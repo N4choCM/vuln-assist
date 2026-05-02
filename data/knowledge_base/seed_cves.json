@@ -1,0 +1,163 @@
+[
+  {
+    "cve_id": "CVE-2021-44228",
+    "description": "Apache Log4j2 JNDI features do not protect against attacker-controlled LDAP and other JNDI related endpoints, allowing remote code execution.",
+    "cvss_score": 10.0,
+    "severity": "CRITICAL",
+    "products": ["Apache Log4j"],
+    "versions": ["2.0-beta9 through 2.15.0", "2.14.1"]
+  },
+  {
+    "cve_id": "CVE-2014-0160",
+    "description": "The TLS heartbeat extension in OpenSSL can disclose process memory from vulnerable clients and servers.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": ["OpenSSL"],
+    "versions": ["1.0.1", "1.0.1f"]
+  },
+  {
+    "cve_id": "CVE-2017-0144",
+    "description": "Microsoft Windows SMBv1 server mishandles specially crafted packets, allowing remote code execution.",
+    "cvss_score": 8.1,
+    "severity": "HIGH",
+    "products": ["Microsoft Windows", "SMBv1"],
+    "versions": ["Windows 7", "Windows Server 2008"]
+  },
+  {
+    "cve_id": "CVE-2020-1472",
+    "description": "An elevation of privilege vulnerability exists when Netlogon establishes a vulnerable secure channel connection to a domain controller.",
+    "cvss_score": 10.0,
+    "severity": "CRITICAL",
+    "products": ["Microsoft Netlogon", "Windows Server"],
+    "versions": ["Windows Server 2016", "Windows Server 2019"]
+  },
+  {
+    "cve_id": "CVE-2020-0796",
+    "description": "A remote code execution vulnerability exists in Microsoft Server Message Block 3.1.1 when handling crafted requests.",
+    "cvss_score": 10.0,
+    "severity": "CRITICAL",
+    "products": ["Microsoft SMBv3", "Microsoft Windows"],
+    "versions": ["Windows 10 version 1903", "Windows Server version 1903"]
+  },
+  {
+    "cve_id": "CVE-2021-26855",
+    "description": "Microsoft Exchange Server is affected by a server-side request forgery vulnerability that allows authentication bypass.",
+    "cvss_score": 9.8,
+    "severity": "CRITICAL",
+    "products": ["Microsoft Exchange Server"],
+    "versions": ["Exchange Server 2013", "Exchange Server 2016", "Exchange Server 2019"]
+  },
+  {
+    "cve_id": "CVE-2021-34527",
+    "description": "Windows Print Spooler improperly performs privileged file operations, enabling remote code execution.",
+    "cvss_score": 8.8,
+    "severity": "HIGH",
+    "products": ["Windows Print Spooler", "Microsoft Windows"],
+    "versions": ["Windows 10", "Windows Server 2019"]
+  },
+  {
+    "cve_id": "CVE-2022-22965",
+    "description": "Spring Framework applications running on JDK 9 or later can be vulnerable to remote code execution through data binding.",
+    "cvss_score": 9.8,
+    "severity": "CRITICAL",
+    "products": ["Spring Framework"],
+    "versions": ["5.3.0 through 5.3.17", "5.2.0 through 5.2.19"]
+  },
+  {
+    "cve_id": "CVE-2021-41773",
+    "description": "Apache HTTP Server path normalization and path traversal flaws can expose files outside configured document roots.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": ["Apache HTTP Server"],
+    "versions": ["2.4.49"]
+  },
+  {
+    "cve_id": "CVE-2019-19781",
+    "description": "Citrix ADC and Citrix Gateway contain a directory traversal vulnerability that can lead to arbitrary code execution.",
+    "cvss_score": 9.8,
+    "severity": "CRITICAL",
+    "products": ["Citrix ADC", "Citrix Gateway"],
+    "versions": ["10.5", "11.1", "12.1"]
+  },
+  {
+    "cve_id": "CVE-2023-3519",
+    "description": "Citrix ADC and Citrix Gateway contain an unauthenticated remote code execution vulnerability.",
+    "cvss_score": 9.8,
+    "severity": "CRITICAL",
+    "products": ["Citrix ADC", "Citrix Gateway"],
+    "versions": ["13.1", "13.0"]
+  },
+  {
+    "cve_id": "CVE-2023-34362",
+    "description": "Progress MOVEit Transfer contains an SQL injection vulnerability that can allow unauthenticated access to databases.",
+    "cvss_score": 9.8,
+    "severity": "CRITICAL",
+    "products": ["MOVEit Transfer"],
+    "versions": ["2020.0 through 2023.0"]
+  },
+  {
+    "cve_id": "CVE-2022-1388",
+    "description": "F5 BIG-IP iControl REST authentication bypass can allow an unauthenticated attacker to execute system commands.",
+    "cvss_score": 9.8,
+    "severity": "CRITICAL",
+    "products": ["F5 BIG-IP", "iControl REST"],
+    "versions": ["12.1.0 through 17.0.0"]
+  },
+  {
+    "cve_id": "CVE-2018-13379",
+    "description": "Fortinet FortiOS SSL VPN web portal contains a path traversal vulnerability that can disclose system files.",
+    "cvss_score": 9.8,
+    "severity": "CRITICAL",
+    "products": ["Fortinet FortiOS", "FortiOS SSL VPN"],
+    "versions": ["5.6.3 through 5.6.7", "6.0.0 through 6.0.4"]
+  },
+  {
+    "cve_id": "CVE-2023-27997",
+    "description": "Fortinet FortiOS and FortiProxy heap-based buffer overflow can allow remote code execution.",
+    "cvss_score": 9.8,
+    "severity": "CRITICAL",
+    "products": ["Fortinet FortiOS", "FortiProxy"],
+    "versions": ["7.2.0 through 7.2.4", "7.0.0 through 7.0.10"]
+  },
+  {
+    "cve_id": "CVE-2021-21972",
+    "description": "VMware vCenter Server contains a remote code execution vulnerability in a vSphere Client plugin.",
+    "cvss_score": 9.8,
+    "severity": "CRITICAL",
+    "products": ["VMware vCenter Server", "vSphere Client"],
+    "versions": ["6.5", "6.7", "7.0"]
+  },
+  {
+    "cve_id": "CVE-2023-28771",
+    "description": "Zyxel firewalls are affected by an improper error message handling vulnerability that allows command injection.",
+    "cvss_score": 9.8,
+    "severity": "CRITICAL",
+    "products": ["Zyxel Firewall", "Zyxel ATP"],
+    "versions": ["4.60 through 5.35"]
+  },
+  {
+    "cve_id": "CVE-2023-0669",
+    "description": "Fortra GoAnywhere MFT contains a pre-authentication command injection vulnerability.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": ["GoAnywhere MFT"],
+    "versions": ["7.1.1"]
+  },
+  {
+    "cve_id": "CVE-2023-23397",
+    "description": "Microsoft Outlook contains an elevation of privilege vulnerability that can leak Net-NTLMv2 hashes.",
+    "cvss_score": 9.8,
+    "severity": "CRITICAL",
+    "products": ["Microsoft Outlook"],
+    "versions": ["Microsoft 365 Apps", "Outlook 2016"]
+  },
+  {
+    "cve_id": "CVE-2024-3094",
+    "description": "Malicious code in XZ Utils release artifacts can interfere with SSH authentication in affected Linux distributions.",
+    "cvss_score": 10.0,
+    "severity": "CRITICAL",
+    "products": ["XZ Utils", "liblzma"],
+    "versions": ["5.6.0", "5.6.1"]
+  }
+]
+

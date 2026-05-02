@@ -1,0 +1,1221 @@
+# split = train
+# intent = VERSION_SEARCH
+# text = Verify whether great circle associates majordomo 1.90 is vulnerable.
+Verify O
+whether O
+great B-PRODUCT
+circle I-PRODUCT
+associates I-PRODUCT
+majordomo I-PRODUCT
+1.90 B-VERSION
+is O
+vulnerable O
+. O
+
+# intent = PRODUCT_SEARCH
+# text = What security issues are known for digital vms?
+What O
+security O
+issues O
+are O
+known O
+for O
+digital B-PRODUCT
+vms I-PRODUCT
+? O
+
+# intent = SEVERITY_FILTER
+# text = Provide CVEs rated high.
+Provide O
+CVEs O
+rated O
+high B-SEVERITY
+. O
+
+# intent = VERSION_SEARCH
+# text = Give me security vulnerabilities for next version <= 2.1.
+Give O
+me O
+security O
+vulnerabilities O
+for O
+next B-PRODUCT
+version O
+< B-VERSION
+= I-VERSION
+2.1 I-VERSION
+. O
+
+# intent = CVSS_QUERY
+# text = What can you tell me about the attack vector for CVE-1999-1197?
+What O
+can O
+you O
+tell O
+me O
+about O
+the O
+attack B-METRIC
+vector I-METRIC
+for O
+CVE-1999-1197 B-CVE_ID
+? O
+
+# intent = VERSION_SEARCH
+# text = Look up whether next <= 2.0 is vulnerable.
+Look O
+up O
+whether O
+next B-PRODUCT
+< B-VERSION
+= I-VERSION
+2.0 I-VERSION
+is O
+vulnerable O
+. O
+
+# intent = VERSION_SEARCH
+# text = Give me CVEs for sunos version 4.0.3.
+Give O
+me O
+CVEs O
+for O
+sunos B-PRODUCT
+version O
+4.0.3 B-VERSION
+. O
+
+# intent = SEVERITY_FILTER
+# text = Show me CVEs rated high.
+Show O
+me O
+CVEs O
+rated O
+high B-SEVERITY
+. O
+
+# intent = PRODUCT_SEARCH
+# text = List security vulnerabilities in hp-ux.
+List O
+security O
+vulnerabilities O
+in O
+hp-ux B-PRODUCT
+. O
+
+# intent = SEVERITY_FILTER
+# text = Search for medium security issues in hp-ux.
+Search O
+for O
+medium B-SEVERITY
+security O
+issues O
+in O
+hp-ux B-PRODUCT
+. O
+
+# intent = CVE_LOOKUP
+# text = Show me details about CVE-1999-1506.
+Show O
+me O
+details O
+about O
+CVE-1999-1506 B-CVE_ID
+. O
+
+# intent = VERSION_SEARCH
+# text = List CVEs in att svr4 4.0.
+List O
+CVEs O
+in O
+att B-PRODUCT
+svr4 I-PRODUCT
+4.0 B-VERSION
+. O
+
+# intent = GENERAL_QUERY
+# text = What can you tell me about security flaw disclosure?
+What O
+can O
+you O
+tell O
+me O
+about O
+security O
+flaw O
+disclosure O
+? O
+
+# intent = CVE_LOOKUP
+# text = Provide details about CVE-1999-1146.
+Provide O
+details O
+about O
+CVE-1999-1146 B-CVE_ID
+. O
+
+# intent = SEVERITY_FILTER
+# text = Which medium security vulnerabilities affect debian linux?
+Which O
+medium B-SEVERITY
+security O
+vulnerabilities O
+affect O
+debian B-PRODUCT
+linux I-PRODUCT
+? O
+
+# intent = GENERAL_QUERY
+# text = Why do analysts use the NVD?
+Why O
+do O
+analysts O
+use O
+the O
+NVD O
+? O
+
+# intent = CVE_LOOKUP
+# text = What does CVE-1999-1243 affect?
+What O
+does O
+CVE-1999-1243 B-CVE_ID
+affect O
+? O
+
+# intent = CVSS_QUERY
+# text = Look up the exploitability score for CVE-1999-1080.
+Look O
+up O
+the O
+exploitability B-METRIC
+score I-METRIC
+for O
+CVE-1999-1080 B-CVE_ID
+. O
+
+# intent = CVSS_QUERY
+# text = Show me the CVSS score assigned to CVE-1999-1138.
+Show O
+me O
+the O
+CVSS B-METRIC
+score I-METRIC
+assigned O
+to O
+CVE-1999-1138 B-CVE_ID
+. O
+
+# intent = GENERAL_QUERY
+# text = What information is stored in a CVE entry record?
+What O
+information O
+is O
+stored O
+in O
+a O
+CVE O
+entry O
+record O
+? O
+
+# intent = CVE_LOOKUP
+# text = Provide details about CVE-1999-0155.
+Provide O
+details O
+about O
+CVE-1999-0155 B-CVE_ID
+. O
+
+# intent = GENERAL_QUERY
+# text = How does exploitability score work?
+How O
+does O
+exploitability B-METRIC
+score I-METRIC
+work O
+? O
+
+# intent = CVSS_QUERY
+# text = What CVSS base score does CVE-1999-1138 have?
+What O
+CVSS B-METRIC
+base I-METRIC
+score I-METRIC
+does O
+CVE-1999-1138 B-CVE_ID
+have O
+? O
+
+# intent = PRODUCT_SEARCH
+# text = Which security vulnerabilities apply to next?
+Which O
+security O
+vulnerabilities O
+apply O
+to O
+next B-PRODUCT
+? O
+
+# intent = PRODUCT_SEARCH
+# text = Search for CVEs impacting sunos.
+Search O
+for O
+CVEs O
+impacting O
+sunos B-PRODUCT
+. O
+
+# intent = CVSS_QUERY
+# text = What exploitability score does CVE-1999-1396 have?
+What O
+exploitability B-METRIC
+score I-METRIC
+does O
+CVE-1999-1396 B-CVE_ID
+have O
+? O
+
+# intent = CVE_LOOKUP
+# text = I need information on CVE-1999-0113.
+I O
+need O
+information O
+on O
+CVE-1999-0113 B-CVE_ID
+. O
+
+# intent = CVSS_QUERY
+# text = What CVSS does CVE-1999-1391 have?
+What O
+CVSS B-METRIC
+does O
+CVE-1999-1391 B-CVE_ID
+have O
+? O
+
+# intent = PRODUCT_SEARCH
+# text = Give me documented CVEs for sunos.
+Give O
+me O
+documented O
+CVEs O
+for O
+sunos B-PRODUCT
+. O
+
+# intent = VERSION_SEARCH
+# text = What CVEs affect hp-ux release 9?
+What O
+CVEs O
+affect O
+hp-ux B-PRODUCT
+release O
+9 B-VERSION
+? O
+
+# intent = PRODUCT_SEARCH
+# text = Search for medium CVEs in microsoft windows nt.
+Search O
+for O
+medium B-SEVERITY
+CVEs O
+in O
+microsoft B-PRODUCT
+windows I-PRODUCT
+nt I-PRODUCT
+. O
+
+# intent = CVSS_QUERY
+# text = Look up the CVSS for CVE-1999-1466.
+Look O
+up O
+the O
+CVSS B-METRIC
+for O
+CVE-1999-1466 B-CVE_ID
+. O
+
+# intent = VERSION_SEARCH
+# text = Does sgi irix version 6.0 have documented CVEs?
+Does O
+sgi B-PRODUCT
+irix I-PRODUCT
+version O
+6.0 B-VERSION
+have O
+documented O
+CVEs O
+? O
+
+# intent = VERSION_SEARCH
+# text = Does ibm aix version 3.1 have documented CVEs?
+Does O
+ibm B-PRODUCT
+aix I-PRODUCT
+version O
+3.1 B-VERSION
+have O
+documented O
+CVEs O
+? O
+
+# intent = CVE_LOOKUP
+# text = Summarize the CVE entry CVE-1999-0627.
+Summarize O
+the O
+CVE O
+entry O
+CVE-1999-0627 B-CVE_ID
+. O
+
+# intent = SEVERITY_FILTER
+# text = List CVEs with medium severity rating.
+List O
+CVEs O
+with O
+medium B-SEVERITY
+severity O
+rating O
+. O
+
+# intent = PRODUCT_SEARCH
+# text = Display security vulnerabilities in ibm aix.
+Display O
+security O
+vulnerabilities O
+in O
+ibm B-PRODUCT
+aix I-PRODUCT
+. O
+
+# intent = GENERAL_QUERY
+# text = How do CVE records relate to affected products?
+How O
+do O
+CVE O
+records O
+relate O
+to O
+affected O
+products O
+? O
+
+# intent = GENERAL_QUERY
+# text = What information is stored in a security flaw record?
+What O
+information O
+is O
+stored O
+in O
+a O
+security O
+flaw O
+record O
+? O
+
+# intent = PRODUCT_SEARCH
+# text = Show me CVEs related to att svr4.
+Show O
+me O
+CVEs O
+related O
+to O
+att B-PRODUCT
+svr4 I-PRODUCT
+. O
+
+# intent = SEVERITY_FILTER
+# text = Search for medium security issues in sunos.
+Search O
+for O
+medium B-SEVERITY
+security O
+issues O
+in O
+sunos B-PRODUCT
+. O
+
+# intent = SEVERITY_FILTER
+# text = List security vulnerabilities with high risk level.
+List O
+security O
+vulnerabilities O
+with O
+high B-SEVERITY
+risk O
+level O
+. O
+
+# intent = CVSS_QUERY
+# text = Display the exploitability score of CVE-1999-0337.
+Display O
+the O
+exploitability B-METRIC
+score I-METRIC
+of O
+CVE-1999-0337 B-CVE_ID
+. O
+
+# intent = CVE_LOOKUP
+# text = What does CVE-1999-1238 affect?
+What O
+does O
+CVE-1999-1238 B-CVE_ID
+affect O
+? O
+
+# intent = CVE_LOOKUP
+# text = What can you tell me about CVE-2000-0508?
+What O
+can O
+you O
+tell O
+me O
+about O
+CVE-2000-0508 B-CVE_ID
+? O
+
+# intent = PRODUCT_SEARCH
+# text = Which CVEs apply to hp-ux?
+Which O
+CVEs O
+apply O
+to O
+hp-ux B-PRODUCT
+? O
+
+# intent = VERSION_SEARCH
+# text = List CVEs in linux kernel 2.6.20.1.
+List O
+CVEs O
+in O
+linux B-PRODUCT
+kernel I-PRODUCT
+2.6.20.1 B-VERSION
+. O
+
+# intent = GENERAL_QUERY
+# text = How should I interpret a CVSS base score?
+How O
+should O
+I O
+interpret O
+a O
+CVSS B-METRIC
+base I-METRIC
+score I-METRIC
+? O
+
+# intent = GENERAL_QUERY
+# text = What does the NVD provide?
+What O
+does O
+the O
+NVD O
+provide O
+? O
+
+# intent = PRODUCT_SEARCH
+# text = Search for medium security vulnerabilities in sunos.
+Search O
+for O
+medium B-SEVERITY
+security O
+vulnerabilities O
+in O
+sunos B-PRODUCT
+. O
+
+# intent = GENERAL_QUERY
+# text = How are software security vulnerabilities classified?
+How O
+are O
+software O
+security O
+vulnerabilities O
+classified O
+? O
+
+# intent = GENERAL_QUERY
+# text = How does base severity work?
+How O
+does O
+base B-METRIC
+severity I-METRIC
+work O
+? O
+
+# intent = GENERAL_QUERY
+# text = How should I interpret a CVSS score?
+How O
+should O
+I O
+interpret O
+a O
+CVSS B-METRIC
+score I-METRIC
+? O
+
+# intent = GENERAL_QUERY
+# text = What can you tell me about a CVE?
+What O
+can O
+you O
+tell O
+me O
+about O
+a O
+CVE O
+? O
+
+# intent = SEVERITY_FILTER
+# text = Which high CVEs affect hp-ux?
+Which O
+high B-SEVERITY
+CVEs O
+affect O
+hp-ux B-PRODUCT
+? O
+
+# intent = CVSS_QUERY
+# text = How severe is CVE-1999-1318 according to CVSS score?
+How O
+severe O
+is O
+CVE-1999-1318 B-CVE_ID
+according O
+to O
+CVSS B-METRIC
+score I-METRIC
+? O
+
+# intent = SEVERITY_FILTER
+# text = List medium CVEs.
+List O
+medium B-SEVERITY
+CVEs O
+. O
+
+# intent = SEVERITY_FILTER
+# text = Display high security vulnerabilities.
+Display O
+high B-SEVERITY
+security O
+vulnerabilities O
+. O
+
+# intent = VERSION_SEARCH
+# text = What CVEs affect sunos release <= 4.1.2?
+What O
+CVEs O
+affect O
+sunos B-PRODUCT
+release O
+< B-VERSION
+= I-VERSION
+4.1.2 I-VERSION
+? O
+
+# intent = CVE_LOOKUP
+# text = Explain CVE-1999-1304.
+Explain O
+CVE-1999-1304 B-CVE_ID
+. O
+
+# intent = PRODUCT_SEARCH
+# text = Show documented CVEs for next.
+Show O
+documented O
+CVEs O
+for O
+next B-PRODUCT
+. O
+
+# intent = CVE_LOOKUP
+# text = What can you tell me about CVE-1999-1243?
+What O
+can O
+you O
+tell O
+me O
+about O
+CVE-1999-1243 B-CVE_ID
+? O
+
+# intent = CVSS_QUERY
+# text = Show me the CVSS score assigned to CVE-1999-0232.
+Show O
+me O
+the O
+CVSS B-METRIC
+score I-METRIC
+assigned O
+to O
+CVE-1999-0232 B-CVE_ID
+. O
+
+# intent = PRODUCT_SEARCH
+# text = Show reported CVEs for sunos.
+Show O
+reported O
+CVEs O
+for O
+sunos B-PRODUCT
+. O
+
+# intent = GENERAL_QUERY
+# text = How are software CVEs classified?
+How O
+are O
+software O
+CVEs O
+classified O
+? O
+
+# intent = VERSION_SEARCH
+# text = Does att svr4 version 4.0 have reported CVEs?
+Does O
+att B-PRODUCT
+svr4 I-PRODUCT
+version O
+4.0 B-VERSION
+have O
+reported O
+CVEs O
+? O
+
+# intent = PRODUCT_SEARCH
+# text = Give me reported CVEs for ibm aix.
+Give O
+me O
+reported O
+CVEs O
+for O
+ibm B-PRODUCT
+aix I-PRODUCT
+. O
+
+# intent = GENERAL_QUERY
+# text = What does medium severity rating mean?
+What O
+does O
+medium B-SEVERITY
+severity O
+rating O
+mean O
+? O
+
+# intent = CVE_LOOKUP
+# text = What does CVE-1999-1115 affect?
+What O
+does O
+CVE-1999-1115 B-CVE_ID
+affect O
+? O
+
+# intent = PRODUCT_SEARCH
+# text = Which security vulnerabilities affect sgi irix?
+Which O
+security O
+vulnerabilities O
+affect O
+sgi B-PRODUCT
+irix I-PRODUCT
+? O
+
+# intent = SEVERITY_FILTER
+# text = Search for high security issues in next nex.
+Search O
+for O
+high B-SEVERITY
+security O
+issues O
+in O
+next B-PRODUCT
+nex I-PRODUCT
+. O
+
+# intent = SEVERITY_FILTER
+# text = Display medium CVEs.
+Display O
+medium B-SEVERITY
+CVEs O
+. O
+
+# intent = VERSION_SEARCH
+# text = Search for CVEs related to hp-ux 9.01.
+Search O
+for O
+CVEs O
+related O
+to O
+hp-ux B-PRODUCT
+9.01 B-VERSION
+. O
+
+# intent = VERSION_SEARCH
+# text = Does sunos version 4.1 have reported CVEs?
+Does O
+sunos B-PRODUCT
+version O
+4.1 B-VERSION
+have O
+reported O
+CVEs O
+? O
+
+# intent = CVE_LOOKUP
+# text = Summarize the security flaw CVE-1999-0627.
+Summarize O
+the O
+security O
+flaw O
+CVE-1999-0627 B-CVE_ID
+. O
+
+# intent = VERSION_SEARCH
+# text = List CVEs in next 6.1.
+List O
+CVEs O
+in O
+next B-PRODUCT
+6.1 B-VERSION
+. O
+
+# intent = CVSS_QUERY
+# text = How severe is CVE-1999-1466 according to exploitability score?
+How O
+severe O
+is O
+CVE-1999-1466 B-CVE_ID
+according O
+to O
+exploitability B-METRIC
+score I-METRIC
+? O
+
+# intent = CVSS_QUERY
+# text = List the attack vector of CVE-1999-1123.
+List O
+the O
+attack B-METRIC
+vector I-METRIC
+of O
+CVE-1999-1123 B-CVE_ID
+. O
+
+# intent = CVSS_QUERY
+# text = What can you tell me about the exploitability score for CVE-1999-1303?
+What O
+can O
+you O
+tell O
+me O
+about O
+the O
+exploitability B-METRIC
+score I-METRIC
+for O
+CVE-1999-1303 B-CVE_ID
+? O
+
+# intent = CVE_LOOKUP
+# text = Summarize the security flaw CVE-1999-1059.
+Summarize O
+the O
+security O
+flaw O
+CVE-1999-1059 B-CVE_ID
+. O
+
+# intent = CVE_LOOKUP
+# text = Explain CVE-1999-1162.
+Explain O
+CVE-1999-1162 B-CVE_ID
+. O
+
+# intent = SEVERITY_FILTER
+# text = Search for low CVEs.
+Search O
+for O
+low B-SEVERITY
+CVEs O
+. O
+
+# intent = SEVERITY_FILTER
+# text = Search for critical security issues in john s. roberts anyform.
+Search O
+for O
+critical B-SEVERITY
+security O
+issues O
+in O
+john B-PRODUCT
+s I-PRODUCT
+. I-PRODUCT
+roberts I-PRODUCT
+anyform I-PRODUCT
+. O
+
+# intent = CVSS_QUERY
+# text = Display the base severity of CVE-1999-1057.
+Display O
+the O
+base B-METRIC
+severity I-METRIC
+of O
+CVE-1999-1057 B-CVE_ID
+. O
+
+# split = validation
+# intent = VERSION_SEARCH
+# text = What CVEs affect next release <= 2.0?
+What O
+CVEs O
+affect O
+next B-PRODUCT
+release O
+< B-VERSION
+= I-VERSION
+2.0 I-VERSION
+? O
+
+# intent = CVE_LOOKUP
+# text = Explain CVE-1999-1395.
+Explain O
+CVE-1999-1395 B-CVE_ID
+. O
+
+# intent = CVSS_QUERY
+# text = How severe is CVE-1999-1162 according to CVSS?
+How O
+severe O
+is O
+CVE-1999-1162 B-CVE_ID
+according O
+to O
+CVSS B-METRIC
+? O
+
+# intent = SEVERITY_FILTER
+# text = Which high security vulnerabilities affect ibm aix?
+Which O
+high B-SEVERITY
+security O
+vulnerabilities O
+affect O
+ibm B-PRODUCT
+aix I-PRODUCT
+? O
+
+# intent = PRODUCT_SEARCH
+# text = Search for CVEs related to ibm aix.
+Search O
+for O
+CVEs O
+related O
+to O
+ibm B-PRODUCT
+aix I-PRODUCT
+. O
+
+# intent = SEVERITY_FILTER
+# text = Show me CVEs rated medium.
+Show O
+me O
+CVEs O
+rated O
+medium B-SEVERITY
+. O
+
+# intent = GENERAL_QUERY
+# text = Explain security flaw severity rating.
+Explain O
+security O
+flaw O
+severity O
+rating O
+. O
+
+# intent = SEVERITY_FILTER
+# text = Search for high CVEs.
+Search O
+for O
+high B-SEVERITY
+CVEs O
+. O
+
+# intent = VERSION_SEARCH
+# text = Search for CVEs impacting eric allman sendmail 8.6.10.
+Search O
+for O
+CVEs O
+impacting O
+eric B-PRODUCT
+allman I-PRODUCT
+sendmail I-PRODUCT
+8.6.10 B-VERSION
+. O
+
+# intent = GENERAL_QUERY
+# text = How does CVSS base score work?
+How O
+does O
+CVSS B-METRIC
+base I-METRIC
+score I-METRIC
+work O
+? O
+
+# intent = PRODUCT_SEARCH
+# text = Search for high CVEs in sunos.
+Search O
+for O
+high B-SEVERITY
+CVEs O
+in O
+sunos B-PRODUCT
+. O
+
+# intent = VERSION_SEARCH
+# text = Search for CVEs impacting hp-ux 9.
+Search O
+for O
+CVEs O
+impacting O
+hp-ux B-PRODUCT
+9 B-VERSION
+. O
+
+# intent = CVE_LOOKUP
+# text = I need information on CVE-1999-1212.
+I O
+need O
+information O
+on O
+CVE-1999-1212 B-CVE_ID
+. O
+
+# intent = CVSS_QUERY
+# text = Provide the CVSS assigned to CVE-1999-0334.
+Provide O
+the O
+CVSS B-METRIC
+assigned O
+to O
+CVE-1999-0334 B-CVE_ID
+. O
+
+# intent = CVE_LOOKUP
+# text = Provide details about CVE-1999-1467.
+Provide O
+details O
+about O
+CVE-1999-1467 B-CVE_ID
+. O
+
+# intent = GENERAL_QUERY
+# text = Explain security flaw risk level.
+Explain O
+security O
+flaw O
+risk O
+level O
+. O
+
+# intent = PRODUCT_SEARCH
+# text = Which security vulnerabilities apply to hp-ux?
+Which O
+security O
+vulnerabilities O
+apply O
+to O
+hp-ux B-PRODUCT
+? O
+
+# intent = CVSS_QUERY
+# text = How severe is CVE-1999-0334 according to CVSS base score?
+How O
+severe O
+is O
+CVE-1999-0334 B-CVE_ID
+according O
+to O
+CVSS B-METRIC
+base I-METRIC
+score I-METRIC
+? O
+
+# split = test
+# intent = SEVERITY_FILTER
+# text = Which high CVEs affect sunos?
+Which O
+high B-SEVERITY
+CVEs O
+affect O
+sunos B-PRODUCT
+? O
+
+# intent = VERSION_SEARCH
+# text = Give me CVEs for next nex version 1.0.
+Give O
+me O
+CVEs O
+for O
+next B-PRODUCT
+nex I-PRODUCT
+version O
+1.0 B-VERSION
+. O
+
+# intent = CVE_LOOKUP
+# text = I need information on CVE-1999-1121.
+I O
+need O
+information O
+on O
+CVE-1999-1121 B-CVE_ID
+. O
+
+# intent = CVE_LOOKUP
+# text = Define CVE-1999-0095?
+Define O
+CVE-1999-0095 B-CVE_ID
+? O
+
+# intent = CVSS_QUERY
+# text = Define the CVSS for CVE-1999-1303?
+Define O
+the O
+CVSS B-METRIC
+for O
+CVE-1999-1303 B-CVE_ID
+? O
+
+# intent = SEVERITY_FILTER
+# text = Show me high CVEs.
+Show O
+me O
+high B-SEVERITY
+CVEs O
+. O
+
+# intent = PRODUCT_SEARCH
+# text = What security issues are known for sunos?
+What O
+security O
+issues O
+are O
+known O
+for O
+sunos B-PRODUCT
+? O
+
+# intent = VERSION_SEARCH
+# text = Verify whether att svr4 4.0 is vulnerable.
+Verify O
+whether O
+att B-PRODUCT
+svr4 I-PRODUCT
+4.0 B-VERSION
+is O
+vulnerable O
+. O
+
+# intent = SEVERITY_FILTER
+# text = Give me vulnerabilities with high risk level.
+Give O
+me O
+vulnerabilities O
+with O
+high B-SEVERITY
+risk O
+level O
+. O
+
+# intent = GENERAL_QUERY
+# text = Define a CVE?
+Define O
+a O
+CVE O
+? O
+
+# intent = PRODUCT_SEARCH
+# text = List CVEs in linux kernel.
+List O
+CVEs O
+in O
+linux B-PRODUCT
+kernel I-PRODUCT
+. O
+
+# intent = CVSS_QUERY
+# text = Verify the exploitability score for CVE-2000-0388.
+Verify O
+the O
+exploitability B-METRIC
+score I-METRIC
+for O
+CVE-2000-0388 B-CVE_ID
+. O
+
+# intent = GENERAL_QUERY
+# text = What does high risk level mean?
+What O
+does O
+high B-SEVERITY
+risk O
+level O
+mean O
+? O
+
+# intent = GENERAL_QUERY
+# text = What fields are useful in CVE analysis?
+What O
+fields O
+are O
+useful O
+in O
+CVE O
+analysis O
+? O
+
+# intent = CVSS_QUERY
+# text = Display the CVSS score of CVE-1999-1193.
+Display O
+the O
+CVSS B-METRIC
+score I-METRIC
+of O
+CVE-1999-1193 B-CVE_ID
+. O
+
+# intent = PRODUCT_SEARCH
+# text = Search for CVEs related to next.
+Search O
+for O
+CVEs O
+related O
+to O
+next B-PRODUCT
+. O
+
+# intent = CVE_LOOKUP
+# text = Explain CVE-1999-1467.
+Explain O
+CVE-1999-1467 B-CVE_ID
+. O
+
+# intent = VERSION_SEARCH
+# text = Show me CVEs impacting sco open desktop 1.1.
+Show O
+me O
+CVEs O
+impacting O
+sco B-PRODUCT
+open I-PRODUCT
+desktop I-PRODUCT
+1.1 B-VERSION
+. O
+

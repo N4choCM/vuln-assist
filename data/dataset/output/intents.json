@@ -1,0 +1,1700 @@
+{
+  "metadata": {
+    "generated_at": "2026-04-30T00:41:18.278919+00:00",
+    "total_samples": 120,
+    "splits": {
+      "train": 84,
+      "validation": 18,
+      "test": 18
+    },
+    "intent_distribution": {
+      "train": {
+        "CVE_LOOKUP": 14,
+        "CVSS_QUERY": 14,
+        "GENERAL_QUERY": 14,
+        "PRODUCT_SEARCH": 14,
+        "SEVERITY_FILTER": 14,
+        "VERSION_SEARCH": 14
+      },
+      "validation": {
+        "CVE_LOOKUP": 3,
+        "CVSS_QUERY": 3,
+        "GENERAL_QUERY": 3,
+        "PRODUCT_SEARCH": 3,
+        "SEVERITY_FILTER": 3,
+        "VERSION_SEARCH": 3
+      },
+      "test": {
+        "CVE_LOOKUP": 3,
+        "CVSS_QUERY": 3,
+        "GENERAL_QUERY": 3,
+        "PRODUCT_SEARCH": 3,
+        "SEVERITY_FILTER": 3,
+        "VERSION_SEARCH": 3
+      }
+    }
+  },
+  "splits": {
+    "train": [
+      {
+        "text": "Verify whether great circle associates majordomo 1.90 is vulnerable.",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "great circle associates majordomo",
+            "start": 15,
+            "end": 48
+          },
+          {
+            "type": "VERSION",
+            "value": "1.90",
+            "start": 49,
+            "end": 53
+          }
+        ]
+      },
+      {
+        "text": "What security issues are known for digital vms?",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "digital vms",
+            "start": 35,
+            "end": 46
+          }
+        ]
+      },
+      {
+        "text": "Provide CVEs rated high.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "high",
+            "start": 19,
+            "end": 23
+          }
+        ]
+      },
+      {
+        "text": "Give me security vulnerabilities for next version <= 2.1.",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "next",
+            "start": 37,
+            "end": 41
+          },
+          {
+            "type": "VERSION",
+            "value": "<= 2.1",
+            "start": 50,
+            "end": 56
+          }
+        ]
+      },
+      {
+        "text": "What can you tell me about the attack vector for CVE-1999-1197?",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "attack vector",
+            "start": 31,
+            "end": 44
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1197",
+            "start": 49,
+            "end": 62
+          }
+        ]
+      },
+      {
+        "text": "Look up whether next <= 2.0 is vulnerable.",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "next",
+            "start": 16,
+            "end": 20
+          },
+          {
+            "type": "VERSION",
+            "value": "<= 2.0",
+            "start": 21,
+            "end": 27
+          }
+        ]
+      },
+      {
+        "text": "Give me CVEs for sunos version 4.0.3.",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "sunos",
+            "start": 17,
+            "end": 22
+          },
+          {
+            "type": "VERSION",
+            "value": "4.0.3",
+            "start": 31,
+            "end": 36
+          }
+        ]
+      },
+      {
+        "text": "Show me CVEs rated high.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "high",
+            "start": 19,
+            "end": 23
+          }
+        ]
+      },
+      {
+        "text": "List security vulnerabilities in hp-ux.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "hp-ux",
+            "start": 33,
+            "end": 38
+          }
+        ]
+      },
+      {
+        "text": "Search for medium security issues in hp-ux.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "medium",
+            "start": 11,
+            "end": 17
+          },
+          {
+            "type": "PRODUCT",
+            "value": "hp-ux",
+            "start": 37,
+            "end": 42
+          }
+        ]
+      },
+      {
+        "text": "Show me details about CVE-1999-1506.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1506",
+            "start": 22,
+            "end": 35
+          }
+        ]
+      },
+      {
+        "text": "List CVEs in att svr4 4.0.",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "att svr4",
+            "start": 13,
+            "end": 21
+          },
+          {
+            "type": "VERSION",
+            "value": "4.0",
+            "start": 22,
+            "end": 25
+          }
+        ]
+      },
+      {
+        "text": "What can you tell me about security flaw disclosure?",
+        "intent": "GENERAL_QUERY",
+        "entities": []
+      },
+      {
+        "text": "Provide details about CVE-1999-1146.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1146",
+            "start": 22,
+            "end": 35
+          }
+        ]
+      },
+      {
+        "text": "Which medium security vulnerabilities affect debian linux?",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "medium",
+            "start": 6,
+            "end": 12
+          },
+          {
+            "type": "PRODUCT",
+            "value": "debian linux",
+            "start": 45,
+            "end": 57
+          }
+        ]
+      },
+      {
+        "text": "Why do analysts use the NVD?",
+        "intent": "GENERAL_QUERY",
+        "entities": []
+      },
+      {
+        "text": "What does CVE-1999-1243 affect?",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1243",
+            "start": 10,
+            "end": 23
+          }
+        ]
+      },
+      {
+        "text": "Look up the exploitability score for CVE-1999-1080.",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "exploitability score",
+            "start": 12,
+            "end": 32
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1080",
+            "start": 37,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "text": "Show me the CVSS score assigned to CVE-1999-1138.",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "CVSS score",
+            "start": 12,
+            "end": 22
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1138",
+            "start": 35,
+            "end": 48
+          }
+        ]
+      },
+      {
+        "text": "What information is stored in a CVE entry record?",
+        "intent": "GENERAL_QUERY",
+        "entities": []
+      },
+      {
+        "text": "Provide details about CVE-1999-0155.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-0155",
+            "start": 22,
+            "end": 35
+          }
+        ]
+      },
+      {
+        "text": "How does exploitability score work?",
+        "intent": "GENERAL_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "exploitability score",
+            "start": 9,
+            "end": 29
+          }
+        ]
+      },
+      {
+        "text": "What CVSS base score does CVE-1999-1138 have?",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "CVSS base score",
+            "start": 5,
+            "end": 20
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1138",
+            "start": 26,
+            "end": 39
+          }
+        ]
+      },
+      {
+        "text": "Which security vulnerabilities apply to next?",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "next",
+            "start": 40,
+            "end": 44
+          }
+        ]
+      },
+      {
+        "text": "Search for CVEs impacting sunos.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "sunos",
+            "start": 26,
+            "end": 31
+          }
+        ]
+      },
+      {
+        "text": "What exploitability score does CVE-1999-1396 have?",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "exploitability score",
+            "start": 5,
+            "end": 25
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1396",
+            "start": 31,
+            "end": 44
+          }
+        ]
+      },
+      {
+        "text": "I need information on CVE-1999-0113.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-0113",
+            "start": 22,
+            "end": 35
+          }
+        ]
+      },
+      {
+        "text": "What CVSS does CVE-1999-1391 have?",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "CVSS",
+            "start": 5,
+            "end": 9
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1391",
+            "start": 15,
+            "end": 28
+          }
+        ]
+      },
+      {
+        "text": "Give me documented CVEs for sunos.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "sunos",
+            "start": 28,
+            "end": 33
+          }
+        ]
+      },
+      {
+        "text": "What CVEs affect hp-ux release 9?",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "hp-ux",
+            "start": 17,
+            "end": 22
+          },
+          {
+            "type": "VERSION",
+            "value": "9",
+            "start": 31,
+            "end": 32
+          }
+        ]
+      },
+      {
+        "text": "Search for medium CVEs in microsoft windows nt.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "medium",
+            "start": 11,
+            "end": 17
+          },
+          {
+            "type": "PRODUCT",
+            "value": "microsoft windows nt",
+            "start": 26,
+            "end": 46
+          }
+        ]
+      },
+      {
+        "text": "Look up the CVSS for CVE-1999-1466.",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "CVSS",
+            "start": 12,
+            "end": 16
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1466",
+            "start": 21,
+            "end": 34
+          }
+        ]
+      },
+      {
+        "text": "Does sgi irix version 6.0 have documented CVEs?",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "sgi irix",
+            "start": 5,
+            "end": 13
+          },
+          {
+            "type": "VERSION",
+            "value": "6.0",
+            "start": 22,
+            "end": 25
+          }
+        ]
+      },
+      {
+        "text": "Does ibm aix version 3.1 have documented CVEs?",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "ibm aix",
+            "start": 5,
+            "end": 12
+          },
+          {
+            "type": "VERSION",
+            "value": "3.1",
+            "start": 21,
+            "end": 24
+          }
+        ]
+      },
+      {
+        "text": "Summarize the CVE entry CVE-1999-0627.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-0627",
+            "start": 24,
+            "end": 37
+          }
+        ]
+      },
+      {
+        "text": "List CVEs with medium severity rating.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "medium",
+            "start": 15,
+            "end": 21
+          }
+        ]
+      },
+      {
+        "text": "Display security vulnerabilities in ibm aix.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "ibm aix",
+            "start": 36,
+            "end": 43
+          }
+        ]
+      },
+      {
+        "text": "How do CVE records relate to affected products?",
+        "intent": "GENERAL_QUERY",
+        "entities": []
+      },
+      {
+        "text": "What information is stored in a security flaw record?",
+        "intent": "GENERAL_QUERY",
+        "entities": []
+      },
+      {
+        "text": "Show me CVEs related to att svr4.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "att svr4",
+            "start": 24,
+            "end": 32
+          }
+        ]
+      },
+      {
+        "text": "Search for medium security issues in sunos.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "medium",
+            "start": 11,
+            "end": 17
+          },
+          {
+            "type": "PRODUCT",
+            "value": "sunos",
+            "start": 37,
+            "end": 42
+          }
+        ]
+      },
+      {
+        "text": "List security vulnerabilities with high risk level.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "high",
+            "start": 35,
+            "end": 39
+          }
+        ]
+      },
+      {
+        "text": "Display the exploitability score of CVE-1999-0337.",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "exploitability score",
+            "start": 12,
+            "end": 32
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-0337",
+            "start": 36,
+            "end": 49
+          }
+        ]
+      },
+      {
+        "text": "What does CVE-1999-1238 affect?",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1238",
+            "start": 10,
+            "end": 23
+          }
+        ]
+      },
+      {
+        "text": "What can you tell me about CVE-2000-0508?",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-2000-0508",
+            "start": 27,
+            "end": 40
+          }
+        ]
+      },
+      {
+        "text": "Which CVEs apply to hp-ux?",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "hp-ux",
+            "start": 20,
+            "end": 25
+          }
+        ]
+      },
+      {
+        "text": "List CVEs in linux kernel 2.6.20.1.",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "linux kernel",
+            "start": 13,
+            "end": 25
+          },
+          {
+            "type": "VERSION",
+            "value": "2.6.20.1",
+            "start": 26,
+            "end": 34
+          }
+        ]
+      },
+      {
+        "text": "How should I interpret a CVSS base score?",
+        "intent": "GENERAL_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "CVSS base score",
+            "start": 25,
+            "end": 40
+          }
+        ]
+      },
+      {
+        "text": "What does the NVD provide?",
+        "intent": "GENERAL_QUERY",
+        "entities": []
+      },
+      {
+        "text": "Search for medium security vulnerabilities in sunos.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "medium",
+            "start": 11,
+            "end": 17
+          },
+          {
+            "type": "PRODUCT",
+            "value": "sunos",
+            "start": 46,
+            "end": 51
+          }
+        ]
+      },
+      {
+        "text": "How are software security vulnerabilities classified?",
+        "intent": "GENERAL_QUERY",
+        "entities": []
+      },
+      {
+        "text": "How does base severity work?",
+        "intent": "GENERAL_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "base severity",
+            "start": 9,
+            "end": 22
+          }
+        ]
+      },
+      {
+        "text": "How should I interpret a CVSS score?",
+        "intent": "GENERAL_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "CVSS score",
+            "start": 25,
+            "end": 35
+          }
+        ]
+      },
+      {
+        "text": "What can you tell me about a CVE?",
+        "intent": "GENERAL_QUERY",
+        "entities": []
+      },
+      {
+        "text": "Which high CVEs affect hp-ux?",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "high",
+            "start": 6,
+            "end": 10
+          },
+          {
+            "type": "PRODUCT",
+            "value": "hp-ux",
+            "start": 23,
+            "end": 28
+          }
+        ]
+      },
+      {
+        "text": "How severe is CVE-1999-1318 according to CVSS score?",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1318",
+            "start": 14,
+            "end": 27
+          },
+          {
+            "type": "METRIC",
+            "value": "CVSS score",
+            "start": 41,
+            "end": 51
+          }
+        ]
+      },
+      {
+        "text": "List medium CVEs.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "medium",
+            "start": 5,
+            "end": 11
+          }
+        ]
+      },
+      {
+        "text": "Display high security vulnerabilities.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "high",
+            "start": 8,
+            "end": 12
+          }
+        ]
+      },
+      {
+        "text": "What CVEs affect sunos release <= 4.1.2?",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "sunos",
+            "start": 17,
+            "end": 22
+          },
+          {
+            "type": "VERSION",
+            "value": "<= 4.1.2",
+            "start": 31,
+            "end": 39
+          }
+        ]
+      },
+      {
+        "text": "Explain CVE-1999-1304.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1304",
+            "start": 8,
+            "end": 21
+          }
+        ]
+      },
+      {
+        "text": "Show documented CVEs for next.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "next",
+            "start": 25,
+            "end": 29
+          }
+        ]
+      },
+      {
+        "text": "What can you tell me about CVE-1999-1243?",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1243",
+            "start": 27,
+            "end": 40
+          }
+        ]
+      },
+      {
+        "text": "Show me the CVSS score assigned to CVE-1999-0232.",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "CVSS score",
+            "start": 12,
+            "end": 22
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-0232",
+            "start": 35,
+            "end": 48
+          }
+        ]
+      },
+      {
+        "text": "Show reported CVEs for sunos.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "sunos",
+            "start": 23,
+            "end": 28
+          }
+        ]
+      },
+      {
+        "text": "How are software CVEs classified?",
+        "intent": "GENERAL_QUERY",
+        "entities": []
+      },
+      {
+        "text": "Does att svr4 version 4.0 have reported CVEs?",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "att svr4",
+            "start": 5,
+            "end": 13
+          },
+          {
+            "type": "VERSION",
+            "value": "4.0",
+            "start": 22,
+            "end": 25
+          }
+        ]
+      },
+      {
+        "text": "Give me reported CVEs for ibm aix.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "ibm aix",
+            "start": 26,
+            "end": 33
+          }
+        ]
+      },
+      {
+        "text": "What does medium severity rating mean?",
+        "intent": "GENERAL_QUERY",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "medium",
+            "start": 10,
+            "end": 16
+          }
+        ]
+      },
+      {
+        "text": "What does CVE-1999-1115 affect?",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1115",
+            "start": 10,
+            "end": 23
+          }
+        ]
+      },
+      {
+        "text": "Which security vulnerabilities affect sgi irix?",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "sgi irix",
+            "start": 38,
+            "end": 46
+          }
+        ]
+      },
+      {
+        "text": "Search for high security issues in next nex.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "high",
+            "start": 11,
+            "end": 15
+          },
+          {
+            "type": "PRODUCT",
+            "value": "next nex",
+            "start": 35,
+            "end": 43
+          }
+        ]
+      },
+      {
+        "text": "Display medium CVEs.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "medium",
+            "start": 8,
+            "end": 14
+          }
+        ]
+      },
+      {
+        "text": "Search for CVEs related to hp-ux 9.01.",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "hp-ux",
+            "start": 27,
+            "end": 32
+          },
+          {
+            "type": "VERSION",
+            "value": "9.01",
+            "start": 33,
+            "end": 37
+          }
+        ]
+      },
+      {
+        "text": "Does sunos version 4.1 have reported CVEs?",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "sunos",
+            "start": 5,
+            "end": 10
+          },
+          {
+            "type": "VERSION",
+            "value": "4.1",
+            "start": 19,
+            "end": 22
+          }
+        ]
+      },
+      {
+        "text": "Summarize the security flaw CVE-1999-0627.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-0627",
+            "start": 28,
+            "end": 41
+          }
+        ]
+      },
+      {
+        "text": "List CVEs in next 6.1.",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "next",
+            "start": 13,
+            "end": 17
+          },
+          {
+            "type": "VERSION",
+            "value": "6.1",
+            "start": 18,
+            "end": 21
+          }
+        ]
+      },
+      {
+        "text": "How severe is CVE-1999-1466 according to exploitability score?",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1466",
+            "start": 14,
+            "end": 27
+          },
+          {
+            "type": "METRIC",
+            "value": "exploitability score",
+            "start": 41,
+            "end": 61
+          }
+        ]
+      },
+      {
+        "text": "List the attack vector of CVE-1999-1123.",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "attack vector",
+            "start": 9,
+            "end": 22
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1123",
+            "start": 26,
+            "end": 39
+          }
+        ]
+      },
+      {
+        "text": "What can you tell me about the exploitability score for CVE-1999-1303?",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "exploitability score",
+            "start": 31,
+            "end": 51
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1303",
+            "start": 56,
+            "end": 69
+          }
+        ]
+      },
+      {
+        "text": "Summarize the security flaw CVE-1999-1059.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1059",
+            "start": 28,
+            "end": 41
+          }
+        ]
+      },
+      {
+        "text": "Explain CVE-1999-1162.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1162",
+            "start": 8,
+            "end": 21
+          }
+        ]
+      },
+      {
+        "text": "Search for low CVEs.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "low",
+            "start": 11,
+            "end": 14
+          }
+        ]
+      },
+      {
+        "text": "Search for critical security issues in john s. roberts anyform.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "critical",
+            "start": 11,
+            "end": 19
+          },
+          {
+            "type": "PRODUCT",
+            "value": "john s. roberts anyform",
+            "start": 39,
+            "end": 62
+          }
+        ]
+      },
+      {
+        "text": "Display the base severity of CVE-1999-1057.",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "base severity",
+            "start": 12,
+            "end": 25
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1057",
+            "start": 29,
+            "end": 42
+          }
+        ]
+      }
+    ],
+    "validation": [
+      {
+        "text": "What CVEs affect next release <= 2.0?",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "next",
+            "start": 17,
+            "end": 21
+          },
+          {
+            "type": "VERSION",
+            "value": "<= 2.0",
+            "start": 30,
+            "end": 36
+          }
+        ]
+      },
+      {
+        "text": "Explain CVE-1999-1395.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1395",
+            "start": 8,
+            "end": 21
+          }
+        ]
+      },
+      {
+        "text": "How severe is CVE-1999-1162 according to CVSS?",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1162",
+            "start": 14,
+            "end": 27
+          },
+          {
+            "type": "METRIC",
+            "value": "CVSS",
+            "start": 41,
+            "end": 45
+          }
+        ]
+      },
+      {
+        "text": "Which high security vulnerabilities affect ibm aix?",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "high",
+            "start": 6,
+            "end": 10
+          },
+          {
+            "type": "PRODUCT",
+            "value": "ibm aix",
+            "start": 43,
+            "end": 50
+          }
+        ]
+      },
+      {
+        "text": "Search for CVEs related to ibm aix.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "ibm aix",
+            "start": 27,
+            "end": 34
+          }
+        ]
+      },
+      {
+        "text": "Show me CVEs rated medium.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "medium",
+            "start": 19,
+            "end": 25
+          }
+        ]
+      },
+      {
+        "text": "Explain security flaw severity rating.",
+        "intent": "GENERAL_QUERY",
+        "entities": []
+      },
+      {
+        "text": "Search for high CVEs.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "high",
+            "start": 11,
+            "end": 15
+          }
+        ]
+      },
+      {
+        "text": "Search for CVEs impacting eric allman sendmail 8.6.10.",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "eric allman sendmail",
+            "start": 26,
+            "end": 46
+          },
+          {
+            "type": "VERSION",
+            "value": "8.6.10",
+            "start": 47,
+            "end": 53
+          }
+        ]
+      },
+      {
+        "text": "How does CVSS base score work?",
+        "intent": "GENERAL_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "CVSS base score",
+            "start": 9,
+            "end": 24
+          }
+        ]
+      },
+      {
+        "text": "Search for high CVEs in sunos.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "high",
+            "start": 11,
+            "end": 15
+          },
+          {
+            "type": "PRODUCT",
+            "value": "sunos",
+            "start": 24,
+            "end": 29
+          }
+        ]
+      },
+      {
+        "text": "Search for CVEs impacting hp-ux 9.",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "hp-ux",
+            "start": 26,
+            "end": 31
+          },
+          {
+            "type": "VERSION",
+            "value": "9",
+            "start": 32,
+            "end": 33
+          }
+        ]
+      },
+      {
+        "text": "I need information on CVE-1999-1212.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1212",
+            "start": 22,
+            "end": 35
+          }
+        ]
+      },
+      {
+        "text": "Provide the CVSS assigned to CVE-1999-0334.",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "CVSS",
+            "start": 12,
+            "end": 16
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-0334",
+            "start": 29,
+            "end": 42
+          }
+        ]
+      },
+      {
+        "text": "Provide details about CVE-1999-1467.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1467",
+            "start": 22,
+            "end": 35
+          }
+        ]
+      },
+      {
+        "text": "Explain security flaw risk level.",
+        "intent": "GENERAL_QUERY",
+        "entities": []
+      },
+      {
+        "text": "Which security vulnerabilities apply to hp-ux?",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "hp-ux",
+            "start": 40,
+            "end": 45
+          }
+        ]
+      },
+      {
+        "text": "How severe is CVE-1999-0334 according to CVSS base score?",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-0334",
+            "start": 14,
+            "end": 27
+          },
+          {
+            "type": "METRIC",
+            "value": "CVSS base score",
+            "start": 41,
+            "end": 56
+          }
+        ]
+      }
+    ],
+    "test": [
+      {
+        "text": "Which high CVEs affect sunos?",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "high",
+            "start": 6,
+            "end": 10
+          },
+          {
+            "type": "PRODUCT",
+            "value": "sunos",
+            "start": 23,
+            "end": 28
+          }
+        ]
+      },
+      {
+        "text": "Give me CVEs for next nex version 1.0.",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "next nex",
+            "start": 17,
+            "end": 25
+          },
+          {
+            "type": "VERSION",
+            "value": "1.0",
+            "start": 34,
+            "end": 37
+          }
+        ]
+      },
+      {
+        "text": "I need information on CVE-1999-1121.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1121",
+            "start": 22,
+            "end": 35
+          }
+        ]
+      },
+      {
+        "text": "Define CVE-1999-0095?",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-0095",
+            "start": 7,
+            "end": 20
+          }
+        ]
+      },
+      {
+        "text": "Define the CVSS for CVE-1999-1303?",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "CVSS",
+            "start": 11,
+            "end": 15
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1303",
+            "start": 20,
+            "end": 33
+          }
+        ]
+      },
+      {
+        "text": "Show me high CVEs.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "high",
+            "start": 8,
+            "end": 12
+          }
+        ]
+      },
+      {
+        "text": "What security issues are known for sunos?",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "sunos",
+            "start": 35,
+            "end": 40
+          }
+        ]
+      },
+      {
+        "text": "Verify whether att svr4 4.0 is vulnerable.",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "att svr4",
+            "start": 15,
+            "end": 23
+          },
+          {
+            "type": "VERSION",
+            "value": "4.0",
+            "start": 24,
+            "end": 27
+          }
+        ]
+      },
+      {
+        "text": "Give me vulnerabilities with high risk level.",
+        "intent": "SEVERITY_FILTER",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "high",
+            "start": 29,
+            "end": 33
+          }
+        ]
+      },
+      {
+        "text": "Define a CVE?",
+        "intent": "GENERAL_QUERY",
+        "entities": []
+      },
+      {
+        "text": "List CVEs in linux kernel.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "linux kernel",
+            "start": 13,
+            "end": 25
+          }
+        ]
+      },
+      {
+        "text": "Verify the exploitability score for CVE-2000-0388.",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "exploitability score",
+            "start": 11,
+            "end": 31
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-2000-0388",
+            "start": 36,
+            "end": 49
+          }
+        ]
+      },
+      {
+        "text": "What does high risk level mean?",
+        "intent": "GENERAL_QUERY",
+        "entities": [
+          {
+            "type": "SEVERITY",
+            "value": "high",
+            "start": 10,
+            "end": 14
+          }
+        ]
+      },
+      {
+        "text": "What fields are useful in CVE analysis?",
+        "intent": "GENERAL_QUERY",
+        "entities": []
+      },
+      {
+        "text": "Display the CVSS score of CVE-1999-1193.",
+        "intent": "CVSS_QUERY",
+        "entities": [
+          {
+            "type": "METRIC",
+            "value": "CVSS score",
+            "start": 12,
+            "end": 22
+          },
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1193",
+            "start": 26,
+            "end": 39
+          }
+        ]
+      },
+      {
+        "text": "Search for CVEs related to next.",
+        "intent": "PRODUCT_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "next",
+            "start": 27,
+            "end": 31
+          }
+        ]
+      },
+      {
+        "text": "Explain CVE-1999-1467.",
+        "intent": "CVE_LOOKUP",
+        "entities": [
+          {
+            "type": "CVE_ID",
+            "value": "CVE-1999-1467",
+            "start": 8,
+            "end": 21
+          }
+        ]
+      },
+      {
+        "text": "Show me CVEs impacting sco open desktop 1.1.",
+        "intent": "VERSION_SEARCH",
+        "entities": [
+          {
+            "type": "PRODUCT",
+            "value": "sco open desktop",
+            "start": 23,
+            "end": 39
+          },
+          {
+            "type": "VERSION",
+            "value": "1.1",
+            "start": 40,
+            "end": 43
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+# Integrations Layer
+
+This directory contains external data-source integrations.
+
+In the project architecture, integrations are responsible only for communication with external systems. They must not contain business logic, NLP logic, dataset generation, API orchestration, or response generation.
+
+## Current Integrations
+
+- [nvd/](nvd/README.md): client for the National Vulnerability Database CVE API.
+
+Future integrations, such as MITRE, should be added as independent subpackages:
+
+```text
+integrations/
+├── nvd/
+└── mitre/
+```
+
+## Responsibilities
+
+Integration modules may:
+
+- Build external API requests.
+- Handle authentication or API keys.
+- Handle pagination.
+- Handle rate limits and retry logic.
+- Return raw structured data from the external source.
+
+Integration modules must not:
+
+- Normalize records into the project knowledge-base schema.
+- Generate training datasets.
+- Perform NER or intent classification.
+- Contain backend API routing.
+- Mix data-source access with business rules.
+
+## Data Flow
+
+For Phase 1, the integration flow is:
+
+```text
+scripts/build_dataset.py
+    -> integrations/nvd/NVDClient
+    -> raw NVD CVE records
+    -> data/knowledge_base/NVDRecordNormalizer
+    -> normalized knowledge base
+    -> data/dataset pipeline
+```
+
+The integration layer stops at returning raw CVE records. The knowledge-base layer owns normalization, and the dataset layer owns sample generation.
+
+## Usage Example
+
+```python
+from integrations.nvd import NVDClient, NVDQuery
+
+client = NVDClient()
+records = client.fetch_cves(
+    query=NVDQuery(keyword_search="apache"),
+    total_limit=50,
+)
+```
+
+The returned `records` should be passed to a normalizer before being used by downstream modules.
