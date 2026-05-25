@@ -1,0 +1,32 @@
+{
+  "CWE-502": [
+    {
+      "technique_id": "T1190",
+      "name": "Exploit Public-Facing Application"
+    }
+  ],
+  "CWE-20": [
+    {
+      "technique_id": "T1190",
+      "name": "Exploit Public-Facing Application"
+    }
+  ],
+  "CWE-787": [
+    {
+      "technique_id": "T1068",
+      "name": "Exploitation for Privilege Escalation"
+    }
+  ],
+  "CWE-416": [
+    {
+      "technique_id": "T1068",
+      "name": "Exploitation for Privilege Escalation"
+    }
+  ],
+  "CWE-119": [
+    {
+      "technique_id": "T1203",
+      "name": "Exploitation for Client Execution"
+    }
+  ]
+}

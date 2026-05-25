@@ -6,7 +6,7 @@ Core finite-state dialogue policy that consumes [`NLUResult`](../nlu/models.py) 
 
 - Merge BIO-extracted spans into conversational slot memory.
 - Decide when mandatory slots ([`.cursor/rules/domain.mdc`](../../.cursor/rules/domain.mdc)) are missing and ask focused clarifying questions.
-- Flag when downstream CVE retrieval can start (`ready_for_external_query`) once Phase 4 integrations land.
+- Flag when downstream CVE retrieval can start (`ready_for_external_query`) once slots are complete; Phase 4 executes retrieval in the backend application service.
 
 This package **never** exposes HTTP endpoints, persists storage, touches Hugging Face models directly, nor calls external APIs—those boundaries live in [`backend/`](../../backend/README.md) and [`integrations/`](../../integrations/).
 
@@ -34,4 +34,4 @@ print(outcome.reply, outcome.ready_for_external_query)
 
 ## Extension hooks
 
-Phase 4 injects repositories that hydrate cache lines from `integrations/`; this module intentionally stops at deterministic responses with `blocked_reason="integrations_pending"` when external data is unavailable.
+Phase 4 injects [`ExternalDataRepository`](../../backend/repositories/external_data_repository.py) through the backend application service when `ready_for_external_query` is true.

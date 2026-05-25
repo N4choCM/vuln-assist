@@ -68,7 +68,7 @@ def test_cvss_requires_cve_id(engine: DialogueEngine, cve_entity: EntityPredicti
 
     assert ready.state == "ready"
     assert ready.ready_for_external_query is True
-    assert ready.blocked_reason == "integrations_pending"
+    assert ready.blocked_reason is None
     assert session.slots["CVE_ID"] == cve_entity.value
 
 

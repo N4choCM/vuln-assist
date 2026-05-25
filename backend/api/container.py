@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 
+from backend.repositories.external_data_repository import ExternalDataRepository
 from backend.repositories.nlu_repository import NLURepository
 from backend.repositories.session_repository import SessionRepository
 from backend.services.dialogue_app_service import DialogueApplicationService
@@ -21,4 +22,5 @@ def build_production_dialogue_application_service() -> DialogueApplicationServic
         nlu_repository=NLURepository(pipeline),
         session_repository=SessionRepository(),
         dialogue_engine=DialogueEngine(),
+        external_data_repository=ExternalDataRepository(),
     )
