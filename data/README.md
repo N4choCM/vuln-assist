@@ -101,4 +101,4 @@ This directory must not contain:
 - External API HTTP clients.
 - Model training code.
 
-Those responsibilities belong to other project layers defined in `AGENTS.md`.
+Those responsibilities belong to other project layers defined in `.cursor/rules/architecture.mdc`.

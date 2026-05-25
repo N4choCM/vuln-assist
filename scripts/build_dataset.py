@@ -15,6 +15,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from data.dataset.pipeline import DatasetBuilder, DatasetSplitter, DatasetValidator, DatasetWriter
+from data.dataset.settings import DEFAULT_SAMPLE_COUNT, MAX_SAMPLE_COUNT, MIN_SAMPLE_COUNT
 from data.knowledge_base import KnowledgeBaseRepository, NVDRecordNormalizer, NormalizedCVE
 from integrations.nvd import NVDClient, NVDQuery
 
@@ -62,7 +63,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
 def parse_args(argv: Optional[Sequence[str]]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Build the NLU dataset.")
-    parser.add_argument("--samples", type=int, default=120, help="Total samples, from 100 to 150.")
+    parser.add_argument(
+        "--samples",
+        type=int,
+        default=DEFAULT_SAMPLE_COUNT,
+        help=f"Total samples, from {MIN_SAMPLE_COUNT} to {MAX_SAMPLE_COUNT}.",
+    )
     parser.add_argument("--seed", type=int, default=42, help="Deterministic generation seed.")
     # Path arguments accept both absolute paths and project-relative paths.
     parser.add_argument(

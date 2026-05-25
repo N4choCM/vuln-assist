@@ -1,15 +1,14 @@
-# Cybersecurity Vulnerability NLU Dataset Pipeline
+# Cybersecurity Vulnerability Conversational System
 
-This project implements Phase 1 of a hybrid NLP-based conversational system for cybersecurity vulnerability analysis.
+This project implements a hybrid NLP-based conversational system for cybersecurity vulnerability analysis.
 
-The current implementation focuses on the Data & Knowledge Layer:
+The current repository covers:
 
-- Fetch or load CVE records.
-- Normalize CVE knowledge.
-- Generate NLU training samples.
-- Produce intent-classification and NER datasets.
+- Phase 1: Data & Knowledge Layer.
+- Phase 2: NLU Pipeline with BERT and RoBERTa intent classification plus BIO NER.
+- Phase 3: Backend core (FastAPI orchestration via controllers → application services → repositories) and deterministic `DialogueEngine` finite-state dialogue policy.
 
-The architecture follows the project rules defined in `AGENTS.md`: modules are separated by responsibility, and no API, NLP, integration, or dataset logic is mixed across layers.
+The architecture follows the Cursor rules in `.cursor/rules/`: modules are separated by responsibility, and no API, NLP, integration, dataset, or response-generation logic is mixed across layers.
 
 ## Current Scope
 
@@ -22,37 +21,50 @@ Implemented:
 - Rule-based paraphrasing.
 - BIO annotation.
 - Train/validation/test splitting.
-- Dataset validation.
-- Output writing.
+- Dataset validation and output writing.
+- HuggingFace-based NLU training for BERT and RoBERTa.
+- Intent classification evaluation.
+- BIO NER evaluation.
+- Runtime `NLUPipeline` prediction interface.
+- FastAPI layered API (`controllers` / `backend/services` / `repositories`) with `POST /v1/dialogue/message`.
+- Dialogue manager finite-state workflow (`services/dialogue_manager`) emitting templated replies and slot-tracking for future query execution.
 
 Not implemented yet:
 
-- Backend API layer.
 - Frontend layer.
-- NLU model training.
-- Dialogue manager.
 - Query builder.
 - Response generation.
 - MITRE integration.
+- Deployment.
 
 ## Project Structure
 
 ```text
 .
-├── AGENTS.md
+├── .cursor/
+│   └── rules/
 ├── README.md
 ├── INFORME_PROYECTO.md
+├── config/
 ├── context/
 ├── data/
 │   ├── knowledge_base/
 │   └── dataset/
 ├── integrations/
 │   └── nvd/
-└── scripts/
+├── models/
+│   └── nlu/
+├── backend/
+├── scripts/
+├── services/
+│   ├── nlu/
+│   └── dialogue_manager/
+└── tests/
 ```
 
 ## Important Directories
 
+- [config/](config/README.md): project configuration files.
 - [integrations/](integrations/README.md): external data-source integrations.
 - [integrations/nvd/](integrations/nvd/README.md): NVD CVE API client.
 - [data/](data/README.md): project data layer.
@@ -60,96 +72,80 @@ Not implemented yet:
 - [data/dataset/](data/dataset/README.md): NLU dataset generation.
 - [data/dataset/pipeline/](data/dataset/pipeline/README.md): dataset builder, splitter, validator, and writer.
 - [data/dataset/output/](data/dataset/output/README.md): generated dataset artifacts.
+- [services/](services/README.md): core service-layer modules.
+- [services/nlu/](services/nlu/README.md): Phase 2 NLU training and prediction.
+- [services/dialogue_manager/](services/dialogue_manager/README.md): Phase 3 dialogue FSM.
+- [backend/](backend/README.md): Phase 3 FastAPI orchestration (controllers, repos, adapters).
+- [models/](models/README.md): local trained model artifacts.
+- [models/nlu/](models/nlu/README.md): NLU model output directory.
 - [scripts/](scripts/README.md): executable entry points.
+- [tests/](tests/README.md): automated tests.
 - [context/](context/README.md): project documentation/context files.
-
-Each main directory contains its own README with more specific details.
 
 ## Quick Start
 
-From the project root:
+Install dependencies:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+Generate the Phase 1 dataset:
 
 ```bash
 python3 scripts/build_dataset.py
 ```
 
-This generates:
+For a larger NLU training dataset:
+
+```bash
+python3 scripts/build_dataset.py --samples 1000
+```
+
+Train one Phase 2 model family:
+
+```bash
+python3 scripts/train_nlu.py --model-family bert
+python3 scripts/train_nlu.py --model-family roberta
+```
+
+Run prediction after training:
+
+```bash
+python3 scripts/predict_nlu.py --model-family bert --text "What is CVE-2021-44228?"
+```
+
+Run the Phase 3 dialogue API locally (Torch models lazy-load when the repository first invokes `predict`):
+
+```bash
+NLU_MODEL_FAMILY=bert uvicorn backend.api.main:app --reload
+```
+
+Then probe `GET /health` or call `POST /v1/dialogue/message` (`session_id` optional; one is minted automatically).
+
+## Generated Outputs
+
+Phase 1 writes:
 
 ```text
 data/dataset/output/intents.json
 data/dataset/output/ner.conll
 ```
 
-Default output:
+Phase 2 writes local model artifacts and metrics:
 
-- 120 generated samples.
-- 84 train samples.
-- 18 validation samples.
-- 18 test samples.
-
-## Useful Commands
-
-Generate a dataset with a specific size:
-
-```bash
-python3 scripts/build_dataset.py --samples 100
+```text
+models/nlu/bert/
+models/nlu/roberta/
+models/nlu/evaluation_summary.json
 ```
 
-Write output to another directory:
-
-```bash
-python3 scripts/build_dataset.py --output-dir /tmp/tfg-dataset
-```
-
-Refresh CVEs from NVD:
-
-```bash
-python3 scripts/build_dataset.py --refresh-nvd --nvd-limit 100
-```
-
-Filter NVD results by keyword:
-
-```bash
-python3 scripts/build_dataset.py --refresh-nvd --nvd-keyword openssl
-```
-
-Use an NVD API key:
-
-```bash
-export NVD_API_KEY="your-api-key"
-python3 scripts/build_dataset.py --refresh-nvd --nvd-limit 100
-```
-
-Run a syntax check:
-
-```bash
-PYTHONPYCACHEPREFIX=/tmp/tfg-pycache python3 -m compileall integrations data scripts
-```
-
-## Generated Outputs
-
-### `intents.json`
-
-JSON dataset for intent classification. It contains generated user queries grouped into:
-
-- `train`
-- `validation`
-- `test`
-
-Each sample includes text, intent, and character-level entity spans.
-
-### `ner.conll`
-
-CoNLL-style NER dataset using BIO tags:
-
-- `B-ENTITY`
-- `I-ENTITY`
-- `O`
-
-This file is intended for future NER model training/evaluation.
+Trained models are ignored by git because they are generated local artifacts.
 
 ## Data Flow
 
+Phase 1:
+
 ```text
 scripts/build_dataset.py
     -> data/knowledge_base
@@ -157,29 +153,38 @@ scripts/build_dataset.py
     -> data/dataset/output
 ```
 
-With live NVD refresh:
+Phase 2:
 
 ```text
-scripts/build_dataset.py
-    -> integrations/nvd
-    -> data/knowledge_base
-    -> data/dataset/pipeline
-    -> data/dataset/output
+data/dataset/output
+    -> services/nlu
+    -> models/nlu
 ```
 
-## Documentation
+Phase 3 (HTTP):
 
-- [INFORME_PROYECTO.md](INFORME_PROYECTO.md): detailed Spanish report explaining folders, files, local testing, execution flow, and Mermaid diagrams.
-- [context/DATASET_PIPELINE_FLOW.md](context/DATASET_PIPELINE_FLOW.md): beginner-friendly Spanish explanation of the dataset generation flow.
-- [integrations/README.md](integrations/README.md): integration layer overview.
-- [integrations/nvd/README.md](integrations/nvd/README.md): NVD client details.
-- [data/README.md](data/README.md): data layer overview.
-- [data/knowledge_base/README.md](data/knowledge_base/README.md): normalized CVE knowledge base.
-- [data/dataset/README.md](data/dataset/README.md): dataset generation module.
-- [data/dataset/pipeline/README.md](data/dataset/pipeline/README.md): dataset pipeline components.
-- [data/dataset/output/README.md](data/dataset/output/README.md): generated outputs.
-- [scripts/README.md](scripts/README.md): executable scripts.
-- [context/README.md](context/README.md): context directory notes.
+```text
+client HTTP
+    -> backend/controllers (FastAPI)
+        -> backend/services (dialogue application service)
+        -> backend/repositories (+ services/nlu NLUPipeline, services/dialogue_manager DialogueEngine)
+```
+
+Future full-system flow:
+
+```text
+User -> API -> NLU -> Dialogue Manager -> Query Builder -> External APIs -> Response Generator -> API -> User
+```
+
+## Useful Checks
+
+```bash
+python3 scripts/build_dataset.py
+python3 -m compileall integrations data services backend scripts
+pytest
+```
+
+Training BERT and RoBERTa requires the dependencies in `requirements.txt` and internet access the first time HuggingFace models are downloaded.
 
 ## Architecture Boundary
 
@@ -188,9 +193,13 @@ The project must remain modular:
 - External API access belongs in `integrations/`.
 - Normalized data belongs in `data/knowledge_base/`.
 - Dataset generation belongs in `data/dataset/`.
+- Core NLU logic belongs in `services/nlu/`.
+- Dialogue finite-state orchestration belongs in `services/dialogue_manager/`.
 - Executable orchestration belongs in `scripts/`.
+- Generated model artifacts belong in `models/`.
+- HTTP adapters (FastAPI routers) live in [`backend/`](backend/README.md); they must orchestrate domain packages without importing Torch inside controllers.
 
-Future backend, frontend, NLU, dialogue manager, query builder, and response-generation modules should follow the structure defined in `AGENTS.md`.
+Frontend, query builder, and response generation modules should continue following `.cursor/rules/architecture.mdc` once they ship.
 
 ## Maintenance Conventions
 
@@ -198,5 +207,4 @@ Future backend, frontend, NLU, dialogue manager, query builder, and response-gen
 - Parent README files should link to child README files.
 - When code is created, modified, or removed, update the README in that folder if behavior, usage, purpose, or file lists change.
 - Update parent README files when a change affects parent-level understanding.
-- Code should include concise comments for non-obvious blocks, such as regex, retries, validation, transformations, pagination, BIO tagging, and architectural boundaries.
-- Comments should clarify intent without restating every trivial assignment.
+- Code should include concise comments for non-obvious blocks such as regex, retries, validation, transformations, pagination, BIO tagging, token alignment, and architecture boundaries.

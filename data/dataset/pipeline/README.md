@@ -53,7 +53,7 @@ The target ratio is 70/15/15. The splitter allocates samples by intent so the re
 
 It validates:
 
-- Total sample count is between 100 and 150.
+- Total sample count is between 100 and 1000.
 - All intents are represented.
 - No unknown intents are present.
 - Splits are exactly `train`, `validation`, and `test`.

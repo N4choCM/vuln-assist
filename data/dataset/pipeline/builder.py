@@ -12,6 +12,7 @@ from data.dataset.entity_sampler import EntitySampler
 from data.dataset.labels import INTENTS
 from data.dataset.models import DatasetSample
 from data.dataset.paraphraser import RuleBasedParaphraser
+from data.dataset.settings import DEFAULT_SAMPLE_COUNT, MAX_SAMPLE_COUNT, MIN_SAMPLE_COUNT
 from data.dataset.templates import TEMPLATES, QueryTemplate
 from data.knowledge_base.models import NormalizedCVE
 
@@ -22,11 +23,13 @@ class DatasetBuilder:
     def __init__(
         self,
         records: Iterable[NormalizedCVE],
-        sample_count: int = 120,
+        sample_count: int = DEFAULT_SAMPLE_COUNT,
         seed: int = 42,
     ) -> None:
-        if sample_count < 100 or sample_count > 150:
-            raise ValueError("sample_count must be between 100 and 150")
+        if sample_count < MIN_SAMPLE_COUNT or sample_count > MAX_SAMPLE_COUNT:
+            raise ValueError(
+                f"sample_count must be between {MIN_SAMPLE_COUNT} and {MAX_SAMPLE_COUNT}"
+            )
         self._records = list(records)
         self._sample_count = sample_count
         # One seeded RNG is shared across sampling and paraphrasing for reproducibility.

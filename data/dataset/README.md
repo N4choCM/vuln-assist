@@ -32,12 +32,14 @@ It must not:
 
 - `labels.py`: shared intent names, entity types, severity labels, and metric names.
 - `models.py`: dataset-domain dataclasses such as `DatasetSample`, `EntitySpan`, and `TokenAnnotation`.
+- `settings.py`: shared dataset generation limits and default sample count.
 - `templates.py`: parameterized query templates grouped by intent.
 - `entity_sampler.py`: samples real CVE IDs, products, versions, severities, and metrics.
 - `paraphraser.py`: applies controlled rule-based paraphrases.
 - `bio_annotator.py`: tokenizes generated text and assigns BIO tags.
-- `AGENTS.md`: local specification for dataset generation rules.
 - `__init__.py`: package marker.
+
+Local generation rules for this module live in the project Cursor rule `.cursor/rules/dataset.mdc`.
 
 ## Subdirectories
 
@@ -96,6 +98,12 @@ To regenerate them, run from the project root:
 
 ```bash
 python3 scripts/build_dataset.py
+```
+
+The default generation size is 120 samples. The `--samples` option accepts 100 to 1000 samples when larger training runs are needed:
+
+```bash
+python3 scripts/build_dataset.py --samples 1000
 ```
 
 ## Notes
