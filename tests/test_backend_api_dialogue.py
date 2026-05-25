@@ -45,12 +45,36 @@ class _StubNLUPredictor:
         return self._predictor(text)
 
 
+class _StubExternalDataRepository:
+    """Avoid live NVD calls during HTTP smoke tests."""
+
+    def fetch(self, intent: str, slots: dict[str, str], query: object, limit: int) -> dict[str, object]:
+        return {
+            "intent": intent,
+            "source": "nvd_live",
+            "cves": [
+                {
+                    "cve_id": slots.get("CVE_ID", "CVE-2025-4242"),
+                    "description": "Stub vulnerability record.",
+                    "cvss_score": 9.8,
+                    "severity": "CRITICAL",
+                    "products": ["Example Product"],
+                    "versions": ["1.0"],
+                }
+            ],
+            "mitre_techniques": [],
+            "errors": [],
+            "raw_count": 1,
+        }
+
+
 def test_dialogue_route_returns_bundle() -> None:
     predictor = _StubNLUPredictor(_prediction_factory())
     service = DialogueApplicationService(
         nlu_repository=predictor,
         session_repository=SessionRepository(),
         dialogue_engine=DialogueEngine(),
+        external_data_repository=_StubExternalDataRepository(),
     )
     application = create_app(dialogue_application_service=service)
 
@@ -64,6 +88,8 @@ def test_dialogue_route_returns_bundle() -> None:
     body = response.json()
     assert body["session_id"]
     assert body["dialogue"]["ready_for_external_query"] is True
+    assert body["retrieval"] is not None
+    assert body["retrieval"]["cves"][0]["cve_id"] == "CVE-2025-4242"
 
 
 def test_session_ids_are_stable_across_turns() -> None:

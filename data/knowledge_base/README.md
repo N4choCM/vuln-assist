@@ -43,6 +43,7 @@ Each normalized CVE has this shape:
 - `repository.py`: loads and saves normalized CVE records from/to JSON files.
 - `seed_cves.json`: controlled fallback knowledge base with real CVE-derived records.
 - `cves.json`: active normalized knowledge base used by the dataset pipeline.
+- `mitre_attack_index.json`: local CWE → MITRE ATT&CK technique index for Phase 4 enrichment.
 - `__init__.py`: exports the public package interface.
 
 ## `seed_cves.json` vs `cves.json`

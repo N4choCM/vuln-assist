@@ -19,3 +19,4 @@ class DialogueMessageResponse(BaseModel):
     reply: str
     dialogue: dict[str, object]
     nlu: dict[str, object]
+    retrieval: dict[str, object] | None = None

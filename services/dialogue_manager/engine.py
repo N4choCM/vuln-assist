@@ -84,15 +84,12 @@ class DialogueEngine:
             )
 
         return DialogueOutcome(
-            reply=(
-                "Gathered everything needed for lookup. CVE data retrieval will activate "
-                "once the Phase 4 query builder is wired in."
-            ),
+            reply="Retrieving vulnerability data...",
             state=STATE_READY,
             slots=dict(session.slots),
             intent=intent,
             ready_for_external_query=True,
-            blocked_reason="integrations_pending",
+            blocked_reason=None,
         )
 
     def _requirements_for(self, intent: str) -> tuple[str, ...]:

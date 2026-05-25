@@ -7,8 +7,9 @@ In the project architecture, integrations are responsible only for communication
 ## Current Integrations
 
 - [nvd/](nvd/README.md): client for the National Vulnerability Database CVE API.
+- [mitre/](mitre/README.md): local MITRE ATT&CK CWE → technique index lookup.
 
-Future integrations, such as MITRE, should be added as independent subpackages:
+Future integrations should be added as independent subpackages:
 
 ```text
 integrations/
@@ -45,6 +46,17 @@ scripts/build_dataset.py
     -> data/knowledge_base/NVDRecordNormalizer
     -> normalized knowledge base
     -> data/dataset pipeline
+```
+
+For Phase 4 runtime dialogue retrieval:
+
+```text
+backend/services/dialogue_app_service.py
+    -> services/query_builder/build_nvd_query
+    -> backend/repositories/external_data_repository.py
+    -> integrations/nvd/NVDClient
+    -> data/knowledge_base/NVDRecordNormalizer
+    -> integrations/mitre/MITREAttackCache (CVE_LOOKUP enrichment)
 ```
 
 The integration layer stops at returning raw CVE records. The knowledge-base layer owns normalization, and the dataset layer owns sample generation.
