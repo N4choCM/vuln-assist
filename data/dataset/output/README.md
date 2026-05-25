@@ -81,7 +81,7 @@ By default, the builder generates 120 samples:
 - Validation: 18 samples.
 - Test: 18 samples.
 
-The split ratio is 70/15/15 and is validated before files are written.
+The `--samples` option accepts 100 to 1000 samples. The split ratio is 70/15/15 and is validated before files are written.
 
 ## Regeneration Notes
 
