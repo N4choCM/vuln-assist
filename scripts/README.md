@@ -7,77 +7,76 @@ Scripts should stay thin: they may parse command-line arguments and orchestrate 
 ## Files
 
 - `build_dataset.py`: runs the complete Phase 1 dataset generation pipeline.
+- `train_nlu.py`: trains Phase 2 intent and NER models.
+- `predict_nlu.py`: runs prediction with a trained Phase 2 NLU model.
 
 ## `build_dataset.py`
 
-This script builds the NLU dataset used for future intent classification and NER.
-
-It orchestrates:
-
-```text
-Knowledge base loading
-    -> Dataset generation
-    -> Train/validation/test splitting
-    -> Validation
-    -> Output writing
-```
-
-## Basic Usage
-
-From the project root:
+This script builds the NLU dataset used for intent classification and NER.
 
 ```bash
 python3 scripts/build_dataset.py
 ```
 
-This generates:
+It writes:
 
 ```text
 data/dataset/output/intents.json
 data/dataset/output/ner.conll
 ```
 
-## Useful Options
-
-Set the number of generated samples:
+Useful options:
 
 ```bash
 python3 scripts/build_dataset.py --samples 120
-```
-
-Use a different deterministic seed:
-
-```bash
+python3 scripts/build_dataset.py --samples 1000
 python3 scripts/build_dataset.py --seed 7
-```
-
-Write outputs to another directory:
-
-```bash
 python3 scripts/build_dataset.py --output-dir /tmp/tfg-dataset
-```
-
-Refresh the knowledge base from NVD:
-
-```bash
 python3 scripts/build_dataset.py --refresh-nvd --nvd-limit 100
-```
-
-Filter NVD results by keyword:
-
-```bash
 python3 scripts/build_dataset.py --refresh-nvd --nvd-keyword apache
 ```
 
-## Expected Output
+## `train_nlu.py`
 
-With the default configuration, the script generates 120 samples:
+This script trains HuggingFace BERT and RoBERTa models for:
 
-- 84 train samples.
-- 18 validation samples.
-- 18 test samples.
+- Intent classification.
+- BIO NER.
 
-The script validates the dataset before writing output files.
+Train all configured model families:
+
+```bash
+python3 scripts/train_nlu.py
+```
+
+Train one model family:
+
+```bash
+python3 scripts/train_nlu.py --model-family bert
+python3 scripts/train_nlu.py --model-family roberta
+```
+
+Outputs are written to:
+
+```text
+models/nlu/
+```
+
+## `predict_nlu.py`
+
+This script loads a trained NLU model family and prints structured JSON.
+
+```bash
+python3 scripts/predict_nlu.py --model-family bert --text "What is CVE-2021-44228?"
+```
+
+## Serving the Phase 3 Dialogue API
+
+The FastAPI orchestration stack lives outside this folder (see [`../backend/README.md`](../backend/README.md)). Typical local launch:
+
+```bash
+NLU_MODEL_FAMILY=bert uvicorn backend.api.main:app --reload
+```
 
 ## Boundary
 
@@ -86,5 +85,6 @@ Scripts in this directory should delegate to modules under:
 - `integrations/`
 - `data/knowledge_base/`
 - `data/dataset/`
+- `services/nlu/`
 
 They should not become monolithic pipelines.

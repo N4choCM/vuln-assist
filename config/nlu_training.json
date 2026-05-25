@@ -1,0 +1,12 @@
+{
+  "models": {
+    "bert": "bert-base-uncased",
+    "roberta": "roberta-base"
+  },
+  "learning_rate": 0.00002,
+  "batch_size": 16,
+  "max_length": 96,
+  "early_stopping_patience": 2,
+  "seed": 42,
+  "num_train_epochs": 3
+}

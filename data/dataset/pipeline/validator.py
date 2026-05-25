@@ -8,6 +8,7 @@ from dataclasses import dataclass
 
 from data.dataset.labels import ENTITY_TYPES, INTENTS
 from data.dataset.models import DatasetSample, TokenAnnotation
+from data.dataset.settings import MAX_SAMPLE_COUNT, MIN_SAMPLE_COUNT
 
 
 @dataclass(frozen=True)
@@ -44,8 +45,11 @@ class DatasetValidator:
             raise ValueError(f"Dataset validation failed:\n{joined_errors}")
 
     def _validate_size(self, samples: list[DatasetSample], errors: list[str]) -> None:
-        if not 100 <= len(samples) <= 150:
-            errors.append(f"Dataset size must be 100-150 samples, got {len(samples)}")
+        if not MIN_SAMPLE_COUNT <= len(samples) <= MAX_SAMPLE_COUNT:
+            errors.append(
+                "Dataset size must be "
+                f"{MIN_SAMPLE_COUNT}-{MAX_SAMPLE_COUNT} samples, got {len(samples)}"
+            )
 
     def _validate_intents(
         self,
