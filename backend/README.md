@@ -1,6 +1,7 @@
 # Backend (`backend/`)
 
-Phase 3–4 exposes the conversational stack through FastAPI **without embedding NLP inside routers**.
+Phase 3–4 exposes the conversational stack through FastAPI **without embedding NLP inside routers**.
+Phase 5 adds grounded LLM replies via `ResponseGeneratorRepository`.
 This package follows a classic layering model:
 
 ```
@@ -22,13 +23,14 @@ backend/
 │   └── dialogue_app_service.py   # Use-case façade orchestrating repos + NLU + FSM
 ├── repositories/
 │   ├── session_repository.py     # Thread-safe in-memory sessions (swap later)
-│   ├── nlu_repository.py         # Wraps Phase 2 NLUPredictor
-│   └── external_data_repository.py  # Phase 4 NVD + MITRE retrieval adapter
+│   ├── nlu_repository.py         # Wraps Phase 2 NLUPredictor
+│   ├── external_data_repository.py  # Phase 4 NVD + MITRE retrieval adapter
+│   └── response_generator_repository.py  # Phase 5 grounded reply generation
 └── schemas/
     └── dialogue.py               # Pydantic payloads returned to callers
 ```
 
-Naming reminder: **`backend/services/` hosts HTTP orchestration** while [`../services/`](../services/README.md) retains **domain modules** (`nlu`, `dialogue_manager`, `query_builder`).
+Naming reminder: **`backend/services/` hosts HTTP orchestration** while [`../services/`](../services/README.md) retains **domain modules** (`nlu`, `dialogue_manager`, `query_builder`, `response_generator`).
 
 ## Authentication
 

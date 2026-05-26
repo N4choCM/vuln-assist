@@ -8,13 +8,15 @@ In the project architecture, integrations are responsible only for communication
 
 - [nvd/](nvd/README.md): client for the National Vulnerability Database CVE API.
 - [mitre/](mitre/README.md): local MITRE ATT&CK CWE → technique index lookup.
+- [llm/](llm/README.md): Ollama HTTP client for Phase 5 response generation.
 
 Future integrations should be added as independent subpackages:
 
 ```text
 integrations/
 ├── nvd/
-└── mitre/
+├── mitre/
+└── llm/
 ```
 
 ## Responsibilities

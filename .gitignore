@@ -1,1 +1,9 @@
 *.pyc
+__pycache__/
+.pytest_cache/
+.venv/
+
+# Trained model artifacts are local outputs; keep only documentation tracked.
+models/nlu/*
+!models/nlu/README.md
+.cursor/

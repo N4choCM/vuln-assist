@@ -1,14 +1,23 @@
 # Cybersecurity Vulnerability Conversational System
 
-This project implements a hybrid NLP-based conversational system for cybersecurity vulnerability analysis.
+Hybrid NLP-based conversational system for cybersecurity vulnerability analysis (VulnAssist).
 
 The current repository covers:
 
 - Phase 1: Data & Knowledge Layer.
 - Phase 2: NLU Pipeline with BERT and RoBERTa intent classification plus BIO NER.
 - Phase 3: Backend core (FastAPI orchestration via controllers → application services → repositories) and deterministic `DialogueEngine` finite-state dialogue policy.
+- Phase 4: Query Builder, live NVD retrieval, and MITRE ATT&CK local index enrichment.
+- Phase 5: Grounded response generation via Ollama (RAG-lite from structured `retrieval` context).
 
 The architecture follows the Cursor rules in `.cursor/rules/`: modules are separated by responsibility, and no API, NLP, integration, dataset, or response-generation logic is mixed across layers.
+
+## Testing Guide
+
+Step-by-step instructions for Phases 1–4 (automated tests, manual checks, and E2E API):
+
+- **[GUIA_PRUEBAS.md](GUIA_PRUEBAS.md)** — guía de pruebas por fase (español).
+- **[MEMORIA_IDEAS_POR_FASE.md](MEMORIA_IDEAS_POR_FASE.md)** — ideas de contenido para la memoria del TFG por fase (español).
 
 ## Current Scope
 
@@ -27,17 +36,20 @@ Implemented:
 - BIO NER evaluation.
 - Runtime `NLUPipeline` prediction interface.
 - FastAPI layered API (`controllers` / `backend/services` / `repositories`) with `POST /v1/dialogue/message`.
-- Dialogue manager finite-state workflow (`services/dialogue_manager`) emitting templated replies and slot-tracking for future query execution.
+- Dialogue manager finite-state workflow (`services/dialogue_manager`) emitting templated replies and slot-tracking for query execution.
+- Query Builder intent/slot → NVD query mapping (`services/query_builder`).
+- Live NVD retrieval via external data repository.
+- MITRE ATT&CK local index lookup and enrichment (`integrations/mitre`).
+- Grounded LLM response generation (`services/response_generator`) with Ollama and deterministic fallback.
 
 Not implemented yet:
 
 - Frontend layer.
-- Query builder.
-- Response generation.
-- MITRE integration.
-- Deployment.
+- Full deployment — Phase 8.
 
-## Project Structure
+See [GUIA_PRUEBAS.md](GUIA_PRUEBAS.md) for how to validate each implemented phase.
+
+## Project Structure (summary)
 
 ```text
 .
@@ -75,6 +87,9 @@ Not implemented yet:
 - [services/](services/README.md): core service-layer modules.
 - [services/nlu/](services/nlu/README.md): Phase 2 NLU training and prediction.
 - [services/dialogue_manager/](services/dialogue_manager/README.md): Phase 3 dialogue FSM.
+- [services/query_builder/](services/query_builder/README.md): Phase 4 query mapping.
+- [services/response_generator/](services/response_generator/README.md): Phase 5 LLM replies.
+- [integrations/llm/](integrations/llm/README.md): Ollama HTTP client.
 - [backend/](backend/README.md): Phase 3 FastAPI orchestration (controllers, repos, adapters).
 - [models/](models/README.md): local trained model artifacts.
 - [models/nlu/](models/nlu/README.md): NLU model output directory.
@@ -170,6 +185,10 @@ client HTTP
         -> backend/repositories (+ services/nlu NLUPipeline, services/dialogue_manager DialogueEngine)
 ```
 
+Phase 4 extends the repository layer with `services/query_builder` and live calls to `integrations/nvd` and `integrations/mitre`.
+
+Phase 5 adds `services/response_generator` and optional Ollama calls through `integrations/llm`.
+
 Future full-system flow:
 
 ```text
@@ -185,6 +204,13 @@ pytest
 ```
 
 Training BERT and RoBERTa requires the dependencies in `requirements.txt` and internet access the first time HuggingFace models are downloaded.
+
+Additional documentation:
+
+- [GUIA_PRUEBAS.md](GUIA_PRUEBAS.md): how to test Phases 1–4 (Spanish).
+- [MEMORIA_IDEAS_POR_FASE.md](MEMORIA_IDEAS_POR_FASE.md): thesis memory content ideas per phase (Spanish).
+- [INFORME_PROYECTO.md](INFORME_PROYECTO.md): detailed Spanish report explaining folders, files, local testing, execution flow, and Mermaid diagrams.
+- [context/DATASET_PIPELINE_FLOW.md](context/DATASET_PIPELINE_FLOW.md): beginner-friendly Spanish explanation of the dataset generation flow.
 
 ## Architecture Boundary
 
