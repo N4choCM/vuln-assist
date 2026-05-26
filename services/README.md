@@ -8,7 +8,8 @@ Services must remain independent from the API, frontend, and external integratio
 
 - [nlu/](nlu/README.md): Phase 2 Natural Language Understanding module.
 - [dialogue_manager/](dialogue_manager/README.md): Phase 3 conversational finite-state policy (`DialogueEngine`).
-- [query_builder/](query_builder/README.md): Phase 4 intent/slot → external API query mapping.
+- [query_builder/](query_builder/README.md): Phase 4 intent/slot → external API query mapping.
+- [response_generator/](response_generator/README.md): Phase 5 grounded LLM reply generation.
 
 
 ## Boundary
@@ -18,7 +19,7 @@ This layer may contain:
 - NLU logic.
 - Dialogue manager FSM/policy logic (`services/dialogue_manager`).
 - Query-builder logic (`services/query_builder`).
-- Future response-generation logic.
+- Response-generation logic (`services/response_generator`).
 
 This layer must not:
 

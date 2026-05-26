@@ -6,10 +6,12 @@ import os
 
 from backend.repositories.external_data_repository import ExternalDataRepository
 from backend.repositories.nlu_repository import NLURepository
+from backend.repositories.response_generator_repository import ResponseGeneratorRepository
 from backend.repositories.session_repository import SessionRepository
 from backend.services.dialogue_app_service import DialogueApplicationService
 from services.dialogue_manager.engine import DialogueEngine
 from services.nlu.pipeline import NLUPipeline
+from services.response_generator.generator import ResponseGenerator
 
 
 def build_production_dialogue_application_service() -> DialogueApplicationService:
@@ -23,4 +25,5 @@ def build_production_dialogue_application_service() -> DialogueApplicationServic
         session_repository=SessionRepository(),
         dialogue_engine=DialogueEngine(),
         external_data_repository=ExternalDataRepository(),
+        response_generator_repository=ResponseGeneratorRepository(ResponseGenerator()),
     )
