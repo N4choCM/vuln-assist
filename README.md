@@ -9,12 +9,13 @@ The current repository covers:
 - Phase 3: Backend core (FastAPI orchestration via controllers → application services → repositories) and deterministic `DialogueEngine` finite-state dialogue policy.
 - Phase 4: Query Builder, live NVD retrieval, and MITRE ATT&CK local index enrichment.
 - Phase 5: Grounded response generation via Ollama (RAG-lite from structured `retrieval` context).
+- Phase 6: React chat UI consuming `POST /v1/dialogue/message`.
 
 The architecture follows the Cursor rules in `.cursor/rules/`: modules are separated by responsibility, and no API, NLP, integration, dataset, or response-generation logic is mixed across layers.
 
 ## Testing Guide
 
-Step-by-step instructions for Phases 1–4 (automated tests, manual checks, and E2E API):
+Step-by-step instructions for Phases 1–6 (automated tests, manual checks, and E2E API):
 
 - **[GUIA_PRUEBAS.md](GUIA_PRUEBAS.md)** — guía de pruebas por fase (español).
 - **[MEMORIA_IDEAS_POR_FASE.md](MEMORIA_IDEAS_POR_FASE.md)** — ideas de contenido para la memoria del TFG por fase (español).
@@ -41,10 +42,10 @@ Implemented:
 - Live NVD retrieval via external data repository.
 - MITRE ATT&CK local index lookup and enrichment (`integrations/mitre`).
 - Grounded LLM response generation (`services/response_generator`) with Ollama and deterministic fallback.
+- React chat frontend (`frontend/`) with multi-turn session handling and optional technical details panel.
 
 Not implemented yet:
 
-- Frontend layer.
 - Full deployment — Phase 8.
 
 See [GUIA_PRUEBAS.md](GUIA_PRUEBAS.md) for how to validate each implemented phase.
@@ -67,6 +68,7 @@ See [GUIA_PRUEBAS.md](GUIA_PRUEBAS.md) for how to validate each implemented phas
 ├── models/
 │   └── nlu/
 ├── backend/
+├── frontend/
 ├── scripts/
 ├── services/
 │   ├── nlu/
@@ -91,6 +93,7 @@ See [GUIA_PRUEBAS.md](GUIA_PRUEBAS.md) for how to validate each implemented phas
 - [services/response_generator/](services/response_generator/README.md): Phase 5 LLM replies.
 - [integrations/llm/](integrations/llm/README.md): Ollama HTTP client.
 - [backend/](backend/README.md): Phase 3 FastAPI orchestration (controllers, repos, adapters).
+- [frontend/](frontend/README.md): Phase 6 React chat UI (presentation only).
 - [models/](models/README.md): local trained model artifacts.
 - [models/nlu/](models/nlu/README.md): NLU model output directory.
 - [scripts/](scripts/README.md): executable entry points.
@@ -137,6 +140,14 @@ NLU_MODEL_FAMILY=bert uvicorn backend.api.main:app --reload
 ```
 
 Then probe `GET /health` or call `POST /v1/dialogue/message` (`session_id` optional; one is minted automatically).
+
+Run the Phase 6 frontend (requires Node.js 18+):
+
+```bash
+cd frontend && npm install && npm run dev
+```
+
+With the API on port 8000, open [http://localhost:5173](http://localhost:5173).
 
 ## Generated Outputs
 
@@ -189,7 +200,16 @@ Phase 4 extends the repository layer with `services/query_builder` and live call
 
 Phase 5 adds `services/response_generator` and optional Ollama calls through `integrations/llm`.
 
-Future full-system flow:
+Phase 6 (browser):
+
+```text
+User -> frontend/ (React)
+    -> backend/controllers POST /v1/dialogue/message
+        -> (full pipeline as above)
+    -> reply displayed in chat UI
+```
+
+Full-system flow:
 
 ```text
 User -> API -> NLU -> Dialogue Manager -> Query Builder -> External APIs -> Response Generator -> API -> User
@@ -207,7 +227,7 @@ Training BERT and RoBERTa requires the dependencies in `requirements.txt` and in
 
 Additional documentation:
 
-- [GUIA_PRUEBAS.md](GUIA_PRUEBAS.md): how to test Phases 1–4 (Spanish).
+- [GUIA_PRUEBAS.md](GUIA_PRUEBAS.md): how to test Phases 1–6 (Spanish).
 - [MEMORIA_IDEAS_POR_FASE.md](MEMORIA_IDEAS_POR_FASE.md): thesis memory content ideas per phase (Spanish).
 - [INFORME_PROYECTO.md](INFORME_PROYECTO.md): detailed Spanish report explaining folders, files, local testing, execution flow, and Mermaid diagrams.
 - [context/DATASET_PIPELINE_FLOW.md](context/DATASET_PIPELINE_FLOW.md): beginner-friendly Spanish explanation of the dataset generation flow.
@@ -225,7 +245,7 @@ The project must remain modular:
 - Generated model artifacts belong in `models/`.
 - HTTP adapters (FastAPI routers) live in [`backend/`](backend/README.md); they must orchestrate domain packages without importing Torch inside controllers.
 
-Frontend, query builder, and response generation modules should continue following `.cursor/rules/architecture.mdc` once they ship.
+Frontend must remain presentation-only per `.cursor/rules/architecture.mdc`; query builder and response generation live in `services/`.
 
 ## Maintenance Conventions
 
