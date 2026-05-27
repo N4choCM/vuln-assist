@@ -2,6 +2,7 @@
 
 Phase 3–4 exposes the conversational stack through FastAPI **without embedding NLP inside routers**.
 Phase 5 adds grounded LLM replies via `ResponseGeneratorRepository`.
+Phase 8 runs the same app inside Docker (`deploy/Dockerfile.api`) behind nginx.
 This package follows a classic layering model:
 
 ```
@@ -45,6 +46,19 @@ NLU_MODEL_FAMILY=bert uvicorn backend.api.main:app --reload
 ```
 
 `GET /health` reports whether checkpoints exist under `models/nlu/<family>/`; models still lazy-load inside `services.nlu.NLUPipeline`.
+
+## Run with Docker (Phase 8)
+
+From the repository root (see [deploy/README.md](../deploy/README.md)):
+
+```bash
+cp .env.example .env
+docker compose -f deploy/docker-compose.yml up --build
+```
+
+API is reachable internally at `http://backend:8000`; browsers use nginx at `http://localhost:8080/v1/...`.
+
+Production uvicorn: one worker (`--workers 1`) because sessions are in-memory.
 
 ## Useful checks
 

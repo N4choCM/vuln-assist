@@ -1,0 +1,70 @@
+# Full stack: frontend (nginx + React) + backend (FastAPI) + ollama (LLM, internal only).
+# Run from repo root:
+#   cp .env.example .env
+#   docker compose -f deploy/docker-compose.yml up --build
+
+name: vuln-assist
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    # No host ports — reachable only as http://ollama:11434 inside the network.
+
+  ollama-init:
+    image: ollama/ollama:latest
+    depends_on:
+      ollama:
+        condition: service_started
+    restart: "no"
+    volumes:
+      - ./scripts/pull-ollama-model.sh:/pull.sh:ro
+    entrypoint: ["/bin/sh", "/pull.sh"]
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2}
+
+  backend:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.api
+    env_file:
+      - ../.env
+    environment:
+      # Override localhost defaults from .env.example for in-compose DNS.
+      OLLAMA_BASE_URL: http://ollama:11434
+    volumes:
+      - ../models/nlu:/app/models/nlu:ro
+      - ../data/knowledge_base:/app/data/knowledge_base:ro
+    depends_on:
+      ollama-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 90s
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.web
+    ports:
+      - "${WEB_PORT:-8080}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    restart: unless-stopped
+
+volumes:
+  ollama_data:

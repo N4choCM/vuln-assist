@@ -1,3 +1,4 @@
+.env
 *.pyc
 __pycache__/
 .pytest_cache/
@@ -7,3 +8,7 @@ __pycache__/
 models/nlu/*
 !models/nlu/README.md
 .cursor/
+
+# Frontend build artifacts
+frontend/node_modules/
+frontend/dist/

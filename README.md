@@ -10,12 +10,13 @@ The current repository covers:
 - Phase 4: Query Builder, live NVD retrieval, and MITRE ATT&CK local index enrichment.
 - Phase 5: Grounded response generation via Ollama (RAG-lite from structured `retrieval` context).
 - Phase 6: React chat UI consuming `POST /v1/dialogue/message`.
+- Phase 8: VPS deployment via Docker Compose (nginx + API + Ollama, single public URL).
 
 The architecture follows the Cursor rules in `.cursor/rules/`: modules are separated by responsibility, and no API, NLP, integration, dataset, or response-generation logic is mixed across layers.
 
 ## Testing Guide
 
-Step-by-step instructions for Phases 1–6 (automated tests, manual checks, and E2E API):
+Step-by-step instructions for Phases 1–8 (automated tests, manual checks, and E2E API):
 
 - **[GUIA_PRUEBAS.md](GUIA_PRUEBAS.md)** — guía de pruebas por fase (español).
 - **[MEMORIA_IDEAS_POR_FASE.md](MEMORIA_IDEAS_POR_FASE.md)** — ideas de contenido para la memoria del TFG por fase (español).
@@ -43,10 +44,11 @@ Implemented:
 - MITRE ATT&CK local index lookup and enrichment (`integrations/mitre`).
 - Grounded LLM response generation (`services/response_generator`) with Ollama and deterministic fallback.
 - React chat frontend (`frontend/`) with multi-turn session handling and optional technical details panel.
+- Docker Compose deployment (`deploy/`) — nginx same-origin proxy, FastAPI, internal Ollama for public VPS demos.
 
 Not implemented yet:
 
-- Full deployment — Phase 8.
+- Extended system evaluation — Phase 7.
 
 See [GUIA_PRUEBAS.md](GUIA_PRUEBAS.md) for how to validate each implemented phase.
 
@@ -68,6 +70,7 @@ See [GUIA_PRUEBAS.md](GUIA_PRUEBAS.md) for how to validate each implemented phas
 ├── models/
 │   └── nlu/
 ├── backend/
+├── deploy/
 ├── frontend/
 ├── scripts/
 ├── services/
@@ -94,6 +97,7 @@ See [GUIA_PRUEBAS.md](GUIA_PRUEBAS.md) for how to validate each implemented phas
 - [integrations/llm/](integrations/llm/README.md): Ollama HTTP client.
 - [backend/](backend/README.md): Phase 3 FastAPI orchestration (controllers, repos, adapters).
 - [frontend/](frontend/README.md): Phase 6 React chat UI (presentation only).
+- [deploy/](deploy/README.md): Phase 8 Docker Compose VPS stack.
 - [models/](models/README.md): local trained model artifacts.
 - [models/nlu/](models/nlu/README.md): NLU model output directory.
 - [scripts/](scripts/README.md): executable entry points.
@@ -148,6 +152,15 @@ cd frontend && npm install && npm run dev
 ```
 
 With the API on port 8000, open [http://localhost:5173](http://localhost:5173).
+
+Run the Phase 8 full stack locally (requires trained NLU checkpoints and Docker):
+
+```bash
+cp .env.example .env
+docker compose -f deploy/docker-compose.yml up --build
+```
+
+Open [http://localhost:8080](http://localhost:8080). See [deploy/README.md](deploy/README.md) for VPS deployment.
 
 ## Generated Outputs
 
@@ -209,6 +222,14 @@ User -> frontend/ (React)
     -> reply displayed in chat UI
 ```
 
+Phase 8 (Docker VPS):
+
+```text
+User -> deploy/frontend (nginx + React)
+    -> /v1 -> backend (FastAPI) -> ... -> ollama (internal)
+    -> reply displayed in chat UI
+```
+
 Full-system flow:
 
 ```text
@@ -227,7 +248,8 @@ Training BERT and RoBERTa requires the dependencies in `requirements.txt` and in
 
 Additional documentation:
 
-- [GUIA_PRUEBAS.md](GUIA_PRUEBAS.md): how to test Phases 1–6 (Spanish).
+- [GUIA_PRUEBAS.md](GUIA_PRUEBAS.md): how to test Phases 1–8 (Spanish).
+- [deploy/README.md](deploy/README.md): Docker Compose VPS deployment (Phase 8).
 - [MEMORIA_IDEAS_POR_FASE.md](MEMORIA_IDEAS_POR_FASE.md): thesis memory content ideas per phase (Spanish).
 - [INFORME_PROYECTO.md](INFORME_PROYECTO.md): detailed Spanish report explaining folders, files, local testing, execution flow, and Mermaid diagrams.
 - [context/DATASET_PIPELINE_FLOW.md](context/DATASET_PIPELINE_FLOW.md): beginner-friendly Spanish explanation of the dataset generation flow.

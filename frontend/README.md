@@ -46,13 +46,17 @@ POST /v1/dialogue/message
 
 During development, Vite proxies `/v1` and `/health` to `localhost:8000` (see [vite.config.ts](vite.config.ts)), so no CORS configuration is required locally.
 
-For production or split origins, set:
+## Production deploy (Phase 8)
+
+The primary production path is **Docker on a VPS** — nginx serves the built UI and reverse-proxies `/v1` to the API (same origin, no `VITE_API_BASE_URL` needed). See [deploy/README.md](../deploy/README.md).
+
+For split-origin hosting (optional, not the default):
 
 ```bash
 VITE_API_BASE_URL=http://localhost:8000
 ```
 
-and configure CORS on the FastAPI app.
+Configure CORS on the FastAPI app if frontend and API run on different hosts.
 
 ## Project layout
 
@@ -84,4 +88,4 @@ All processing stays on the backend per [`.cursor/rules/architecture.mdc`](../.c
 
 ## Manual testing
 
-See [GUIA_PRUEBAS.md](../GUIA_PRUEBAS.md) — Fase 6 checklist.
+See [GUIA_PRUEBAS.md](../GUIA_PRUEBAS.md) — Fase 6 checklist (dev) and Fase 8 (Docker).

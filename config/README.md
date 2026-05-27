@@ -7,6 +7,11 @@ This directory contains project configuration files.
 - `nlu_training.json`: Phase 2 NLU training defaults for BERT and RoBERTa.
 - `response_generator.json`: Phase 5 Ollama generation defaults (temperature, model, timeout).
 
+Python dependencies:
+
+- [`requirements.txt`](../requirements.txt): full dev install (includes `pytest`).
+- [`requirements-prod.txt`](../requirements-prod.txt): runtime-only deps used by [`deploy/Dockerfile.api`](../deploy/Dockerfile.api).
+
 ## `nlu_training.json`
 
 The NLU config defines:
