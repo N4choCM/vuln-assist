@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import re
+
 from services.dialogue_manager.models import (
     STATE_CLARIFYING,
     STATE_GENERAL,
@@ -22,6 +24,15 @@ KNOWN_INTENTS: frozenset[str] = frozenset(
         "SEVERITY_FILTER",
         "GENERAL_QUERY",
     }
+)
+
+# Below this intent score the FSM treats the turn as chitchy / ambiguous.
+INTENT_CONFIDENCE_THRESHOLD = 0.55
+
+_GREETING_PATTERN = re.compile(
+    r"^(?:hi|hello|hey|hola|buenas|good\s+(?:morning|afternoon|evening)|"
+    r"howdy|greetings)(?:[!?.]|$|\s)",
+    re.IGNORECASE,
 )
 
 _REQUIRED_SLOTS_BY_INTENT: dict[str, tuple[str, ...]] = {
@@ -47,18 +58,30 @@ class DialogueEngine:
     def process_turn(self, session: DialogueSession, nlu: NLUResult) -> DialogueOutcome:
         """Apply one NLU result to ``session`` in place and return the assistant outcome."""
 
-        intent = nlu.intent if nlu.intent in KNOWN_INTENTS else "GENERAL_QUERY"
-        self._merge_entities(session, nlu)
+        intent = self._resolve_intent(nlu)
+        previous_intent = session.active_intent
 
+        if previous_intent is not None and intent != previous_intent:
+            session.slots.clear()
+
+        self._merge_entities(session, nlu)
         session.active_intent = intent
 
         # General questions never block on slots and never trigger external lookups.
         if intent == "GENERAL_QUERY":
+            if self._is_greeting(nlu.text):
+                session.slots.clear()
+            greeting = self._is_greeting(nlu.text)
             return DialogueOutcome(
                 reply=(
-                    "I can help investigate CVE identifiers, severity filters, CVSS "
-                    "details, products, or versions once you anchor the question with those "
-                    "entities."
+                    "Hello! I can help you look up CVE identifiers, CVSS scores, "
+                    "products, versions, and severity filters. What would you like to know?"
+                    if greeting
+                    else (
+                        "I can help investigate CVE identifiers, severity filters, CVSS "
+                        "details, products, or versions once you anchor the question with "
+                        "those entities."
+                    )
                 ),
                 state=STATE_GENERAL,
                 slots=dict(session.slots),
@@ -111,3 +134,20 @@ class DialogueEngine:
             merged[entity_type] = value
         session.slots.clear()
         session.slots.update(merged)
+
+    @staticmethod
+    def _is_greeting(text: str) -> bool:
+        normalized = text.strip()
+        if not normalized:
+            return False
+        return _GREETING_PATTERN.match(normalized) is not None
+
+    @staticmethod
+    def _resolve_intent(nlu: NLUResult) -> str:
+        if DialogueEngine._is_greeting(nlu.text):
+            return "GENERAL_QUERY"
+
+        intent = nlu.intent if nlu.intent in KNOWN_INTENTS else "GENERAL_QUERY"
+        if intent != "GENERAL_QUERY" and nlu.intent_confidence < INTENT_CONFIDENCE_THRESHOLD:
+            return "GENERAL_QUERY"
+        return intent

@@ -5,6 +5,8 @@ Core finite-state dialogue policy that consumes [`NLUResult`](../nlu/models.py) 
 ## Responsibilities
 
 - Merge BIO-extracted spans into conversational slot memory.
+- Reject low-confidence intents and greetings before slot filling (`INTENT_CONFIDENCE_THRESHOLD`, greeting regex in `engine.py`).
+- Clear stale slots when the user changes topic mid-session.
 - Decide when mandatory slots ([`.cursor/rules/domain.mdc`](../../.cursor/rules/domain.mdc)) are missing and ask focused clarifying questions.
 - Flag when downstream CVE retrieval can start (`ready_for_external_query`) once slots are complete; Phase 4 executes retrieval in the backend application service.
 

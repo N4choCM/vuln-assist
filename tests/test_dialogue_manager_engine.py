@@ -43,6 +43,46 @@ def test_general_query_never_requires_slots(engine: DialogueEngine) -> None:
     assert outcome.state == "general"
     assert outcome.ready_for_external_query is False
     assert outcome.blocked_reason is None
+    assert "Hello!" in outcome.reply
+
+
+def test_greeting_after_cve_lookup_clears_stale_slots(engine: DialogueEngine) -> None:
+    session = DialogueSession()
+    cve_turn = _result(
+        "What is CVE-2021-44228?",
+        "CVE_LOOKUP",
+        entities=[EntityPrediction("CVE_ID", "CVE-2021-44228", 0, 20, confidence=0.95)],
+    )
+    engine.process_turn(session, cve_turn)
+    assert session.slots.get("CVE_ID") == "CVE-2021-44228"
+
+    hello = NLUResult(
+        text="hello",
+        intent="PRODUCT_SEARCH",
+        intent_confidence=0.23,
+        entities=[],
+    )
+    outcome = engine.process_turn(session, hello)
+
+    assert outcome.intent == "GENERAL_QUERY"
+    assert outcome.state == "general"
+    assert outcome.slots == {}
+    assert "Hello!" in outcome.reply
+
+
+def test_low_confidence_intent_falls_back_to_general(engine: DialogueEngine) -> None:
+    session = DialogueSession()
+    prediction = NLUResult(
+        text="maybe something about apache",
+        intent="PRODUCT_SEARCH",
+        intent_confidence=0.3,
+        entities=[],
+    )
+
+    outcome = engine.process_turn(session, prediction)
+
+    assert outcome.intent == "GENERAL_QUERY"
+    assert outcome.state == "general"
 
 
 def test_unknown_intent_fallback_to_general(engine: DialogueEngine) -> None:

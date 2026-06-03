@@ -36,7 +36,7 @@ class DatasetBuilder:
         self._rng = random.Random(seed)
         self._sampler = EntitySampler(self._records, self._rng)
         self._paraphraser = RuleBasedParaphraser()
-        self._annotator = BIOAnnotator()
+        self._bio_annotator = BIOAnnotator()
 
     def build(self) -> list[DatasetSample]:
         """Generate unique, balanced samples."""
@@ -66,28 +66,28 @@ class DatasetBuilder:
         templates = TEMPLATES[intent]
         samples: list[DatasetSample] = []
         attempts = 0
-        # Cap retries so a low-variety template set fails loudly instead of looping forever.
+        # Max retries so a low-variety template set fails loudly instead of looping forever.
         max_attempts = target_count * 100
 
         while len(samples) < target_count and attempts < max_attempts:
             attempts += 1
             template = self._select_template(templates, attempts)
             # Paraphrase before rendering so placeholders remain easy to replace.
-            template_text = self._paraphraser.paraphrase(template.text, self._rng)
-            values = self._sampler.sample_values(template.placeholders)
-            text = self._clean_text(QueryTemplate(intent, template_text).render(values))
-            key = text.lower()
+            paraphrased_text = self._paraphraser.paraphrase(template.text, self._rng)
+            placeholder_values_dict = self._sampler.extract_placeholder_values(template.placeholders)
+            cleaned_text = self._clean_text(QueryTemplate(intent, paraphrased_text).render(placeholder_values_dict))
+            key = cleaned_text.lower()
             if key in seen_texts:
                 continue
 
             # Convert sampled placeholder values into spans and token-level BIO labels.
-            entity_values = self._sampler.entity_values(values)
-            annotation = self._annotator.annotate(text, entity_values)
+            entity_values = self._sampler.to_entity_values(placeholder_values_dict)
+            bio_annotation = self._bio_annotator.annotate(cleaned_text, entity_values)
             sample = DatasetSample(
-                text=text,
+                text=cleaned_text,
                 intent=intent,
-                entities=annotation.entities,
-                tokens=annotation.tokens,
+                entities=bio_annotation.entities,
+                tokens=bio_annotation.tokens,
             )
             if self._is_usable(sample, template.placeholders):
                 samples.append(sample)
