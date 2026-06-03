@@ -36,6 +36,8 @@ Each normalized CVE has this shape:
 }
 ```
 
+This flat schema is intentional: it mirrors the project’s NLU entities (`CVE_ID`, `PRODUCT`, `VERSION`, `SEVERITY`, `METRIC`) and keeps only the fields the dataset, dialogue, and response layers need. Raw NVD JSON is much larger and nested; normalizing here gives every downstream module one stable, domain-aligned record instead of parsing the API format repeatedly.
+
 ## Files
 
 - `models.py`: defines `NormalizedCVE`, the internal CVE representation used by the project.
@@ -49,6 +51,8 @@ Each normalized CVE has this shape:
 ## `seed_cves.json` vs `cves.json`
 
 `seed_cves.json` is the fallback source. It allows the project to work without internet access or a live NVD refresh.
+
+It is a **fixed, version-controlled snapshot** of ~20 well-known real CVEs (e.g. Log4Shell, Heartbleed), each written in the `NormalizedCVE` shape with descriptions, scores, products, and versions taken from public NVD/CVE data. The file is curated once and committed to the repo—it is not regenerated on every build. When `cves.json` is missing, `build_dataset.py` copies this seed file to bootstrap the active knowledge base.
 
 `cves.json` is the active knowledge base loaded by default.
 

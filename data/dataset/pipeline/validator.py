@@ -57,21 +57,21 @@ class DatasetValidator:
         errors: list[str],
         warnings: list[str],
     ) -> None:
-        counts = Counter(sample.intent for sample in samples)
+        counts_per_intent = Counter(sample.intent for sample in samples)
         # Every project intent must appear at least once in the full dataset.
-        missing = [intent for intent in INTENTS if counts[intent] == 0]
-        if missing:
-            errors.append(f"Missing intent coverage: {', '.join(missing)}")
+        missing_intents = [intent for intent in INTENTS if counts_per_intent[intent] == 0]
+        if missing_intents:
+            errors.append(f"Missing intent coverage: {', '.join(missing_intents)}")
 
-        unknown = sorted(set(counts) - set(INTENTS))
-        if unknown:
-            errors.append(f"Unknown intents found: {', '.join(unknown)}")
+        unknown_intents = sorted(set(counts_per_intent) - set(INTENTS))
+        if unknown_intents:
+            errors.append(f"Unknown intents found: {', '.join(unknown_intents)}")
 
-        if counts:
-            min_count = min(counts[intent] for intent in INTENTS)
-            max_count = max(counts[intent] for intent in INTENTS)
+        if counts_per_intent:
+            min_count = min(counts_per_intent[intent] for intent in INTENTS)
+            max_count = max(counts_per_intent[intent] for intent in INTENTS)
             if max_count - min_count > 1:
-                warnings.append(f"Intent distribution is not perfectly balanced: {dict(counts)}")
+                warnings.append(f"Intent distribution is not perfectly balanced: {dict(counts_per_intent)}")
 
     def _validate_splits(
         self,
@@ -95,18 +95,18 @@ class DatasetValidator:
                     )
                 seen[key] = split_name
 
-        total = sum(len(split_samples) for split_samples in splits.values())
-        if total == 0:
+        total_samples_count = sum(len(split_samples) for split_samples in splits.values())
+        if total_samples_count == 0:
             errors.append("Cannot validate split ratios for an empty dataset")
             return
 
         ratios = {
-            "train": len(splits["train"]) / total,
-            "validation": len(splits["validation"]) / total,
-            "test": len(splits["test"]) / total,
+            "train": len(splits["train"]) / total_samples_count,
+            "validation": len(splits["validation"]) / total_samples_count,
+            "test": len(splits["test"]) / total_samples_count,
         }
-        expected = {"train": 0.70, "validation": 0.15, "test": 0.15}
-        for split_name, expected_ratio in expected.items():
+        expected_splits = {"train": 0.70, "validation": 0.15, "test": 0.15}
+        for split_name, expected_ratio in expected_splits.items():
             # Allow small rounding differences for sample counts not divisible by 20.
             if abs(ratios[split_name] - expected_ratio) > 0.03:
                 errors.append(
@@ -123,7 +123,7 @@ class DatasetValidator:
             if re.search(r"\s{2,}", sample.text):
                 errors.append(f"Repeated whitespace in sample: {sample.text}")
             self._validate_entities(sample, errors)
-            self._validate_bio(sample.tokens, errors)
+            self._validate_bio_annotation(sample.tokens, errors)
 
     def _validate_entities(self, sample: DatasetSample, errors: list[str]) -> None:
         for entity in sample.entities:
@@ -141,7 +141,7 @@ class DatasetValidator:
             ):
                 errors.append(f"Entity missing BIO beginning tag in {sample.text}: {entity}")
 
-    def _validate_bio(self, tokens: list[TokenAnnotation], errors: list[str]) -> None:
+    def _validate_bio_annotation(self, tokens: list[TokenAnnotation], errors: list[str]) -> None:
         previous_entity_type = ""
         for token in tokens:
             if token.tag == "O":

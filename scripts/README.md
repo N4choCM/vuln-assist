@@ -15,7 +15,7 @@ Scripts should stay thin: they may parse command-line arguments and orchestrate 
 This script builds the NLU dataset used for intent classification and NER.
 
 ```bash
-python3 scripts/build_dataset.py
+python scripts/build_dataset.py
 ```
 
 It writes:
@@ -28,13 +28,16 @@ data/dataset/output/ner.conll
 Useful options:
 
 ```bash
-python3 scripts/build_dataset.py --samples 120
-python3 scripts/build_dataset.py --samples 1000
-python3 scripts/build_dataset.py --seed 7
-python3 scripts/build_dataset.py --output-dir /tmp/tfg-dataset
-python3 scripts/build_dataset.py --refresh-nvd --nvd-limit 100
-python3 scripts/build_dataset.py --refresh-nvd --nvd-keyword apache
+python scripts/build_dataset.py --samples 120
+python scripts/build_dataset.py --samples 1000
+python scripts/build_dataset.py --seed 7
+python scripts/build_dataset.py --output-dir /tmp/tfg-dataset
+python scripts/build_dataset.py --refresh-nvd --nvd-limit 100
+python scripts/build_dataset.py --refresh-nvd --nvd-keyword apache
+python scripts/build_dataset.py --samples 1000 --refresh-nvd --nvd-limit 500 --log-timing
 ```
+
+`--log-timing` prints per-phase wall times and NVD client settings (`api_key`, request interval, records fetched). Run the same command with and without `NVD_API_KEY` to benchmark refresh latency for the thesis.
 
 ## `train_nlu.py`
 
@@ -46,14 +49,14 @@ This script trains HuggingFace BERT and RoBERTa models for:
 Train all configured model families:
 
 ```bash
-python3 scripts/train_nlu.py
+python scripts/train_nlu.py
 ```
 
 Train one model family:
 
 ```bash
-python3 scripts/train_nlu.py --model-family bert
-python3 scripts/train_nlu.py --model-family roberta
+python scripts/train_nlu.py --model-family bert
+python scripts/train_nlu.py --model-family roberta
 ```
 
 Outputs are written to:
@@ -67,7 +70,7 @@ models/nlu/
 This script loads a trained NLU model family and prints structured JSON.
 
 ```bash
-python3 scripts/predict_nlu.py --model-family bert --text "What is CVE-2021-44228?"
+python scripts/predict_nlu.py --model-family bert --text "What is CVE-2021-44228?"
 ```
 
 ## Serving the Phase 3 Dialogue API

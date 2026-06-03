@@ -1221,5 +1221,5565 @@
     "versions": [
       "2.6.20.1"
     ]
+  },
+  {
+    "cve_id": "CVE-1999-0073",
+    "description": "Telnet allows a remote client to specify environment variables including LD_LIBRARY_PATH, allowing an attacker to bypass the normal system libraries and gain root access.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix",
+      "digital osf 1",
+      "digital unix"
+    ],
+    "versions": [
+      "5.0",
+      "5.0.1",
+      "5.1",
+      "5.1.1",
+      "5.2",
+      "5.3",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2",
+      "6.3",
+      "1.2",
+      "1.3",
+      "2.0",
+      "3.0",
+      "3.2",
+      "3.2g",
+      "4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0099",
+    "description": "Buffer overflow in syslog utility allows local or remote attackers to gain root privileges.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "bsdi bsd os",
+      "convexos",
+      "convex spp-ux",
+      "cray unicos",
+      "ibm aix",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.0",
+      "2.0.1",
+      "10.1",
+      "10.2",
+      "11.0",
+      "11.1",
+      "3",
+      "8.0",
+      "8.3",
+      "9.0",
+      "3.2",
+      "4.1",
+      "2.4",
+      "4.1.3",
+      "4.1.3u1",
+      "4.1.4",
+      "5.3",
+      "5.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0241",
+    "description": "Guessable magic cookies in X Windows allows remote attackers to execute commands, e.g. through xterm.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "xfree86 project x11r6",
+      "sgi irix",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.5",
+      "2.5.1",
+      "7.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0080",
+    "description": "Certain configurations of wu-ftp FTP server 2.4 use a _PATH_EXECPATH setting to a directory with dangerous commands, such as /bin, which allows remote authenticated users to gain root access via the \"site exec\" command.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "washington university wu-ftpd"
+    ],
+    "versions": [
+      "2.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0123",
+    "description": "Race condition in Linux mailx command allows local users to read user files.",
+    "cvss_score": 3.7,
+    "severity": "LOW",
+    "products": [
+      "slackware linux"
+    ],
+    "versions": [
+      "3.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0316",
+    "description": "Buffer overflow in Linux splitvt command gives root access to local users.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sam lantinga splitvt"
+    ],
+    "versions": [
+      "<= 1.6.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0325",
+    "description": "vhe_u_mnt program in HP-UX allows local users to create root files through symlinks.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "8",
+      "9"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0208",
+    "description": "rpc.ypupdated (NIS) allows remote users to execute arbitrary commands.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix",
+      "ibm aix",
+      "nec asl ux 4800",
+      "nec ews-ux v",
+      "nec up-ux v"
+    ],
+    "versions": [
+      "3",
+      "4",
+      "5.0",
+      "5.1",
+      "5.2",
+      "3.2",
+      "4.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1186",
+    "description": "rxvt, when compiled with the PRINT_PIPE option in various Linux operating systems including Linux Slackware 3.0 and RedHat 2.1, allows local users to gain root privileges by specifying a malicious program using the -print-pipe command line parameter.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "rxvt",
+      "redhat linux",
+      "slackware linux"
+    ],
+    "versions": [
+      "2.1",
+      "3.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1319",
+    "description": "Vulnerability in object server program in SGI IRIX 5.2 through 6.1 allows remote attackers to gain root privileges in certain configurations.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "<= 6.1",
+      "5",
+      "5.2",
+      "6.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1491",
+    "description": "abuse.console in Red Hat 2.1 uses relative pathnames to find and execute the undrv program, which allows local users to execute arbitrary commands via a path that points to a Trojan horse program.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "redhat linux"
+    ],
+    "versions": [
+      "2.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0143",
+    "description": "Kerberos 4 key servers allow a user to masquerade as another by breaking and generating session keys.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "mit kerberos",
+      "mit kerberos 5",
+      "process software multinet",
+      "sunos"
+    ],
+    "versions": [
+      "4.0",
+      "3.4",
+      "3.5",
+      "5.3",
+      "5.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0233",
+    "description": "IIS 1.0 allows users to execute arbitrary commands using .bat or .cmd files.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "microsoft internet information services"
+    ],
+    "versions": [
+      "1.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0067",
+    "description": "phf CGI program allows remote command execution through shell metacharacters.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "apache http server",
+      "ncsa httpd"
+    ],
+    "versions": [
+      "1.0.3",
+      "1.5a"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0141",
+    "description": "Java Bytecode Verifier allows malicious applets to execute arbitrary commands as the user of the applet.",
+    "cvss_score": 3.7,
+    "severity": "LOW",
+    "products": [
+      "netscape navigator"
+    ],
+    "versions": [
+      "2.02"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0070",
+    "description": "test-cgi program allows an attacker to list files on the server.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "apache http server"
+    ],
+    "versions": [
+      "< 1.3.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1103",
+    "description": "dxconsole in DEC OSF/1 3.2C and earlier allows local users to read arbitrary files by specifying the file with the -file parameter.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "digital osf 1"
+    ],
+    "versions": [
+      "<= 3.2c"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0078",
+    "description": "pcnfsd (aka rpc.pcnfsd) allows local users to change file permissions, or execute arbitrary commands through arguments in the RPC call.",
+    "cvss_score": 1.9,
+    "severity": "LOW",
+    "products": [
+      "ncr mp-ras",
+      "sgi irix",
+      "bsdi bsd os",
+      "freebsd",
+      "hp-ux",
+      "ibm aix",
+      "nec up-ux v",
+      "nextstep",
+      "sco openserver",
+      "sco unixware",
+      "sunos"
+    ],
+    "versions": [
+      "2.03",
+      "3.0",
+      "3.01",
+      "5.3",
+      "6.2",
+      "3.2",
+      "4.1",
+      "4.2",
+      "5",
+      "2.1",
+      "5.4",
+      "5.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0019",
+    "description": "Delete or create a file via rpc.statd, due to invalid information.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "data general dg ux",
+      "ncr mp-ras",
+      "sgi irix",
+      "ibm aix",
+      "nighthawk cx ux",
+      "nighthawk powerux",
+      "sco open desktop",
+      "sco openserver",
+      "sco unixware",
+      "sunos"
+    ],
+    "versions": [
+      "4.11",
+      "2.03",
+      "3.0",
+      "6.1",
+      "3.2",
+      "4.1",
+      "2",
+      "3",
+      "5.0",
+      "4.1.3",
+      "4.1.4",
+      "5.3",
+      "5.4",
+      "5.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1314",
+    "description": "Vulnerability in union file system in FreeBSD 2.2 and earlier, and possibly other operating systems, allows local users to cause a denial of service (system reload) via a series of certain mount_union commands.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "freebsd"
+    ],
+    "versions": [
+      "<= 2.2",
+      "2.0",
+      "2.0.5",
+      "2.1",
+      "2.1.0",
+      "2.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1313",
+    "description": "Manual page reader (man) in FreeBSD 2.2 and earlier allows local users to gain privileges via a sequence of commands.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "freebsd"
+    ],
+    "versions": [
+      "<= 2.2",
+      "2.0",
+      "2.0.5",
+      "2.1.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1205",
+    "description": "nettune in HP-UX 10.01 and 10.00 is installed setuid root, which allows local users to cause a denial of service by modifying critical networking configuration information.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "10.00",
+      "10.01"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1253",
+    "description": "Vulnerability in a kernel error handling routine in SCO OpenServer 5.0.2 and earlier, and SCO Internet FastStart 1.0, allows local users to gain root privileges.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sco internet faststart",
+      "sco openserver"
+    ],
+    "versions": [
+      "1.0",
+      "<= 5.0.2",
+      "5.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0138",
+    "description": "The suidperl and sperl program do not give up root privileges when changing UIDs back to the original users, allowing root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "apple a ux",
+      "digital osf 1",
+      "freebsd",
+      "hp-ux",
+      "ibm aix",
+      "linux kernel",
+      "nec asl ux 4800",
+      "nec ews-ux v",
+      "nec up-ux v"
+    ],
+    "versions": [
+      "3.1.1",
+      "1.3",
+      "2.0",
+      "2.0.5",
+      "2.1.0",
+      "8",
+      "9",
+      "10",
+      "3.2.5",
+      "4",
+      "1.2.0",
+      "4.2",
+      "4.2mp"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0175",
+    "description": "The convert.bas program in the Novell web server allows a remote attackers to read any file on the system that is internally accessible by the web server.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "novell web server"
+    ],
+    "versions": [
+      "1.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0022",
+    "description": "Local user gains root privileges via buffer overflow in rdist, via expstr() function.",
+    "cvss_score": 7.8,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix",
+      "bsdi bsd os",
+      "freebsd",
+      "hp-ux",
+      "ibm aix",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "5.0",
+      "5.0.1",
+      "5.1",
+      "5.1.1",
+      "5.2",
+      "5.3",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "1.1",
+      "2.0",
+      "2.0.5",
+      "2.1.0",
+      "10.00",
+      "3.1",
+      "3.2",
+      "3.2.4",
+      "3.2.5",
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "4.2",
+      "4.1.3u1",
+      "5.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0137",
+    "description": "The dip program on many Linux systems allows local users to gain root access via a buffer overflow.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "fred n. van kempen dip"
+    ],
+    "versions": [
+      "3.3.7o"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1301",
+    "description": "A design flaw in the Z-Modem protocol allows the remote sender of a file to execute arbitrary programs on the client, as implemented in rz in the rzsz module of FreeBSD before 2.1.5, and possibly other programs.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "freebsd"
+    ],
+    "versions": [
+      "<= 2.1.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1572",
+    "description": "cpio on FreeBSD 2.1.0, Debian GNU/Linux 3.0, and possibly other operating systems, uses a 0 umask when creating files using the -O (archive) or -F options, which creates the files with mode 0666 and allows local users to read or overwrite those files.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "debian linux",
+      "freebsd",
+      "mandrakesoft mandrake linux",
+      "redhat enterprise linux",
+      "redhat enterprise linux desktop",
+      "ubuntu linux"
+    ],
+    "versions": [
+      "3.0",
+      "2.1.0",
+      "9.2",
+      "10.0",
+      "10.1",
+      "cs2.1",
+      "cs3.0",
+      "4.0",
+      "4.10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0023",
+    "description": "Local user gains root privileges via buffer overflow in rdist, via lookup() function.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "inet",
+      "bsdi bsd os",
+      "freebsd",
+      "ibm aix",
+      "sco internet faststart",
+      "sco open desktop",
+      "sco openserver",
+      "sco tcp ip",
+      "sco unixware",
+      "sunos"
+    ],
+    "versions": [
+      "5.01",
+      "6.01",
+      "2.0",
+      "2.0.5",
+      "2.1.0",
+      "2.2",
+      "3.2",
+      "4.1",
+      "4.2",
+      "1.0",
+      "3.0",
+      "5.0",
+      "5.0.2",
+      "1.2.0",
+      "1.2.1",
+      "2.1",
+      "4.1.3",
+      "4.1.3u1",
+      "4.1.4",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0135",
+    "description": "admintool in Solaris allows a local user to write to arbitrary files and gain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.5",
+      "2.5.1",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0136",
+    "description": "Kodak Color Management System (KCMS) on Solaris allows a local user to write to arbitrary files and gain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sunos"
+    ],
+    "versions": [
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1413",
+    "description": "Solaris 2.4 before kernel jumbo patch -35 allows set-gid programs to dump core even if the real user id is not in the set-gid group, which allows local users to overwrite or create files at higher privileges by causing a core dump, e.g. through dmesg.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.4",
+      "5.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0134",
+    "description": "vold in Solaris 2.x allows local users to gain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sunos"
+    ],
+    "versions": [
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0132",
+    "description": "Expreserve, as used in vi and ex, allows local users to overwrite arbitrary files and gain root access.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "hp-ux",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "9",
+      "10",
+      "2.4",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.3c",
+      "4.1.3u1",
+      "5.0",
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0085",
+    "description": "Buffer overflow in rwhod on AIX and other operating systems allows remote attackers to execute arbitrary code via a UDP packet with a long hostname.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "freebsd",
+      "ibm aix",
+      "netbsd"
+    ],
+    "versions": [
+      "6.2",
+      "4.2",
+      "2.0.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1187",
+    "description": "Pine before version 3.94 allows local users to gain privileges via a symlink attack on a lockfile that is created when a user receives new mail.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "university of washington pine",
+      "freebsd",
+      "slackware linux"
+    ],
+    "versions": [
+      "<= 3.94",
+      "2.1.0",
+      "3.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1309",
+    "description": "Sendmail before 8.6.7 allows local users to gain root access via a large value in the debug (-d) command line option.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sendmail"
+    ],
+    "versions": [
+      "<= 8.6.7"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0324",
+    "description": "ppl program in HP-UX allows local users to create root files through symlinks.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "9",
+      "10.00",
+      "10.01",
+      "10.10",
+      "10.20"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1252",
+    "description": "Vulnerability in a certain system call in SCO UnixWare 2.0.x and 2.1.0 allows local users to access arbitrary files and gain root privileges.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sco unixware"
+    ],
+    "versions": [
+      "2.0.x",
+      "2.1.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0131",
+    "description": "Buffer overflow and denial of service in Sendmail 8.7.5 and earlier through GECOS field gives root access to local users.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "eric allman sendmail",
+      "bsdi bsd os",
+      "digital osf 1",
+      "freebsd",
+      "hp-ux",
+      "ibm aix",
+      "redhat linux",
+      "sco internet faststart",
+      "sco openserver"
+    ],
+    "versions": [
+      "8.6",
+      "8.7.1",
+      "8.7.2",
+      "8.7.3",
+      "8.7.4",
+      "8.7.5",
+      "2.1",
+      "1.3.2",
+      "2.1.5",
+      "10.01",
+      "10.10",
+      "10.20",
+      "3.2",
+      "4.1",
+      "4.2",
+      "3.0.3",
+      "1.0",
+      "5.0",
+      "5.0.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1383",
+    "description": "(1) bash before 1.14.7, and (2) tcsh 6.05 allow local users to gain privileges via directory names that contain shell metacharacters (` back-tick), which can cause the commands enclosed in the directory name to be executed when the shell expands filenames using the \\w option in the PS1 variable.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "gnu bash",
+      "tcsh"
+    ],
+    "versions": [
+      "<= 1.14.6",
+      "1.14.0",
+      "1.14.1",
+      "1.14.2",
+      "1.14.3",
+      "1.14.4",
+      "1.14.5",
+      "6.05"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1295",
+    "description": "Transarc DCE Distributed File System (DFS) 1.1 for Solaris 2.4 and 2.5 does not properly initialize the grouplist for users who belong to a large number of groups, which could allow those users to gain access to resources that are protected by DFS.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "transarc dce distributed file system"
+    ],
+    "versions": [
+      "1.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0116",
+    "description": "Denial of service when an attacker sends many SYN packets to create multiple connections without ever sending an ACK to complete the connection, aka SYN flood.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "ibm aix",
+      "ibm sng"
+    ],
+    "versions": [
+      "3.2.5",
+      "4.1",
+      "4.2",
+      "2.1",
+      "2.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0961",
+    "description": "HPUX sysdiag allows local users to gain root privileges via a symlink attack during log file creation.",
+    "cvss_score": 6.2,
+    "severity": "MEDIUM",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "9.04",
+      "9.05"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0206",
+    "description": "MIME buffer overflow in Sendmail 8.8.0 and 8.8.1 gives root access.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "eric allman sendmail"
+    ],
+    "versions": [
+      "8.8",
+      "8.8.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0308",
+    "description": "HP-UX gwind program allows users to modify arbitrary files.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "8",
+      "9"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0234",
+    "description": "Bash treats any character with a value of 255 as a command separator.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "yggdrasil linux",
+      "sgi irix",
+      "caldera openlinux",
+      "redhat linux",
+      "suse linux"
+    ],
+    "versions": [
+      "3.0.3",
+      "4.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0032",
+    "description": "Buffer overflow in lpr, as used in BSD-based systems including Linux, allows local users to execute arbitrary code as root via a long -C (classification) command line option.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix",
+      "bsdi bsd os",
+      "freebsd",
+      "nextstep",
+      "sunos"
+    ],
+    "versions": [
+      "5.0",
+      "5.0.1",
+      "5.1",
+      "5.1.1",
+      "5.2",
+      "5.3",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "2.1",
+      "2.0",
+      "2.0.5",
+      "2.1.0",
+      "2.1.5",
+      "4.0",
+      "4.1",
+      "4.1.3u1",
+      "4.1.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0277",
+    "description": "The WorkMan program can be used to overwrite any file to get root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sunos"
+    ],
+    "versions": [
+      "5.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1384",
+    "description": "Indigo Magic System Tour in the SGI system tour package (systour) for IRIX 5.x through 6.3 allows local users to gain root privileges via a Trojan horse .exitops program, which is called by the inst command that is executed by the RemoveSystemTour program.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "<= 6.3",
+      "5",
+      "5.0",
+      "5.0.1",
+      "5.1",
+      "5.1.1",
+      "5.2",
+      "5.3",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0311",
+    "description": "fpkg2swpk in HP-UX allows local users to gain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0336",
+    "description": "Buffer overflow in mstm in HP-UX allows local users to gain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1161",
+    "description": "Vulnerability in ppl in HP-UX 10.x and earlier allows local users to gain root privileges by forcing ppl to core dump.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "<= 10",
+      "9"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0130",
+    "description": "Local users can start Sendmail in daemon mode and gain root privileges.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "caldera network desktop",
+      "eric allman sendmail",
+      "bsdi bsd os",
+      "freebsd",
+      "hp-ux",
+      "ibm aix",
+      "redhat linux"
+    ],
+    "versions": [
+      "1.0",
+      "8.7",
+      "8.8",
+      "8.8.1",
+      "8.8.2",
+      "2.1",
+      "2.1.5",
+      "2.1.6",
+      "10.00",
+      "10.01",
+      "10.10",
+      "10.20",
+      "4.2",
+      "4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1221",
+    "description": "dxchpwd in Digital Unix (OSF/1) 3.x allows local users to modify arbitrary files via a symlink attack on the dxchpwd.log file.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "digital unix"
+    ],
+    "versions": [
+      "3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1099",
+    "description": "Kerberos 4 allows remote attackers to obtain sensitive information via a malformed UDP packet that generates an error string that inadvertently includes the realm name and the last user.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "kth kerberos"
+    ],
+    "versions": [
+      "4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0050",
+    "description": "Buffer overflow in HP-UX newgrp program.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "9.00",
+      "9.01",
+      "9.03",
+      "9.04",
+      "9.05",
+      "9.06",
+      "9.07",
+      "9.08",
+      "9.09",
+      "9.10",
+      "10.00",
+      "10.01",
+      "10.10",
+      "10.20"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0044",
+    "description": "fsdump command in IRIX allows local users to obtain root access by modifying sensitive files.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5.1",
+      "5.1.1",
+      "5.2",
+      "5.3",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0129",
+    "description": "Sendmail allows local users to write to a file and gain group permissions via a .forward or :include: file.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "eric allman sendmail",
+      "bsdi bsd os",
+      "freebsd",
+      "hp-ux",
+      "ibm aix",
+      "sco internet faststart",
+      "sco openserver",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "8.8",
+      "8.8.1",
+      "8.8.2",
+      "8.8.3",
+      "2.1",
+      "2.1.5",
+      "2.1.6",
+      "2.1.6.1",
+      "10.00",
+      "10.01",
+      "10.10",
+      "10.16",
+      "10.20",
+      "3.2",
+      "4.1",
+      "4.2",
+      "1.0",
+      "1.1",
+      "5.0",
+      "5.0.2",
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "4.1.3u1",
+      "4.1.4",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0043",
+    "description": "Command execution via shell metachars in INN daemon (innd) 1.5 using \"newgroup\" and \"rmgroup\" control messages, and others.",
+    "cvss_score": 9.8,
+    "severity": "CRITICAL",
+    "products": [
+      "isc inn",
+      "netscape news server",
+      "bsdi bsd os",
+      "caldera openlinux",
+      "redhat linux",
+      "nec goah intrasv",
+      "nec goah networksv"
+    ],
+    "versions": [
+      "1.4sec",
+      "1.4sec2",
+      "1.4unoff3",
+      "1.4unoff4",
+      "1.5",
+      "1.1",
+      "2.1",
+      "1.0",
+      "4.0",
+      "4.1",
+      "1.2",
+      "2.2",
+      "3.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1401",
+    "description": "Vulnerability in Desktop searchbook program in IRIX 5.0.x through 6.2 sets insecure permissions for certain user files (iconbook and searchbook).",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5.0",
+      "5.0.1",
+      "5.1",
+      "5.1.1",
+      "5.2",
+      "5.3",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0045",
+    "description": "List of arbitrary files on Web host via nph-test-cgi script.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "apache http server",
+      "netscape commerce server",
+      "netscape communications server",
+      "netscape enterprise server"
+    ],
+    "versions": [
+      "0.8.11",
+      "0.8.14",
+      "1.0",
+      "1.0.2",
+      "1.0.3",
+      "1.0.5",
+      "1.1",
+      "1.12",
+      "2.0a"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0096",
+    "description": "Sendmail decode alias can be used to overwrite sensitive files.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "bsdi bsd os",
+      "freebsd",
+      "sco internet faststart",
+      "sco openserver"
+    ],
+    "versions": [
+      "2.1.5",
+      "2.1.6",
+      "2.1.6.1",
+      "1.0",
+      "1.1",
+      "5.0",
+      "5.0.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0101",
+    "description": "Buffer overflow in AIX and Solaris \"gethostbyname\" library call allows root access through corrupt DNS host names.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "3.2",
+      "4.1",
+      "4.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0297",
+    "description": "Buffer overflow in Vixie Cron library up to version 3.0 allows local users to obtain root access via a long environmental variable.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "paul vixie vixie cron",
+      "bsdi bsd os",
+      "freebsd",
+      "netbsd",
+      "redhat linux"
+    ],
+    "versions": [
+      "3.0",
+      "2.1",
+      "2.1.0",
+      "2.0.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1089",
+    "description": "Buffer overflow in chfn command in HP-UX 9.X through 10.20 allows local users to gain privileges via a long command line argument.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "<= 10.20",
+      "9",
+      "10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0128",
+    "description": "Oversized ICMP ping packets can result in a denial of service, aka Ping o' Death.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "digital osf 1",
+      "ibm aix",
+      "linux kernel",
+      "sco internet faststart",
+      "sco open desktop",
+      "sco openserver",
+      "sco tcp ip",
+      "sunos",
+      "ibm sng"
+    ],
+    "versions": [
+      "1.3.3",
+      "3.2",
+      "4.1",
+      "4.2",
+      "1.3.0",
+      "2.0",
+      "1.0",
+      "1.1",
+      "3.0",
+      "5.0",
+      "5.0.2",
+      "1.2.1",
+      "5.4",
+      "5.5",
+      "5.5.1",
+      "2.1",
+      "2.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1385",
+    "description": "Buffer overflow in ppp program in FreeBSD 2.1 and earlier allows local users to gain privileges via a long HOME environment variable.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "freebsd"
+    ],
+    "versions": [
+      "<= 2.1.0",
+      "1.0",
+      "1.1",
+      "2.1.5",
+      "2.1.6",
+      "2.1.6.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1026",
+    "description": "aspppd on Solaris 2.5 x86 allows local users to modify arbitrary files and gain root privileges via a symlink attack on the /tmp/.asppp.fifo file.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris"
+    ],
+    "versions": [
+      "2.4",
+      "2.5",
+      "2.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1251",
+    "description": "Vulnerability in direct audio user space code on HP-UX 10.20 and 10.10 allows local users to cause a denial of service.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "10.10",
+      "10.20"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0100",
+    "description": "Remote access in AIX innd 1.5.1, using control messages.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "isc inn"
+    ],
+    "versions": [
+      "1.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0171",
+    "description": "Denial of service in syslog by sending it a large number of superfluous messages.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "linux kernel"
+    ],
+    "versions": [
+      "2.6.20.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0178",
+    "description": "Buffer overflow in the win-c-sample program (win-c-sample.exe) in the WebSite web server 1.1e allows remote attackers to execute arbitrary code via a long query string.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "oreilly website"
+    ],
+    "versions": [
+      "1.1e"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0179",
+    "description": "Windows NT crashes or locks up when a Samba client executes a \"cd ..\" command on a file share.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "microsoft windows 95",
+      "microsoft windows nt"
+    ],
+    "versions": [
+      "3.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0202",
+    "description": "The GNU tar command, when used in FTP sessions, may allow an attacker to execute arbitrary commands.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "university of washington wu-ftpd"
+    ],
+    "versions": [
+      "2.4.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0204",
+    "description": "Sendmail 8.6.9 allows remote attackers to execute root commands, using ident.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "eric allman sendmail"
+    ],
+    "versions": [
+      "8.6.9"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0217",
+    "description": "Malicious option settings in UDP packets could force a reboot in SunOS 4.1.3 systems.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "sunos"
+    ],
+    "versions": [
+      "4.0.3",
+      "4.0.3c",
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.3a1",
+      "4.1psr a"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0236",
+    "description": "ScriptAlias directory in NCSA and Apache httpd allowed attackers to read CGI programs.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "apache http server",
+      "illinois ncsa httpd"
+    ],
+    "versions": [
+      "< 1.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0253",
+    "description": "IIS 3.0 with the iis-fix hotfix installed allows remote intruders to read source code for ASP programs by using a %2e instead of a . (dot) in the URL.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "microsoft internet information server",
+      "microsoft internet information services"
+    ],
+    "versions": [
+      "3.0",
+      "1.0",
+      "2.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0265",
+    "description": "ICMP redirect messages may crash or lock up a host.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "microware os-9",
+      "novell netware"
+    ],
+    "versions": [
+      "3.12"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0274",
+    "description": "Denial of service in Windows NT DNS servers through malicious packet which contains a response to a query that wasn't made.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "microsoft windows nt"
+    ],
+    "versions": [
+      "4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0345",
+    "description": "Jolt ICMP attack causes a denial of service in Windows 95 and Windows NT systems.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "freebsd",
+      "ibm aix",
+      "sco internet faststart",
+      "sco open desktop",
+      "sco openserver",
+      "sunos",
+      "ibm sng"
+    ],
+    "versions": [
+      "1.0",
+      "1.1",
+      "1.1.5.1",
+      "1.2",
+      "2.0",
+      "2.0.5",
+      "3.2",
+      "4.1",
+      "4.2",
+      "3",
+      "5",
+      "2.1",
+      "2.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0496",
+    "description": "A Windows NT 4.0 user can gain administrative rights by forcing NtOpenProcessToken to succeed regardless of the user's permissions, aka GetAdmin.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "microsoft windows nt"
+    ],
+    "versions": [
+      "4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0517",
+    "description": "An SNMP community name is the default (e.g. public), null, or missing.",
+    "cvss_score": 5.9,
+    "severity": "MEDIUM",
+    "products": [
+      "hp-ux",
+      "sunos"
+    ],
+    "versions": [
+      "10",
+      "11.00",
+      "5.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0519",
+    "description": "A NETBIOS/SMB share password is the default, null, or missing.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "microsoft outlook",
+      "microsoft windows 2000",
+      "microsoft windows 95",
+      "microsoft windows nt"
+    ],
+    "versions": [
+      "2000"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1120",
+    "description": "netprint in SGI IRIX 6.4 and earlier trusts the PATH environmental variable for finding and executing the disable program, which allows local users to gain privileges.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "<= 6.4",
+      "5.3",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2",
+      "6.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0051",
+    "description": "Arbitrary file creation and program execution using FLEXlm LicenseManager, from versions 4.0 to 5.0, in IRIX.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "globetrotter flexlm",
+      "sgi license oeo",
+      "sgi irix",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "4.0",
+      "4.1",
+      "5.0",
+      "3.0",
+      "3.1",
+      "3.1.1",
+      "3.3.2",
+      "3.3.3",
+      "4.0.1",
+      "4.0.1t",
+      "4.0.2",
+      "4.0.3",
+      "4.0.4",
+      "4.0.4b",
+      "4.0.4t",
+      "4.0.5",
+      "4.0.5 iop",
+      "4.0.5 ipr",
+      "4.0.5a",
+      "4.0.5d",
+      "4.0.5e",
+      "4.0.5f",
+      "4.0.5g",
+      "4.0.5h",
+      "5.0.1",
+      "5.1",
+      "5.1.1",
+      "5.2",
+      "5.3",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.3u1",
+      "4.1.4",
+      "4.1.4jl",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1249",
+    "description": "movemail in HP-UX 10.20 has insecure permissions, which allows local users to gain privileges.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "10.20"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1145",
+    "description": "Vulnerability in Glance programs in GlancePlus for HP-UX 10.20 and earlier allows local users to access arbitrary files and gain privileges.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "<= 10.20",
+      "9",
+      "10.01",
+      "10.10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1311",
+    "description": "Vulnerability in dtlogin and dtsession in HP-UX 10.20 and 10.10 allows local users to bypass authentication and gain privileges.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "10.10",
+      "10.20"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0049",
+    "description": "Csetup under IRIX allows arbitrary file creation or overwriting.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1088",
+    "description": "Vulnerability in chsh command in HP-UX 9.X through 10.20 allows local users to gain privileges.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "<= 10.02",
+      "9",
+      "10.00",
+      "10.01",
+      "10.10",
+      "10.20"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0048",
+    "description": "Talkd, when given corrupt DNS information, can be used to execute arbitrary commands with root privileges.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "debian netkit",
+      "ibm aix",
+      "nec asl ux 4800",
+      "nec ews-ux v",
+      "nec up-ux v"
+    ],
+    "versions": [
+      "0.07",
+      "3.1",
+      "4.1",
+      "4.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0966",
+    "description": "Buffer overflow in Solaris getopt in libc allows local users to gain root privileges via a long argv[0].",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sunos"
+    ],
+    "versions": [
+      "5.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0047",
+    "description": "MIME conversion buffer overflow in sendmail versions 8.8.3 and 8.8.4.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "eric allman sendmail",
+      "bsdi bsd os",
+      "caldera openlinux"
+    ],
+    "versions": [
+      "8.8.3",
+      "8.8.4",
+      "2.1",
+      "1.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1144",
+    "description": "Certain files in MPower in HP-UX 10.x are installed with insecure permissions, which allows local users to gain privileges.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "10.00",
+      "10.01",
+      "10.10",
+      "10.20"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0174",
+    "description": "The view-source CGI program allows remote attackers to read arbitrary files via a .. (dot dot) attack.",
+    "cvss_score": 6.4,
+    "severity": "MEDIUM",
+    "products": [
+      "netscape communicator"
+    ],
+    "versions": [
+      "4.0",
+      "4.05",
+      "4.5",
+      "4.06",
+      "4.6",
+      "4.07",
+      "4.51"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0309",
+    "description": "HP-UX vgdisplay program gives root access to local users.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "10.00",
+      "10.01",
+      "10.10",
+      "10.20",
+      "10.24"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0369",
+    "description": "The Sun sdtcm_convert calendar utility for OpenWindows has a buffer overflow which can gain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "1.1.3",
+      "1.1.4",
+      "2.4",
+      "2.5",
+      "4.1.3",
+      "4.1.4",
+      "5.0",
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0959",
+    "description": "IRIX startmidi program allows local users to modify arbitrary files via a symlink attack.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1160",
+    "description": "Vulnerability in ftpd/kftpd in HP-UX 10.x and 9.x allows local and possibly remote users to gain root privileges.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "9",
+      "10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1299",
+    "description": "rcp on various Linux systems including Red Hat 4.0 allows a \"nobody\" user or other user with UID of 65535 to overwrite arbitrary files, since 65535 is interpreted as -1 by chown and other system calls, which causes the calls to fail to modify the ownership of the file.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "redhat linux",
+      "slackware linux"
+    ],
+    "versions": [
+      "4.0",
+      "3.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0298",
+    "description": "ypbind with -ypset and -ypsetme options activated in Linux Slackware and SunOS allows local and remote attackers to overwrite files via a .. (dot dot) attack.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "slackware linux",
+      "sunos"
+    ],
+    "versions": [
+      "2.1",
+      "2.2",
+      "2.3",
+      "4.1.3",
+      "4.1.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0046",
+    "description": "Buffer overflow of rlogin program using TERM environmental variable.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "bsdi bsd os",
+      "debian linux",
+      "digital ultrix",
+      "freebsd",
+      "hp-ux",
+      "ibm aix",
+      "netbsd",
+      "nextstep",
+      "oracle solaris",
+      "sunos"
+    ],
+    "versions": [
+      "1.1",
+      "2.0",
+      "2.0.1",
+      "2.1",
+      "0.93",
+      "1.1.5.1",
+      "2.0.5",
+      "2.1.0",
+      "2.1.5",
+      "10.00",
+      "10.01",
+      "10.08",
+      "10.09",
+      "10.10",
+      "10.16",
+      "10.20",
+      "10.24",
+      "10.30",
+      "10.34",
+      "3.2",
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "1.0",
+      "2.5.1",
+      "2.6",
+      "7.0",
+      "8",
+      "4.1.3u1",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0228",
+    "description": "Denial of service in RPCSS.EXE program (RPC Locator) in Windows NT.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "microsoft windows nt"
+    ],
+    "versions": [
+      "4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0109",
+    "description": "Buffer overflow in ffbconfig in Solaris 2.5.1.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.5",
+      "2.5.1",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0041",
+    "description": "Buffer overflow in NLS (Natural Language Service).",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "gnu libc",
+      "cray unicos",
+      "cray unicos max",
+      "ibm aix",
+      "redhat linux",
+      "slackware linux"
+    ],
+    "versions": [
+      "5.0.9",
+      "5.2.18",
+      "5.3.12",
+      "1.5",
+      "9.0",
+      "9.2",
+      "1.3",
+      "3.2.5",
+      "4.1",
+      "4.2",
+      "4.0",
+      "3.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0868",
+    "description": "ucbmail allows remote attackers to execute commands via shell metacharacters that are passed to it from INN.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "isc inn",
+      "netscape news server",
+      "sun sparc",
+      "redhat linux",
+      "nec goah intrasv",
+      "nec goah networksv"
+    ],
+    "versions": [
+      "1.5.1",
+      "1.1",
+      "4.0",
+      "4.1",
+      "r1.1",
+      "r1.2",
+      "r2.2",
+      "r3.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0165",
+    "description": "NFS cache poisoning.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "sun nfs",
+      "bsdi bsd os",
+      "linux kernel",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.6.20.1",
+      "2.4",
+      "3.5",
+      "4.0",
+      "4.0.1",
+      "4.0.2",
+      "4.0.3",
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "5.0",
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0318",
+    "description": "Buffer overflow in xmcd 2.0p12 allows local users to gain access through an environmental variable.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux",
+      "ibm aix",
+      "redhat linux",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "11",
+      "4",
+      "6.0",
+      "2.6",
+      "5.5.1",
+      "5.7",
+      "5.8"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1128",
+    "description": "Internet Explorer 3.01 on Windows 95 allows remote malicious web sites to execute arbitrary commands via a .isp file, which is automatically downloaded and executed without prompting the user.",
+    "cvss_score": 5.1,
+    "severity": "MEDIUM",
+    "products": [
+      "microsoft internet explorer"
+    ],
+    "versions": [
+      "3.0.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1489",
+    "description": "Buffer overflow in TestChip function in XFree86 SuperProbe in Slackware Linux 3.1 allows local users to gain root privileges via a long -nopr argument.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "slackware linux"
+    ],
+    "versions": [
+      "3.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0299",
+    "description": "Buffer overflow in FreeBSD lpd through long DNS hostnames.",
+    "cvss_score": 9.3,
+    "severity": "HIGH",
+    "products": [
+      "freebsd"
+    ],
+    "versions": [
+      "6.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1408",
+    "description": "Vulnerability in AIX 4.1.4 and HP-UX 10.01 and 9.05 allows local users to cause a denial of service (crash) by using a socket to connect to a port on the localhost, calling shutdown to clear the socket, then using the same socket to connect to a different port on localhost.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "hp-ux",
+      "ibm aix"
+    ],
+    "versions": [
+      "9.05",
+      "10.01",
+      "10.20",
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1525",
+    "description": "Macromedia Shockwave before 6.0 allows a malicious webmaster to read a user's mail box and possibly access internal web servers via the GetNextText command on a Shockwave movie.",
+    "cvss_score": 5.1,
+    "severity": "MEDIUM",
+    "products": [
+      "macromedia shockwave flash plugin"
+    ],
+    "versions": [
+      "<= 6.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0280",
+    "description": "Remote command execution in Microsoft Internet Explorer using .lnk and .url files.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "microsoft internet explorer"
+    ],
+    "versions": [
+      "3.0",
+      "3.0.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0292",
+    "description": "Denial of service through Winpopup using large user names.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "microsoft windows nt"
+    ],
+    "versions": [
+      "4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0315",
+    "description": "Buffer overflow in Solaris fdformat command gives root access to local users.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "2.6",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1",
+      "5.7"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1387",
+    "description": "Windows NT 4.0 SP2 allows remote attackers to cause a denial of service (crash), possibly via malformed inputs or packets, such as those generated by a Linux smbmount command that was compiled on the Linux 2.0.29 kernel but executed on Linux 2.0.25.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "microsoft windows nt"
+    ],
+    "versions": [
+      "4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0042",
+    "description": "Buffer overflow in University of Washington's implementation of IMAP and POP servers.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "university of washington imap",
+      "university of washington pop",
+      "bsdi bsd os",
+      "caldera openlinux",
+      "ibm aix",
+      "redhat linux"
+    ],
+    "versions": [
+      "4",
+      "3",
+      "2.1",
+      "3.0",
+      "1.0",
+      "4.2.1",
+      "2.0",
+      "4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1298",
+    "description": "Sysinstall in FreeBSD 2.2.1 and earlier, when configuring anonymous FTP, creates the ftp user without a password and with /bin/date as the shell, which could allow attackers to gain access to certain system resources.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "freebsd"
+    ],
+    "versions": [
+      "<= 2.2.1",
+      "2.1.0",
+      "2.1.5",
+      "2.1.6",
+      "2.1.7",
+      "2.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0058",
+    "description": "Buffer overflow in PHP cgi program, php.cgi allows shell access.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "php"
+    ],
+    "versions": [
+      "1.0",
+      "2.0b10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0149",
+    "description": "The wrap CGI program in IRIX allows remote attackers to view arbitrary directory listings via a .. (dot dot) attack.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "6.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0038",
+    "description": "Buffer overflow in xlock program allows local users to execute commands as root.",
+    "cvss_score": 8.4,
+    "severity": "HIGH",
+    "products": [
+      "data general dg ux",
+      "sgi irix",
+      "bsdi bsd os",
+      "debian linux",
+      "hp-ux",
+      "ibm aix",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "1.0",
+      "2.0",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0",
+      "7.0",
+      "5.0.1",
+      "5.1",
+      "5.1.1",
+      "5.2",
+      "5.3",
+      "6.0.1",
+      "6.1",
+      "6.3",
+      "6.4",
+      "2.1",
+      "0.93",
+      "1.1",
+      "1.2",
+      "1.3",
+      "10.00",
+      "10.01",
+      "10.08",
+      "10.10",
+      "10.16",
+      "10.20",
+      "10.24",
+      "10.30",
+      "10.34",
+      "3.2",
+      "4.1",
+      "4.2",
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1296",
+    "description": "Buffer overflow in Kerberos IV compatibility libraries as used in Kerberos V allows local users to gain root privileges via a long line in a kerberos configuration file, which can be specified via the KRB_CONF environmental variable.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "mit kerberos 5"
+    ],
+    "versions": [
+      "1.5.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0040",
+    "description": "Buffer overflow in Xt library of X Windowing System allows local users to execute commands with root privileges.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix",
+      "bsdi bsd os",
+      "freebsd",
+      "hp-ux",
+      "ibm aix",
+      "nec asl ux 4800",
+      "nec ews-ux v",
+      "nec up-ux v",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "4.0",
+      "5.0",
+      "5.3",
+      "6.0",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "2.0",
+      "2.0.1",
+      "2.1",
+      "1.1.5.1",
+      "9.00",
+      "9.01",
+      "9.10",
+      "10.00",
+      "10.01",
+      "10.08",
+      "10.09",
+      "10.10",
+      "10.16",
+      "10.20",
+      "10.24",
+      "10.30",
+      "10.34",
+      "3.2",
+      "4.1",
+      "4.2",
+      "64",
+      "4.2mp",
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "4.1.3",
+      "4.1.3u1",
+      "4.1.4",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0112",
+    "description": "Buffer overflow in AIX dtterm program for the CDE.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "cde",
+      "ibm aix"
+    ],
+    "versions": [
+      "4.1",
+      "4.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1116",
+    "description": "Vulnerability in runpriv in Indigo Magic System Administration subsystem of SGI IRIX 6.3 and 6.4 allows local users to gain root privileges.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "6.3",
+      "6.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1380",
+    "description": "Symantec Norton Utilities 2.0 for Windows 95 marks the TUNEOCX.OCX ActiveX control as safe for scripting, which allows remote attackers to execute arbitrary commands via the run option through malicious web pages that are accessed by browsers such as Internet Explorer 3.0.",
+    "cvss_score": 5.1,
+    "severity": "MEDIUM",
+    "products": [
+      "symantec norton utilities"
+    ],
+    "versions": [
+      "2.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0039",
+    "description": "webdist CGI program (webdist.cgi) in SGI IRIX allows remote attackers to execute arbitrary commands via shell metacharacters in the distloc parameter.",
+    "cvss_score": 7.3,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5.0",
+      "5.1",
+      "5.2",
+      "5.3",
+      "6.1",
+      "6.2",
+      "6.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1067",
+    "description": "SGI MachineInfo CGI program, installed by default on some web servers, prints potentially sensitive system status information, which could be used by remote attackers for information gathering activities.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "6.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1398",
+    "description": "Vulnerability in xfsdump in SGI IRIX may allow local users to obtain root privileges via the bck.log log file, possibly via a symlink attack.",
+    "cvss_score": 6.2,
+    "severity": "MEDIUM",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5.0",
+      "5.0.1",
+      "5.1",
+      "5.1.1",
+      "5.2",
+      "5.3",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1461",
+    "description": "inpview in InPerson on IRIX 5.3 through IRIX 6.5.10 trusts the PATH environmental variable to find and execute the ttsession program, which allows local users to obtain root access by modifying the PATH to point to a Trojan horse ttsession program.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5.3",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "6.5.10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1286",
+    "description": "addnetpr in SGI IRIX 6.2 and earlier allows local users to modify arbitrary files and possibly gain root access via a symlink attack on a temporary file.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "<= 6.2",
+      "5.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1410",
+    "description": "addnetpr in IRIX 5.3 and 6.2 allows local users to overwrite arbitrary files and possibly gain root privileges via a symlink attack on the printers temporary file.",
+    "cvss_score": 6.2,
+    "severity": "MEDIUM",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5.0",
+      "5.0.1",
+      "5.1",
+      "5.1.1",
+      "5.2",
+      "5.3",
+      "6.0.1",
+      "6.1",
+      "6.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1158",
+    "description": "Buffer overflow in (1) pluggable authentication module (PAM) on Solaris 2.5.1 and 2.5 and (2) unix_scheme in Solaris 2.4 and 2.3 allows local users to gain root privileges via programs that use these modules such as passwd, yppasswd, and nispasswd.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sunos"
+    ],
+    "versions": [
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1184",
+    "description": "Buffer overflow in Elm 2.4 and earlier allows local users to gain privileges via a long TERM environmental variable.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "elm development group elm"
+    ],
+    "versions": [
+      "<= 2.4",
+      "2.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0962",
+    "description": "Buffer overflow in HPUX passwd command allows local users to gain root privileges via a command line option.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "9",
+      "10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1232",
+    "description": "Untrusted search path vulnerability in day5datacopier in SGI IRIX 6.2 allows local users to execute arbitrary commands via a modified PATH environment variable that points to a malicious cp program.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "6.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1402",
+    "description": "The access permissions for a UNIX domain socket are ignored in Solaris 2.x and SunOS 4.x, and other BSD-based operating systems before 4.4, which could allow local users to connect to the socket and possibly disrupt or control the operations of the program using that socket.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "freebsd",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.2.2",
+      "2.2.3",
+      "2.2.4",
+      "2.2.5",
+      "2.2.6",
+      "2.2.8",
+      "3.0",
+      "3.1",
+      "2.5",
+      "2.5.1",
+      "2.6",
+      "4.0",
+      "5.0",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1191",
+    "description": "Buffer overflow in chkey in Solaris 2.5.1 and earlier allows local users to gain root privileges via a long command line argument.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "<= 5.5.1",
+      "5.4",
+      "5.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1449",
+    "description": "SunOS 4.1.4 on a Sparc 20 machine allows local users to cause a denial of service (kernel panic) by reading from the /dev/tcx0 TCX device.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "sunos"
+    ],
+    "versions": [
+      "4.1.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0037",
+    "description": "Arbitrary command execution via metamail package using message headers, when user processes attacker's message using metamail.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "freebsd",
+      "redhat linux"
+    ],
+    "versions": [
+      "6.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0259",
+    "description": "cfingerd lists all users on a system via search.**@target.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "infodrom cfingerd"
+    ],
+    "versions": [
+      "1.2.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0036",
+    "description": "IRIX login program with a nonzero LOCKOUT parameter allows creation or damage to files.",
+    "cvss_score": 8.4,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5.1",
+      "5.2",
+      "5.3",
+      "6.0",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0064",
+    "description": "Buffer overflow in AIX lquerylv program gives root access to local users.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "3.2",
+      "3.2.4",
+      "3.2.5",
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "4.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1143",
+    "description": "Vulnerability in runtime linker program rld in SGI IRIX 6.x and earlier allows local users to gain privileges via setuid and setgid programs.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "<= 6.0",
+      "5",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0034",
+    "description": "Buffer overflow in suidperl (sperl), Perl 4.x and 5.x.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "larry wall perl",
+      "sgi freeware",
+      "bsdi bsd os",
+      "redhat linux"
+    ],
+    "versions": [
+      "5.3",
+      "1.0",
+      "2.0",
+      "2.1",
+      "3.0",
+      "4.0",
+      "4.1",
+      "4.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0035",
+    "description": "Race condition in signal handling routine in ftpd, allowing read/write arbitrary files.",
+    "cvss_score": 5.4,
+    "severity": "MEDIUM",
+    "products": [
+      "gnu inet",
+      "sgi irix"
+    ],
+    "versions": [
+      "5.01"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0227",
+    "description": "Access violation in LSASS.EXE (LSA/LSARPC) program in Windows NT allows a denial of service.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "microsoft windows nt"
+    ],
+    "versions": [
+      "4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0281",
+    "description": "Denial of service in IIS using long URLs.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "microsoft internet information server",
+      "microsoft internet information services"
+    ],
+    "versions": [
+      "3.0",
+      "2.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0799",
+    "description": "Buffer overflow in bootpd 2.4.3 and earlier via a long boot file location.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "cmu bootpd"
+    ],
+    "versions": [
+      "<= 2.4.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0189",
+    "description": "Solaris rpcbind listens on a high numbered UDP port, which may not be filtered since the standard port number is 111.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0033",
+    "description": "Command execution in Sun systems via buffer overflow in the at program.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "ncr mp-ras",
+      "sgi irix",
+      "ibm aix",
+      "sco open desktop",
+      "sco openserver",
+      "sco unixware",
+      "sunos"
+    ],
+    "versions": [
+      "3.0",
+      "5.0",
+      "2.1",
+      "3.2v4",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1266",
+    "description": "rsh daemon (rshd) generates different error messages when a valid username is provided versus an invalid name, which allows remote attackers to determine valid users on the system.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "metamail corporation metamail"
+    ],
+    "versions": [
+      "<= 7.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0957",
+    "description": "MajorCool mj_key_cache program allows local users to modify files via a symlink attack.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "great circle associates majorcool"
+    ],
+    "versions": [
+      "<= 1.0.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1483",
+    "description": "Buffer overflow in zgv in svgalib 1.2.10 and earlier allows local users to execute arbitrary code via a long HOME environment variable.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "svgalib"
+    ],
+    "versions": [
+      "<= 1.2.10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1192",
+    "description": "Buffer overflow in eeprom in Solaris 2.5.1 and earlier allows local users to gain root privileges via a long command line argument.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sunos"
+    ],
+    "versions": [
+      "<= 5.5.1",
+      "5.3",
+      "5.4",
+      "5.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1423",
+    "description": "ping in Solaris 2.3 through 2.6 allows local users to cause a denial of service (crash) via a ping request to a multicast address through the loopback interface, e.g. via ping -i.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "2.6",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0074",
+    "description": "Listening TCP ports are sequentially allocated, allowing spoofing attacks.",
+    "cvss_score": 6.4,
+    "severity": "MEDIUM",
+    "products": [
+      "freebsd",
+      "linux kernel",
+      "microsoft windows nt",
+      "netbsd"
+    ],
+    "versions": [
+      "6.2",
+      "2.6.20.1",
+      "2.0.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0111",
+    "description": "RIP v1 is susceptible to spoofing.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "3.2",
+      "4.1",
+      "4.2",
+      "4.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0147",
+    "description": "The aglimpse CGI program of the Glimpse package allows remote execution of arbitrary commands.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "university of arizona glimpse http",
+      "university of arizona webglimpse"
+    ],
+    "versions": [
+      "2.0",
+      "<= 1.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0153",
+    "description": "Windows 95/NT out of band (OOB) data denial of service through NETBIOS port, aka WinNuke.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "microsoft windows 2000",
+      "microsoft windows 95",
+      "microsoft windows nt",
+      "sco openserver"
+    ],
+    "versions": [
+      "5.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0184",
+    "description": "When compiled with the -DALLOW_UPDATES option, bind allows dynamic updates to the DNS server, allowing for malicious modification of DNS records.",
+    "cvss_score": 6.4,
+    "severity": "MEDIUM",
+    "products": [
+      "isc bind"
+    ],
+    "versions": [
+      "9.4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0195",
+    "description": "Denial of service in RPC portmapper allows attackers to register or unregister RPC services or spoof RPC services using a spoofed source IP address such as 127.0.0.1.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "sgi irix",
+      "linux kernel"
+    ],
+    "versions": [
+      "2.6.20.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0219",
+    "description": "Buffer overflow in FTP Serv-U 2.5 allows remote authenticated users to cause a denial of service (crash) via a long (1) CWD or (2) LS (list) command.",
+    "cvss_score": 7.8,
+    "severity": "HIGH",
+    "products": [
+      "cat soft serv-u"
+    ],
+    "versions": [
+      "2.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0250",
+    "description": "Denial of service in Qmail through long SMTP commands.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "dan bernstein qmail"
+    ],
+    "versions": [
+      "<= 1.01"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0526",
+    "description": "An X server's access control is disabled (e.g. through an \"xhost +\" command) and allows anyone to connect to the server.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "x.org x11"
+    ],
+    "versions": [
+      "7.1 1.1.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0628",
+    "description": "The rwho/rwhod service is running, which exposes machine status and user information.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "freebsd",
+      "ibm aix",
+      "linux kernel",
+      "netbsd"
+    ],
+    "versions": [
+      "6.2",
+      "4.2",
+      "2.6.20.1",
+      "2.0.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1326",
+    "description": "wu-ftpd 2.4 FTP server does not properly drop privileges when an ABOR (abort file transfer) command is executed during a file transfer, which causes a signal to be handled incorrectly and allows local and possibly remote attackers to read arbitrary files.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "washington university wu-ftpd"
+    ],
+    "versions": [
+      "2.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0031",
+    "description": "JavaScript in Internet Explorer 3.x and 4.x, and Netscape 2.x, 3.x and 4.x, allows remote attackers to monitor a user's web activities, aka the Bell Labs vulnerability.",
+    "cvss_score": 2.6,
+    "severity": "LOW",
+    "products": [
+      "microsoft internet explorer",
+      "netscape communicator"
+    ],
+    "versions": [
+      "3.0",
+      "4.0",
+      "2.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0196",
+    "description": "websendmail in Webgais 1.0 allows a remote user to access arbitrary files and execute arbitrary code via the receiver parameter ($VAR_receiver variable).",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "webgais development team webgais"
+    ],
+    "versions": [
+      "1.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0176",
+    "description": "The Webgais program allows a remote user to execute arbitrary commands.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "webgais development team webgais"
+    ],
+    "versions": [
+      "<= 1.0b2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1463",
+    "description": "Windows NT 4.0 before SP3 allows remote attackers to bypass firewall restrictions or cause a denial of service (crash) by sending improperly fragmented IP packets without the first fragment, which the TCP/IP stack incorrectly reassembles into a valid session.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "microsoft windows nt"
+    ],
+    "versions": [
+      "<= 4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0059",
+    "description": "IRIX fam service allows an attacker to obtain a list of all files on the server.",
+    "cvss_score": 7.3,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5.3",
+      "6.1",
+      "6.2",
+      "6.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1182",
+    "description": "Buffer overflow in run-time linkers (1) ld.so or (2) ld-linux.so for Linux systems allows local users to gain privileges by calling a setuid program with a long program name (argv[0]) and forcing ld.so/ld-linux.so to report an error.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "delix dld",
+      "caldera openlinux lite",
+      "debian linux",
+      "lst power linux",
+      "redhat linux",
+      "suse linux"
+    ],
+    "versions": [
+      "5.2",
+      "1.1",
+      "4.0",
+      "2.2",
+      "4.1",
+      "4.2",
+      "5.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0122",
+    "description": "Buffer overflow in AIX lchangelv gives root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "4.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0247",
+    "description": "Buffer overflow in nnrpd program in INN up to version 1.6 allows remote users to execute arbitrary commands.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "isc inn"
+    ],
+    "versions": [
+      "1.4",
+      "1.4sec",
+      "1.4sec2",
+      "1.4unoff3",
+      "1.4unoff4",
+      "1.5",
+      "1.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1208",
+    "description": "Buffer overflow in ping in AIX 4.2 and earlier allows local users to gain root privileges via a long command line argument.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "3.2.5",
+      "4.1",
+      "4.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0971",
+    "description": "Buffer overflow in Exim allows local users to gain root privileges via a long :include: option in a .forward file.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "university of cambridge exim"
+    ],
+    "versions": [
+      "<= 1.62"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1068",
+    "description": "Oracle Webserver 2.1, when serving PL/SQL stored procedures, allows remote attackers to cause a denial of service via a long HTTP GET request.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "oracle http server"
+    ],
+    "versions": [
+      "2.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1419",
+    "description": "Buffer overflow in nss_nisplus.so.1 library in NIS+ in Solaris 2.3 and 2.4 allows local users to gain root privileges.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.4",
+      "5.3",
+      "5.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1308",
+    "description": "Certain programs in HP-UX 10.20 do not properly handle large user IDs (UID) or group IDs (GID) over 60000, which could allow local users to gain privileges.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "10.20"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0238",
+    "description": "php.cgi allows attackers to read any file on the system.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "php"
+    ],
+    "versions": [
+      "1.0",
+      "2.0",
+      "2.0b10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0301",
+    "description": "Buffer overflow in SunOS/Solaris ps command.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1262",
+    "description": "Java in Netscape 4.5 does not properly restrict applets from connecting to other hosts besides the one from which the applet was loaded, which violates the Java security model and could allow remote attackers to conduct unauthorized activities.",
+    "cvss_score": 5.1,
+    "severity": "MEDIUM",
+    "products": [
+      "netscape communicator"
+    ],
+    "versions": [
+      "4.01",
+      "4.5",
+      "4.06",
+      "4.07",
+      "4.08"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1446",
+    "description": "Internet Explorer 3 records a history of all URL's that are visited by a user in DAT files located in the Temporary Internet Files and History folders, which are not cleared when the user selects the \"Clear History\" option, and are not visible when the user browses the folders because of tailored displays.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "microsoft internet explorer"
+    ],
+    "versions": [
+      "3.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0024",
+    "description": "DNS cache poisoning via BIND, by predictable query IDs.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "isc bind",
+      "bsdi bsd os",
+      "ibm aix",
+      "nec asl ux 4800",
+      "nec ews-ux v",
+      "nec up-ux v",
+      "sco open desktop",
+      "sco openserver",
+      "sco unix",
+      "sco unixware",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "4.9.5",
+      "8.1",
+      "2.1",
+      "3.0",
+      "4.1",
+      "4.2",
+      "64",
+      "4.2mp",
+      "5.0",
+      "3.2v4",
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "2.6",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1399",
+    "description": "spaceball program in SpaceWare 7.3 v1.0 in IRIX 6.2 allows local users to gain root privileges by setting the HOSTNAME environmental variable to contain the commands to be executed.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "6.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1220",
+    "description": "Majordomo 1.94.3 and earlier allows remote attackers to execute arbitrary commands when the advertise or noadvertise directive is used in a configuration file, via shell metacharacters in the Reply-To header.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "great circle associates majordomo"
+    ],
+    "versions": [
+      "<= 1.94.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1225",
+    "description": "rpc.mountd on Linux, Ultrix, and possibly other operating systems, allows remote attackers to determine the existence of a file on the server by attempting to mount that file, which generates different error messages depending on whether the file exists or not.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "digital ultrix",
+      "linux kernel",
+      "netbsd",
+      "openbsd",
+      "sun solaris"
+    ],
+    "versions": [
+      "2.6.20.1",
+      "2.0.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0071",
+    "description": "Apache httpd cookie buffer overflow for versions 1.1.1 and earlier.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "apache http server"
+    ],
+    "versions": [
+      "1.1.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0115",
+    "description": "AIX bugfiler program allows local users to gain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "3.1",
+      "3.2",
+      "3.2.4",
+      "3.2.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0148",
+    "description": "The handler CGI program in IRIX allows arbitrary command execution.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5.3",
+      "6.2",
+      "6.3",
+      "6.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0177",
+    "description": "The uploader program in the WebSite web server allows a remote attacker to execute arbitrary programs.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "oreilly website"
+    ],
+    "versions": [
+      "2.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0183",
+    "description": "Linux implementations of TFTP would allow access to files outside the restricted directory.",
+    "cvss_score": 6.4,
+    "severity": "MEDIUM",
+    "products": [
+      "tftp",
+      "linux kernel"
+    ],
+    "versions": [
+      "2.6.20.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0191",
+    "description": "IIS newdsn.exe CGI script allows remote users to overwrite files.",
+    "cvss_score": 6.4,
+    "severity": "MEDIUM",
+    "products": [
+      "microsoft internet information server"
+    ],
+    "versions": [
+      "3.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1133",
+    "description": "HP-UX 9.x and 10.x running X windows may allow local attackers to gain privileges via (1) vuefile, (2) vuepad, (3) dtfile, or (4) dtpad, which do not authenticate users.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "9",
+      "10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1139",
+    "description": "Character-Terminal User Environment (CUE) in HP-UX 11.0 and earlier allows local users to overwrite arbitrary files and gain root privileges via a symlink attack on the IOERROR.mytty file.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "<= 11.00"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1275",
+    "description": "Lotus cc:Mail release 8 stores the postoffice password in plaintext in a hidden file which has insecure permissions, which allows local users to gain privileges.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "ibm lotus cc mail"
+    ],
+    "versions": [
+      "8.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0079",
+    "description": "Remote attackers can cause a denial of service in FTP by issuing multiple PASV commands, causing the server to run out of available ports.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "bisonware ftp server"
+    ],
+    "versions": [
+      "3.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1214",
+    "description": "The asynchronous I/O facility in 4.4 BSD kernel does not check user credentials when setting the recipient of I/O notification, which allows local users to cause a denial of service by using certain ioctl and fcntl calls to cause the signal to be sent to an arbitrary process ID.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "sgi irix",
+      "bsd",
+      "freebsd",
+      "netbsd",
+      "openbsd"
+    ],
+    "versions": [
+      "4.4",
+      "6.2",
+      "2.0.4",
+      "2.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0956",
+    "description": "The NeXT NetInfo _writers property allows local users to gain root privileges or conduct a denial of service.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "nextstep"
+    ],
+    "versions": [
+      "1.0",
+      "1.0a",
+      "2.0",
+      "2.1",
+      "3.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0965",
+    "description": "Race condition in xterm allows local users to modify arbitrary files via the logging option.",
+    "cvss_score": 6.2,
+    "severity": "MEDIUM",
+    "products": [
+      "x.org x11"
+    ],
+    "versions": [
+      "< 5.0",
+      "5.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1125",
+    "description": "Oracle Webserver 2.1 and earlier runs setuid root, but the configuration file is owned by the oracle account, which allows any local or remote attacker who obtains access to the oracle account to gain privileges or modify arbitrary files by modifying the configuration file.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "oracle http server"
+    ],
+    "versions": [
+      "<= 2.1",
+      "1.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0267",
+    "description": "Buffer overflow in NCSA HTTP daemon v1.3 allows remote command execution.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "ncsa httpd"
+    ],
+    "versions": [
+      "1.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0955",
+    "description": "Race condition in wu-ftpd and BSDI ftpd allows remote attackers to gain root access via the SITE EXEC command.",
+    "cvss_score": 7.6,
+    "severity": "HIGH",
+    "products": [
+      "washington university wu-ftpd"
+    ],
+    "versions": [
+      "2.4.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0182",
+    "description": "Samba has a buffer overflow which allows a remote attacker to obtain root access by specifying a long password.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "samba"
+    ],
+    "versions": [
+      "<= 1.9.17"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0090",
+    "description": "Buffer overflow in AIX rcp command allows local users to obtain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "4.1",
+      "4.1.1",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "4.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0160",
+    "description": "Some classic Cisco IOS devices have a vulnerability in the PPP CHAP authentication to establish unauthorized PPP connections.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "cisco ios"
+    ],
+    "versions": [
+      "4.1",
+      "9.1",
+      "10.3",
+      "11.0",
+      "11.1",
+      "11.2",
+      "11.2p"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0185",
+    "description": "In SunOS or Solaris, a remote user could connect from an FTP server's data port to an rlogin server on a host that trusts the FTP server, allowing remote command execution.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "4.1.3u1",
+      "4.1.4",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0272",
+    "description": "Denial of service in Slmail v2.5 through the POP3 port.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "slmail"
+    ],
+    "versions": [
+      "3.0.2421"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0295",
+    "description": "Solaris sysdef command allows local users to read kernel memory, potentially leading to root privileges.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0300",
+    "description": "nis_cachemgr for Solaris NIS+ allows attackers to add malicious NIS+ servers.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0326",
+    "description": "Vulnerability in HP-UX mediainit program.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "9",
+      "10.01",
+      "10.10",
+      "10.20",
+      "10.30"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1213",
+    "description": "Vulnerability in telnet service in HP-UX 10.30 allows attackers to cause a denial of service.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "hp-ux"
+    ],
+    "versions": [
+      "10.30"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0061",
+    "description": "File creation and deletion, and remote execution, in the BSD line printer daemon (lpd).",
+    "cvss_score": 5.1,
+    "severity": "MEDIUM",
+    "products": [
+      "bsdi bsd os",
+      "freebsd",
+      "linux kernel",
+      "openbsd"
+    ],
+    "versions": [
+      "6.2",
+      "2.6.20.1",
+      "2.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1095",
+    "description": "sort creates temporary files and follows symbolic links, which allows local users to modify arbitrary files that are writable by the user running sort, as observed in updatedb and other programs that use sort.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "redhat linux",
+      "slackware linux"
+    ],
+    "versions": [
+      "4.1",
+      "3.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1224",
+    "description": "IMAP 4.1 BETA, and possibly other versions, does not properly handle the SIGABRT (abort) signal, which allows local users to crash the server (imapd) via certain sequences of commands, which causes a core dump that may contain sensitive password information.",
+    "cvss_score": 3.6,
+    "severity": "LOW",
+    "products": [
+      "university of washington imapd"
+    ],
+    "versions": [
+      "4.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0192",
+    "description": "Buffer overflow in telnet daemon tgetent routing allows remote attackers to gain root access via the TERMCAP environmental variable.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "redhat linux",
+      "slackware linux"
+    ],
+    "versions": [
+      "4.0",
+      "4.1",
+      "4.2",
+      "5.0",
+      "5.1",
+      "5.2",
+      "6.0",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.5",
+      "3.6",
+      "3.9"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0068",
+    "description": "CGI PHP mylog script allows an attacker to read any file on the target server.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "php"
+    ],
+    "versions": [
+      "1.0",
+      "2.0",
+      "2.0b10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0072",
+    "description": "Buffer overflow in AIX xdat gives root access to local users.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "4.2",
+      "4.2.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1131",
+    "description": "Buffer overflow in OSF Distributed Computing Environment (DCE) security demon (secd) in IRIX 6.4 and earlier allows attackers to cause a denial of service via a long principal, group, or organization.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5.3",
+      "6.2",
+      "6.3",
+      "6.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1261",
+    "description": "Buffer overflow in Rainbow Six Multiplayer allows remote attackers to cause a denial of service, and possibly execute arbitrary commands, via a long nickname (nick) command.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "metamail corporation metamail"
+    ],
+    "versions": [
+      "<= 7.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0089",
+    "description": "Buffer overflow in AIX libDtSvc library can allow local users to gain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "4.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0091",
+    "description": "Buffer overflow in AIX writesrv command allows local users to obtain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "4.2",
+      "4.2.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0092",
+    "description": "Various vulnerabilities in the AIX portmir command allows local users to obtain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "4.2.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0093",
+    "description": "AIX nslookup command allows local users to obtain root access by not dropping privileges correctly.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "4.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0094",
+    "description": "AIX piodmgrsu command allows local users to gain additional group privileges.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "4.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0097",
+    "description": "The AIX FTP client can be forced to execute commands from a malicious server through shell metacharacters (e.g. a pipe character).",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux",
+      "ibm aix",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "9.00",
+      "9.01",
+      "9.03",
+      "9.04",
+      "9.05",
+      "9.06",
+      "9.07",
+      "9.08",
+      "9.09",
+      "9.10",
+      "10.00",
+      "10.10",
+      "10.16",
+      "10.20",
+      "10.24",
+      "11.00",
+      "3.2",
+      "3.2.4",
+      "3.2.5",
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "4.2",
+      "4.2.1",
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "2.6",
+      "4.1.3c",
+      "4.1.3u1",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0322",
+    "description": "The open() function in FreeBSD allows local attackers to write to arbitrary files.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "freebsd"
+    ],
+    "versions": [
+      "2.1.0",
+      "2.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0216",
+    "description": "Denial of service of inetd on Linux through SYN and RST packets.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "gnu inet",
+      "hp-ux",
+      "linux kernel"
+    ],
+    "versions": [
+      "5.01",
+      "10",
+      "2.6.20.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0327",
+    "description": "SGI syserr program allows local users to corrupt files.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5.3",
+      "6.2",
+      "6.3",
+      "6.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0328",
+    "description": "SGI permissions program allows local users to gain root privileges.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5.0.1",
+      "5.1",
+      "5.1.1",
+      "5.2",
+      "5.3",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0967",
+    "description": "Buffer overflow in the HTML library used by Internet Explorer, Outlook Express, and Windows Explorer via the res: local resource protocol.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "microsoft internet explorer",
+      "microsoft outlook express",
+      "microsoft windows explorer"
+    ],
+    "versions": [
+      "4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0306",
+    "description": "buffer overflow in HP xlock program.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "hp vvos"
+    ],
+    "versions": [
+      "10.24"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0021",
+    "description": "Arbitrary command execution via buffer overflow in Count.cgi (wwwcount) cgi-bin program.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "muhammad a. muquit wwwcount"
+    ],
+    "versions": [
+      "2.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1069",
+    "description": "Directory traversal vulnerability in carbo.dll in iCat Carbo Server 3.0.0 allows remote attackers to read arbitrary files via a .. (dot dot) in the icatcommand parameter.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "icat electronic commerce suite"
+    ],
+    "versions": [
+      "3.0.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1424",
+    "description": "Solaris Solstice AdminSuite (AdminSuite) 2.1 uses unsafe permissions when adding new users to the NIS+ password table, which allows local users to gain root access by modifying their password table entries.",
+    "cvss_score": 6.2,
+    "severity": "MEDIUM",
+    "products": [
+      "sun solstice adminsuite"
+    ],
+    "versions": [
+      "2.1",
+      "2.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1425",
+    "description": "Solaris Solstice AdminSuite (AdminSuite) 2.1 incorrectly sets write permissions on source files for NIS maps, which could allow local users to gain privileges by modifying /etc/passwd.",
+    "cvss_score": 6.2,
+    "severity": "MEDIUM",
+    "products": [
+      "sun solstice adminsuite"
+    ],
+    "versions": [
+      "2.1",
+      "2.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1426",
+    "description": "Solaris Solstice AdminSuite (AdminSuite) 2.1 follows symbolic links when updating an NIS database, which allows local users to overwrite arbitrary files.",
+    "cvss_score": 6.2,
+    "severity": "MEDIUM",
+    "products": [
+      "sun solstice adminsuite"
+    ],
+    "versions": [
+      "2.1",
+      "2.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1427",
+    "description": "Solaris Solstice AdminSuite (AdminSuite) 2.1 and 2.2 create lock files insecurely, which allows local users to gain root privileges.",
+    "cvss_score": 6.2,
+    "severity": "MEDIUM",
+    "products": [
+      "sun solstice adminsuite"
+    ],
+    "versions": [
+      "2.1",
+      "2.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1428",
+    "description": "Solaris Solstice AdminSuite (AdminSuite) 2.1 and 2.2 allows local users to gain privileges via the save option in the Database Manager, which is running with setgid bin privileges.",
+    "cvss_score": 6.2,
+    "severity": "MEDIUM",
+    "products": [
+      "sun solstice adminsuite"
+    ],
+    "versions": [
+      "2.1",
+      "2.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1210",
+    "description": "xterm in Digital UNIX 4.0B *with* patch kit 5 allows local users to overwrite arbitrary files via a symlink attack on a core dump file, which is created when xterm is called with a DISPLAY environmental variable set to a display that xterm cannot access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "digital unix"
+    ],
+    "versions": [
+      "4.0b"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1209",
+    "description": "Vulnerability in scoterm in SCO OpenServer 5.0 and SCO Open Desktop/Open Server 3.0 allows local users to gain root privileges.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sco open desktop",
+      "sco openserver"
+    ],
+    "versions": [
+      "3.0",
+      "5.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0210",
+    "description": "Automount daemon automountd allows local or remote users to gain privileges via shell metacharacters.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1257",
+    "description": "Xyplex terminal server 6.0.1S1, and possibly other versions, allows remote attackers to bypass the password prompt by entering (1) a CTRL-Z character, or (2) a ? (question mark).",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "maxserver xyplex terminal server"
+    ],
+    "versions": [
+      "<= 6.0.2_s4",
+      "6.0.1 s1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0016",
+    "description": "Land IP denial of service.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "cisco ios",
+      "gnu inet",
+      "microsoft winsock",
+      "hp-ux",
+      "microsoft windows 95",
+      "microsoft windows nt",
+      "netbsd",
+      "sunos"
+    ],
+    "versions": [
+      "7000",
+      "5.01",
+      "2.0",
+      "9.00",
+      "9.01",
+      "9.03",
+      "9.04",
+      "9.05",
+      "9.07",
+      "10.00",
+      "10.01",
+      "10.10",
+      "10.16",
+      "10.20",
+      "10.24",
+      "10.30",
+      "11.00",
+      "4.0",
+      "1.0",
+      "1.1",
+      "4.1.3u1",
+      "4.1.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0193",
+    "description": "Denial of service in Ascend and 3com routers, which can be rebooted by sending a zero length TCP option.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "ascend cascadeview ux"
+    ],
+    "versions": [
+      "1.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0244",
+    "description": "Livingston RADIUS code has a buffer overflow which can allow remote execution of commands as root.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "livingston radius"
+    ],
+    "versions": [
+      "1.x"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0340",
+    "description": "Buffer overflow in Linux Slackware crond program allows local users to gain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "slackware linux"
+    ],
+    "versions": [
+      "3.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0018",
+    "description": "Buffer overflow in statd allows root privileges.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix",
+      "ibm aix",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "5.0",
+      "5.0.1",
+      "5.1",
+      "5.1.1",
+      "5.2",
+      "5.3",
+      "3.2",
+      "4.1",
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0017",
+    "description": "FTP servers can allow an attacker to connect to arbitrary ports on machines other than the FTP client, aka FTP bounce.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "gnu inet",
+      "washington university wu-ftpd",
+      "caldera openlinux",
+      "freebsd",
+      "ibm aix",
+      "netbsd",
+      "sco open desktop",
+      "sco openserver",
+      "sco unixware",
+      "siemens reliant unix",
+      "sunos"
+    ],
+    "versions": [
+      "5.01",
+      "6.01",
+      "6.02",
+      "2.4",
+      "1.2",
+      "1.0",
+      "1.1",
+      "2.0",
+      "2.1.0",
+      "2.1.7",
+      "3.2",
+      "4.1",
+      "4.2",
+      "4.3",
+      "1.2.1",
+      "3.0",
+      "5.0.4",
+      "2.1",
+      "4.1.3u1",
+      "4.1.4",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1140",
+    "description": "Buffer overflow in CrackLib 2.5 may allow local users to gain root privileges via a long GECOS field.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "alec muffet cracklib"
+    ],
+    "versions": [
+      "2.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0230",
+    "description": "Buffer overflow in Cisco 7xx routers through the telnet service.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "cisco ios"
+    ],
+    "versions": [
+      "4.1",
+      "4.1.1",
+      "4.1.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0004",
+    "description": "MIME buffer overflow in email clients, e.g. Solaris mailtool and Outlook.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "hp dtmail",
+      "university of washington pine",
+      "sco unixware"
+    ],
+    "versions": [
+      "4.02",
+      "7.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0015",
+    "description": "Teardrop IP denial of service.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "hp-ux",
+      "microsoft windows 95",
+      "microsoft windows nt",
+      "netbsd",
+      "sunos"
+    ],
+    "versions": [
+      "9.00",
+      "9.01",
+      "9.03",
+      "9.04",
+      "9.05",
+      "9.07",
+      "10",
+      "10.01",
+      "10.16",
+      "10.20",
+      "10.24",
+      "10.30",
+      "11.00",
+      "0.0a",
+      "3.5.1",
+      "4.0",
+      "1.0",
+      "1.1",
+      "1.2",
+      "1.2.1",
+      "4.1.3u1",
+      "4.1.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0104",
+    "description": "A later variation on the Teardrop IP denial of service attack, a.k.a. Teardrop-2.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "caldera openlinux",
+      "hp-ux",
+      "microsoft windows 95",
+      "microsoft windows nt",
+      "sunos"
+    ],
+    "versions": [
+      "2.0",
+      "0a",
+      "4.0",
+      "4.1.3u1",
+      "4.1.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1581",
+    "description": "Memory leak in Simple Network Management Protocol (SNMP) agent (snmp.exe) for Windows NT 4.0 before Service Pack 4 allows remote attackers to cause a denial of service (memory consumption) via a large number of SNMP packets with Object Identifiers (OIDs) that cannot be decoded.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "microsoft windows nt"
+    ],
+    "versions": [
+      "4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1274",
+    "description": "iPass RoamServer 3.1 creates temporary files with world-writable permissions.",
+    "cvss_score": 6.4,
+    "severity": "MEDIUM",
+    "products": [
+      "ipass roamserver"
+    ],
+    "versions": [
+      "3.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0107",
+    "description": "Buffer overflow in Apache 1.2.5 and earlier allows a remote attacker to cause a denial of service with a large number of GET requests containing a large number of / characters.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "apache http server"
+    ],
+    "versions": [
+      "0.8.11",
+      "0.8.14",
+      "1.0",
+      "1.0.2",
+      "1.0.3",
+      "1.0.5",
+      "1.1",
+      "1.1.1",
+      "1.2.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0114",
+    "description": "Local users can execute commands as other users, and read other users' files, through the filter command in the Elm elm-2.4 mail package using a symlink attack.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "elm development group elm"
+    ],
+    "versions": [
+      "2.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0239",
+    "description": "Netscape FastTrack Web server lists files when a lowercase \"get\" command is used instead of an uppercase GET.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "netscape fasttrack server"
+    ],
+    "versions": [
+      "3.01"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0273",
+    "description": "Denial of service through Solaris 2.5.1 telnet by sending ^D characters.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "sunos"
+    ],
+    "versions": [
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0279",
+    "description": "Excite for Web Servers (EWS) allows remote command execution via shell metacharacters.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "excite ews"
+    ],
+    "versions": [
+      "1.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0284",
+    "description": "Denial of service to NT mail servers including Ipswitch, Mdaemon, and Exchange through a buffer overflow in the SMTP HELO command.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "ibm lotus domino mail server",
+      "microsoft exchange server"
+    ],
+    "versions": [
+      "4.0",
+      "5.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0331",
+    "description": "Buffer overflow in Internet Explorer 4.0(1).",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "microsoft internet explorer"
+    ],
+    "versions": [
+      "3.0.2",
+      "4.0",
+      "4.0.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0341",
+    "description": "Buffer overflow in the Linux mail program \"deliver\" allows local users to gain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "debian linux",
+      "slackware linux"
+    ],
+    "versions": [
+      "1.3.1",
+      "2.1",
+      "2.2",
+      "2.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1439",
+    "description": "gcc 2.7.2 allows local users to overwrite arbitrary files via a symlink attack on temporary .i, .s, or .o files.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "gcc"
+    ],
+    "versions": [
+      "2.7.2"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0513",
+    "description": "ICMP messages to broadcast addresses are allowed, allowing for a Smurf attack that can cause a denial of service.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "digital unix",
+      "freebsd",
+      "hp-ux",
+      "ibm aix",
+      "linux kernel",
+      "netbsd",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "3.2g",
+      "4.0",
+      "4.0a",
+      "4.0b",
+      "4.0c",
+      "4.0d",
+      "1.1.5.1",
+      "2.0.5",
+      "2.1.0",
+      "2.1.5",
+      "2.1.6",
+      "2.1.7.1",
+      "2.2.2",
+      "2.2.3",
+      "2.2.4",
+      "10.20",
+      "11.00",
+      "3.1",
+      "3.2",
+      "3.2.4",
+      "3.2.5",
+      "2.0",
+      "2.1",
+      "1.2",
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "2.6",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0086",
+    "description": "AIX routed allows remote users to modify sensitive files.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "3.2",
+      "4.1",
+      "4.2",
+      "4.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0958",
+    "description": "sudo 1.5.x allows local users to execute arbitrary commands via a .. (dot dot) attack.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "todd miller sudo"
+    ],
+    "versions": [
+      "1.5",
+      "1.5.2",
+      "1.5.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1045",
+    "description": "pnserver in RealServer 5.0 and earlier allows remote attackers to cause a denial of service by sending a short, malformed request.",
+    "cvss_score": 7.8,
+    "severity": "HIGH",
+    "products": [
+      "realnetworks realserver"
+    ],
+    "versions": [
+      "5.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0014",
+    "description": "Unauthorized privileged access or denial of service via dtappgather program in CDE.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "cde",
+      "hp-ux",
+      "hp vvos",
+      "ibm aix"
+    ],
+    "versions": [
+      "1.01",
+      "1.01 x86",
+      "1.02",
+      "1.2",
+      "1.02 x86",
+      "1.2 x86",
+      "10.10",
+      "10.20",
+      "11.00",
+      "10.24",
+      "4.1",
+      "4.2",
+      "4.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1487",
+    "description": "Vulnerability in digest in AIX 4.3 allows printq users to gain root privileges by creating and/or modifing any file on the system.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "4.2",
+      "4.2.1",
+      "4.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0013",
+    "description": "Stolen credentials from SSH clients via ssh-agent program, allowing other local users to access remote accounts belonging to the ssh-agent user.",
+    "cvss_score": 8.4,
+    "severity": "HIGH",
+    "products": [
+      "ssh"
+    ],
+    "versions": [
+      "1.2.0",
+      "1.2.1",
+      "1.2.2",
+      "1.2.3",
+      "1.2.4",
+      "1.2.5",
+      "1.2.6",
+      "1.2.7",
+      "1.2.8",
+      "1.2.9",
+      "1.2.10",
+      "1.2.11",
+      "1.2.12",
+      "1.2.13",
+      "1.2.14"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0125",
+    "description": "Buffer overflow in SGI IRIX mailx program.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "sgi irix",
+      "redhat linux",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "5.2",
+      "5.3",
+      "6.3",
+      "4.2",
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "2.6",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0087",
+    "description": "Denial of service in AIX telnet can freeze a system and prevent users from accessing the server.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "4.1",
+      "4.2",
+      "4.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0256",
+    "description": "Buffer overflow in War FTP allows remote execution of commands.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "jgaa warftpd",
+      "microsoft windows 95",
+      "microsoft windows nt"
+    ],
+    "versions": [
+      "<= 1.66"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0296",
+    "description": "Solaris volrmmount program allows attackers to read any file.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.6"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0304",
+    "description": "mmap function in BSD allows local attackers in the kmem group to modify memory through devices.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "bsdi bsd os",
+      "freebsd",
+      "netbsd",
+      "openbsd"
+    ],
+    "versions": [
+      "3.0",
+      "2.2",
+      "2.0.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0305",
+    "description": "The system configuration control (sysctl) facility in BSD based operating systems OpenBSD 2.2 and earlier, and FreeBSD 2.2.5 and earlier, does not properly restrict source routed packets even when the (1) dosourceroute or (2) forwarding variables are set, which allows remote attackers to spoof TCP connections.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "bsdi bsd os",
+      "freebsd",
+      "openbsd"
+    ],
+    "versions": [
+      "2.2",
+      "2.2.5",
+      "2.0",
+      "2.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0486",
+    "description": "Denial of service in AOL Instant Messenger when a remote attacker sends a malicious hyperlink to the receiving client, potentially causing a system crash.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "aol instant messenger"
+    ],
+    "versions": [
+      "3.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1445",
+    "description": "Vulnerability in imapd and ipop3d in Slackware 3.4 and 3.3 with shadowing enabled, and possibly other operating systems, allows remote attackers to cause a core dump via a short sequence of USER and PASS commands that do not provide valid usernames or passwords.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "slackware linux"
+    ],
+    "versions": [
+      "3.3",
+      "3.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0012",
+    "description": "Some web servers under Microsoft Windows allow remote attackers to bypass access restrictions for files with long file names.",
+    "cvss_score": 7.0,
+    "severity": "HIGH",
+    "products": [
+      "microsoft frontpage",
+      "microsoft internet information server",
+      "microsoft personal web server",
+      "netscape enterprise server",
+      "netscape fasttrack server"
+    ],
+    "versions": [
+      "4.0",
+      "3.0",
+      "2.01",
+      "3.01"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1269",
+    "description": "Screen savers in KDE beta 3 allows local users to overwrite arbitrary files via a symlink attack on the .kss.pid file.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "kde beta 3"
+    ],
+    "versions": [
+      "initial"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0225",
+    "description": "Windows NT 4.0 allows remote attackers to cause a denial of service via a malformed SMB logon request in which the actual data size does not match the specified size.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "microsoft windows nt"
+    ],
+    "versions": [
+      "4.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1207",
+    "description": "Buffer overflow in web-admin tool in NetXRay 2.6 allows remote attackers to cause a denial of service, and possibly execute arbitrary commands, via a long HTTP request.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "network general netxray"
+    ],
+    "versions": [
+      "all versions"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0323",
+    "description": "FreeBSD mmap function allows users to modify append-only or immutable files.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "bsdi bsd os",
+      "freebsd",
+      "netbsd",
+      "openbsd"
+    ],
+    "versions": [
+      "3.0",
+      "2.2",
+      "2.0.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1273",
+    "description": "Squid Internet Object Cache 1.1.20 allows users to bypass access control lists (ACLs) by encoding the URL with hexadecimal escape sequences.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "national science foundation squid web proxy"
+    ],
+    "versions": [
+      "1.1.20"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1229",
+    "description": "Quake 2 server 3.13 on Linux does not properly check file permissions for the config.cfg configuration file, which allows local users to read arbitrary files via a symlink from config.cfg to the target file.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "id software quake 2 server"
+    ],
+    "versions": [
+      "<= 3.13"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1486",
+    "description": "sadc in IBM AIX 4.1 through 4.3, when called from programs such as timex that are setgid adm, allows local users to overwrite arbitrary files via a symlink attack.",
+    "cvss_score": 1.2,
+    "severity": "LOW",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "4.2",
+      "4.2.1",
+      "4.3"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0320",
+    "description": "SunOS rpc.cmsd allows attackers to obtain root access by overwriting arbitrary files.",
+    "cvss_score": 9.3,
+    "severity": "HIGH",
+    "products": [
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "2.4",
+      "2.5",
+      "2.5.1",
+      "4.1.3u1",
+      "4.1.4",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0330",
+    "description": "Linux bdash game has a buffer overflow that allows local users to gain root access.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "linux kernel"
+    ],
+    "versions": [
+      "2.6.20.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0502",
+    "description": "A Unix account has a default, null, blank, or missing password.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "hp-ux",
+      "redhat linux",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "10.20",
+      "11",
+      "6.0",
+      "2.6",
+      "5.5.1",
+      "5.7",
+      "5.8"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1272",
+    "description": "Buffer overflows in CDROM Confidence Test program (cdrom) allow local users to gain root privileges.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1407",
+    "description": "ifdhcpc-done script for configuring DHCP on Red Hat Linux 5 allows local users to append text to arbitrary files via a symlink attack on the dhcplog file.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "redhat linux"
+    ],
+    "versions": [
+      "5.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1118",
+    "description": "ndd in Solaris 2.6 allows local users to cause a denial of service by modifying certain TCP/IP parameters.",
+    "cvss_score": 2.1,
+    "severity": "LOW",
+    "products": [
+      "sun solaris"
+    ],
+    "versions": [
+      "2.6"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0060",
+    "description": "Attackers can cause a denial of service in Ascend MAX and Pipeline routers with a malformed packet to the discard port, which is used by the Java Configurator tool.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "lucent ascend max router",
+      "lucent ascend pipeline router",
+      "lucent ascend tnt router"
+    ],
+    "versions": [
+      "1.0",
+      "2.0",
+      "3.0",
+      "4.0",
+      "5.0",
+      "6.0"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1075",
+    "description": "inetd in AIX 4.1.5 dynamically assigns a port N when starting ttdbserver (ToolTalk server), but also inadvertently listens on port N-1 without passing control to ttdbserver, which allows remote attackers to cause a denial of service via a large number of connections to port N-1, which are not properly closed by inetd.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "ibm aix"
+    ],
+    "versions": [
+      "4.1.5"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0960",
+    "description": "IRIX cdplayer allows local users to create directories in arbitrary locations via a command line option.",
+    "cvss_score": 7.2,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "5",
+      "6.0",
+      "6.0.1",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0003",
+    "description": "Execute commands as root via buffer overflow in Tooltalk database server (rpc.ttdbserverd).",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "tritreal ted cde",
+      "sgi irix",
+      "hp-ux",
+      "ibm aix",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "4.3",
+      "5.2",
+      "5.3",
+      "6.0",
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "10.01",
+      "10.02",
+      "10.03",
+      "11.00",
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "4.2",
+      "4.2.1",
+      "2.6",
+      "5.0",
+      "5.1",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0098",
+    "description": "Buffer overflow in SMTP HELO command in Sendmail allows a remote attacker to hide activities.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "appleshare",
+      "pmail mercury mail server",
+      "seattlelab slmail"
+    ],
+    "versions": [
+      "2.6"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0257",
+    "description": "Nestea variation of teardrop IP fragmentation denial of service.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "linux kernel"
+    ],
+    "versions": [
+      "2.6.20.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0537",
+    "description": "A configuration in a web browser such as Internet Explorer or Netscape Navigator allows execution of active content such as ActiveX, Java, Javascript, etc.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "microsoft internet explorer",
+      "netscape communicator"
+    ],
+    "versions": [
+      "6.0.2900"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0551",
+    "description": "HP OpenMail can be misconfigured to allow users to run arbitrary commands using malicious print requests.",
+    "cvss_score": 4.6,
+    "severity": "MEDIUM",
+    "products": [
+      "hp openmail"
+    ],
+    "versions": [
+      "4.1",
+      "5.1",
+      "5.10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1183",
+    "description": "System Manager sysmgr GUI in SGI IRIX 6.4 and 6.3 allows remote attackers to execute commands by providing a trojan horse (1) runtask or (2) runexec descriptor file, which is used to execute a System Manager Task when the user's Mailcap entry supports the x-sgi-task or x-sgi-exec type.",
+    "cvss_score": 7.6,
+    "severity": "HIGH",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "6.3",
+      "6.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0270",
+    "description": "Directory traversal vulnerability in pfdispaly.cgi program (sometimes referred to as \"pfdisplay\") for SGI's Performer API Search Tool (performer_tools) allows remote attackers to read arbitrary files.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "sgi irix"
+    ],
+    "versions": [
+      "6.2",
+      "6.3",
+      "6.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1498",
+    "description": "Slackware Linux 3.4 pkgtool allows local attacker to read and write to arbitrary files via a symlink attack on the reply file.",
+    "cvss_score": 3.6,
+    "severity": "LOW",
+    "products": [
+      "slackware linux"
+    ],
+    "versions": [
+      "3.4"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-1505",
+    "description": "Buffer overflow in QuakeWorld 2.10 allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary commands via a long initial connect packet.",
+    "cvss_score": 7.5,
+    "severity": "HIGH",
+    "products": [
+      "id software quakeworld"
+    ],
+    "versions": [
+      "2.10"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0009",
+    "description": "Inverse query buffer overflow in BIND 4.9 and BIND 8 Releases.",
+    "cvss_score": 10.0,
+    "severity": "HIGH",
+    "products": [
+      "data general dg ux",
+      "isc bind",
+      "sgi irix",
+      "bsdi bsd os",
+      "caldera openlinux",
+      "ibm aix",
+      "nec asl ux 4800",
+      "netbsd",
+      "redhat linux",
+      "sco open desktop",
+      "sco unixware",
+      "sun solaris",
+      "sunos"
+    ],
+    "versions": [
+      "5.4 3.0",
+      "5.4 3.1",
+      "5.4 4.1",
+      "5.4 4.11",
+      "4.9.6",
+      "8.1",
+      "8.1.1",
+      "3.2",
+      "3.3",
+      "3.3.1",
+      "3.3.2",
+      "3.3.3",
+      "4.0",
+      "4.0.1",
+      "4.0.1t",
+      "4.0.2",
+      "4.0.3",
+      "4.0.4",
+      "4.0.4b",
+      "4.0.4t",
+      "4.0.5",
+      "4.0.5 iop",
+      "4.0.5 ipr",
+      "4.0.5a",
+      "4.0.5d",
+      "4.0.5e",
+      "4.0.5f",
+      "4.0.5g",
+      "4.0.5h",
+      "5.0",
+      "5.0.1",
+      "5.1",
+      "5.1.1",
+      "5.2",
+      "5.3",
+      "6.0",
+      "6.1",
+      "6.2",
+      "6.3",
+      "2.0",
+      "2.0.1",
+      "2.1",
+      "1.0",
+      "4.1",
+      "4.1.1",
+      "4.1.2",
+      "4.1.3",
+      "4.1.4",
+      "4.1.5",
+      "4.2",
+      "4.2.1",
+      "4.3",
+      "64",
+      "1.1",
+      "1.2",
+      "1.2.1",
+      "1.3",
+      "1.3.1",
+      "3.0",
+      "7.0",
+      "2.5",
+      "2.5.1",
+      "2.6",
+      "5.4",
+      "5.5",
+      "5.5.1"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0010",
+    "description": "Denial of Service vulnerability in BIND 8 Releases via maliciously formatted DNS messages.",
+    "cvss_score": 5.0,
+    "severity": "MEDIUM",
+    "products": [
+      "data general dg ux",
+      "isc bind",
+      "ibm aix",
+      "nec asl ux 4800",
+      "netbsd",
+      "redhat linux",
+      "sco open desktop",
+      "sco openserver",
+      "sco unix",
+      "sco unixware",
+      "sunos"
+    ],
+    "versions": [
+      "y2k patchr4.11mu05",
+      "y2k patchr4.12mu03",
+      "y2k patchr4.20mu01",
+      "y2k patchr4.20mu02",
+      "y2k patchr4.20mu03",
+      "4.9",
+      "8",
+      "4.1",
+      "4.2",
+      "4.3",
+      "11",
+      "13",
+      "1.3",
+      "1.3.1",
+      "5.0",
+      "3.0",
+      "3.2v4",
+      "2.1",
+      "7.0",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1",
+      "5.6"
+    ]
+  },
+  {
+    "cve_id": "CVE-1999-0011",
+    "description": "Denial of Service vulnerabilities in BIND 4.9 and BIND 8 Releases via CNAME record and zone transfer.",
+    "cvss_score": 5.4,
+    "severity": "MEDIUM",
+    "products": [
+      "data general dg ux",
+      "isc bind",
+      "ibm aix",
+      "nec asl ux 4800",
+      "netbsd",
+      "redhat linux",
+      "sco open desktop",
+      "sco openserver",
+      "sco unix",
+      "sco unixware",
+      "sunos"
+    ],
+    "versions": [
+      "y2k patchr4.11mu05",
+      "y2k patchr4.12mu03",
+      "y2k patchr4.20mu01",
+      "y2k patchr4.20mu02",
+      "y2k patchr4.20mu03",
+      "4.9",
+      "8",
+      "4.1",
+      "4.2",
+      "4.3",
+      "11",
+      "13",
+      "1.3",
+      "1.3.1",
+      "5.0",
+      "3.0",
+      "3.2v4",
+      "2.1",
+      "7.0",
+      "5.3",
+      "5.4",
+      "5.5",
+      "5.5.1",
+      "5.6"
+    ]
   }
 ]

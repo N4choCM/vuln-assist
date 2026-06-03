@@ -11,7 +11,7 @@ const TAGLINE = "Talk CVEs. Skip the manual search.";
 const EXAMPLE_QUERIES = [
   "What is CVE-2021-44228?",
   "Show critical vulnerabilities in Apache",
-  "find product",
+  "What is the CVSS score for CVE-2024-0001?",
 ] as const;
 
 function createId(): string {

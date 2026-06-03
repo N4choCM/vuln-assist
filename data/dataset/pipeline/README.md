@@ -45,7 +45,7 @@ The builder also keeps intent distribution balanced and avoids duplicate generat
 - `validation`
 - `test`
 
-The target ratio is 70/15/15. The splitter allocates samples by intent so the resulting splits stay balanced.
+The target ratio is 70/15/15. The splitter uses one proportional allocator (`_allocate_proportionally`) for both train and validation counts so each split stays balanced by intent.
 
 ## `DatasetValidator`
 
