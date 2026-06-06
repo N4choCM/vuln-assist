@@ -20,7 +20,7 @@ It trains and serves:
 
 ## Inputs
 
-The service consumes Phase 1 generated artifacts:
+The service consumes the build dataset pipeline generated artifacts:
 
 ```text
 data/dataset/output/intents.json
@@ -60,8 +60,8 @@ At runtime, NER prediction pre-tokenizes the input with the same cybersecurity t
 From the project root:
 
 ```bash
-python3 scripts/train_nlu.py --model-family bert
-python3 scripts/train_nlu.py --model-family roberta
+python scripts/train_nlu.py --model-family bert
+python scripts/train_nlu.py --model-family roberta
 ```
 
 ## Boundary

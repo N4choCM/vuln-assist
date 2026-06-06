@@ -10,7 +10,7 @@ from services.nlu.config import DEFAULT_CONFIG_PATH, DEFAULT_MODELS_DIR, load_tr
 from services.nlu.models import EntityPrediction, NLUResult
 
 
-# Mirror the Phase 1 BIO token boundaries so runtime NER sees the same word units as training.
+# Mirror the build dataset pipelineBIO token boundaries so runtime NER sees the same word units as training.
 _TOKEN_PATTERN = re.compile(
     r"CVE-\d{4}-\d{4,7}|[A-Za-z0-9]+(?:[._/-][A-Za-z0-9]+)*|[^\w\s]",
     re.IGNORECASE,
@@ -61,7 +61,7 @@ class NLUPipeline:
         if not intent_dir.exists() or not ner_dir.exists():
             raise FileNotFoundError(
                 "Trained NLU models were not found. Run "
-                f"`python3 scripts/train_nlu.py --model-family {self._model_family}` first."
+                f"`python scripts/train_nlu.py --model-family {self._model_family}` first."
             )
 
         self._intent_tokenizer = AutoTokenizer.from_pretrained(intent_dir)

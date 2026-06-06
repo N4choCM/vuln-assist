@@ -1,0 +1,41 @@
+---
+config:
+  layout: dagre
+---
+flowchart TD
+  A["build_dataset.py"] --> B["parse_args()"]
+  B --> C{"--refresh-nvd?"}
+
+  C -->|Yes| D["NVDClient.fetch_cves()"]
+  D --> E["NVDRecordNormalizer.normalize_many()"]
+  E --> F["Filter records with products + versions"]
+  F --> G["Save data/knowledge_base/cves.json"]
+
+  C -->|No| H{"Does cves.json exist?"}
+  H -->|Yes| I["KnowledgeBaseRepository.load()"]
+  H -->|No| J["Load seed_cves.json → create cves.json"]
+  J --> I
+  G --> I
+
+  I --> K["list[NormalizedCVE] records"]
+  K --> L["DatasetBuilder.build()"]
+
+  subgraph GEN["Generation per intent (N balanced samples)"]
+    L --> M["Select template (templates.py)"]
+    M --> N["RuleBasedParaphraser.paraphrase()<br/>(placeholders intact)"]
+    N --> O["EntitySampler.extract_placeholder_values()"]
+    O --> P["QueryTemplate.render() → final text"]
+    P --> Q["BIOAnnotator.annotate()"]
+    Q --> R["DatasetSample"]
+    R --> S{"_is_usable and not duplicate?"}
+    S -->|No| M
+    S -->|Yes| T["Add to samples + shuffle"]
+  end
+
+  T --> U["DatasetSplitter.split()<br/>70% train / 15% val / 15% test"]
+  U --> V["DatasetValidator.validate()"]
+  V --> W{"Errors?"}
+  W -->|Yes| X["ValueError — does not write outputs"]
+  W -->|No| Y["DatasetWriter.write()"]
+  Y --> Z1["data/dataset/output/intents.json"]
+  Y --> Z2["data/dataset/output/ner.conll"]
