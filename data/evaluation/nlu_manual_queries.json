@@ -1,0 +1,1514 @@
+{
+  "description": "Manual NLU evaluation set for the TFG. It contains 120 realistic cybersecurity queries balanced across the six supported intents.",
+  "queries": [
+    {
+      "id": "CVE_LOOKUP_001",
+      "text": "What is CVE-2021-44228?",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2021-44228"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_002",
+      "text": "Give me details about CVE-2020-1472.",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2020-1472"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_003",
+      "text": "Explain CVE-2017-0144.",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2017-0144"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_004",
+      "text": "Summarize CVE-2019-19781.",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2019-19781"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_005",
+      "text": "I need information on CVE-2022-22965.",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2022-22965"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_006",
+      "text": "What does CVE-2023-34362 affect?",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2023-34362"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_007",
+      "text": "Tell me about CVE-2021-34527.",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2021-34527"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_008",
+      "text": "Describe CVE-2014-0160.",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2014-0160"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_009",
+      "text": "What happened in CVE-2018-13379?",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2018-13379"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_010",
+      "text": "Provide an overview of CVE-2021-26855.",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2021-26855"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_011",
+      "text": "What is known about CVE-2023-38408?",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2023-38408"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_012",
+      "text": "Summarize the vulnerability CVE-2022-30190.",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2022-30190"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_013",
+      "text": "Can you explain CVE-2020-0796?",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2020-0796"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_014",
+      "text": "What software is impacted by CVE-2021-41773?",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2021-41773"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_015",
+      "text": "Show me information for CVE-2023-23397.",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2023-23397"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_016",
+      "text": "I want the details of CVE-2022-1388.",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2022-1388"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_017",
+      "text": "What does CVE-2024-3094 refer to?",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2024-3094"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_018",
+      "text": "Give a short summary of CVE-2020-0601.",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2020-0601"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_019",
+      "text": "What is the issue behind CVE-2023-4966?",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2023-4966"
+        }
+      ]
+    },
+    {
+      "id": "CVE_LOOKUP_020",
+      "text": "Tell me the main facts about CVE-2019-0708.",
+      "expected_intent": "CVE_LOOKUP",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2019-0708"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_001",
+      "text": "What is the CVSS score for CVE-2021-44228?",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "CVSS score"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2021-44228"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_002",
+      "text": "Show the CVSS base score of CVE-2020-1472.",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "CVSS base score"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2020-1472"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_003",
+      "text": "How severe is CVE-2014-0160 according to base severity?",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2014-0160"
+        },
+        {
+          "entity_type": "METRIC",
+          "value": "base severity"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_004",
+      "text": "What attack vector does CVE-2019-19781 have?",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "attack vector"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2019-19781"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_005",
+      "text": "Give me the exploitability score assigned to CVE-2022-22965.",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "exploitability score"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2022-22965"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_006",
+      "text": "Check the CVSS for CVE-2023-34362.",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "CVSS"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2023-34362"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_007",
+      "text": "What is the base severity of CVE-2021-34527?",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "base severity"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2021-34527"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_008",
+      "text": "Show the attack vector for CVE-2020-0796.",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "attack vector"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2020-0796"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_009",
+      "text": "What CVSS base score does CVE-2017-0144 have?",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "CVSS base score"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2017-0144"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_010",
+      "text": "Give me the CVSS score of CVE-2023-23397.",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "CVSS score"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2023-23397"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_011",
+      "text": "How severe is CVE-2024-3094 according to CVSS?",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2024-3094"
+        },
+        {
+          "entity_type": "METRIC",
+          "value": "CVSS"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_012",
+      "text": "Check the exploitability score for CVE-2021-26855.",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "exploitability score"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2021-26855"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_013",
+      "text": "What is the CVSS metric for CVE-2022-30190?",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "CVSS"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2022-30190"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_014",
+      "text": "Show the base severity of CVE-2018-13379.",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "base severity"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2018-13379"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_015",
+      "text": "What attack vector is listed for CVE-2023-4966?",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "attack vector"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2023-4966"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_016",
+      "text": "What is the CVSS score assigned to CVE-2019-0708?",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "CVSS score"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2019-0708"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_017",
+      "text": "Give me the base severity for CVE-2022-1388.",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "base severity"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2022-1388"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_018",
+      "text": "How is CVE-2021-45046 rated in CVSS?",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2021-45046"
+        },
+        {
+          "entity_type": "METRIC",
+          "value": "CVSS"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_019",
+      "text": "Show the CVSS base score for CVE-2023-44487.",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "CVSS base score"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2023-44487"
+        }
+      ]
+    },
+    {
+      "id": "CVSS_QUERY_020",
+      "text": "What exploitability score does CVE-2020-0601 have?",
+      "expected_intent": "CVSS_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "exploitability score"
+        },
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2020-0601"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_001",
+      "text": "Show vulnerabilities in Apache Log4j.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Apache Log4j"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_002",
+      "text": "Find CVEs affecting OpenSSL.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "OpenSSL"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_003",
+      "text": "Which vulnerabilities impact Microsoft Exchange Server?",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Microsoft Exchange Server"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_004",
+      "text": "List known CVEs for WordPress.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "WordPress"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_005",
+      "text": "Search for critical vulnerabilities in Apache HTTP Server.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "critical"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Apache HTTP Server"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_006",
+      "text": "What security issues are known for Cisco IOS XE?",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Cisco IOS XE"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_007",
+      "text": "Show high vulnerabilities in VMware vCenter Server.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "high"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "VMware vCenter Server"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_008",
+      "text": "Find CVEs affecting Jenkins.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Jenkins"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_009",
+      "text": "Which vulnerabilities impact Fortinet FortiOS?",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Fortinet FortiOS"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_010",
+      "text": "List known CVEs for Google Chrome.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Google Chrome"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_011",
+      "text": "Search for medium vulnerabilities in Linux kernel.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "medium"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Linux kernel"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_012",
+      "text": "What security issues are known for Atlassian Confluence?",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Atlassian Confluence"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_013",
+      "text": "Show vulnerabilities in Drupal.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Drupal"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_014",
+      "text": "Find CVEs affecting Oracle WebLogic Server.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Oracle WebLogic Server"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_015",
+      "text": "Which vulnerabilities impact GitLab?",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "GitLab"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_016",
+      "text": "List known CVEs for F5 BIG-IP.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "F5 BIG-IP"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_017",
+      "text": "Search for low vulnerabilities in Mozilla Firefox.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "low"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Mozilla Firefox"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_018",
+      "text": "What security issues are known for Kubernetes?",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Kubernetes"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_019",
+      "text": "Show critical vulnerabilities in Apache Struts.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "critical"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Apache Struts"
+        }
+      ]
+    },
+    {
+      "id": "PRODUCT_SEARCH_020",
+      "text": "Find CVEs affecting SonicWall SMA.",
+      "expected_intent": "PRODUCT_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "SonicWall SMA"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_001",
+      "text": "Show vulnerabilities in Apache Log4j 2.17.1.",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Apache Log4j"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "2.17.1"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_002",
+      "text": "Does OpenSSL version 3.0.7 have known CVEs?",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "OpenSSL"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "3.0.7"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_003",
+      "text": "Find CVEs affecting Apache HTTP Server 2.4.49.",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Apache HTTP Server"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "2.4.49"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_004",
+      "text": "List vulnerabilities for Microsoft Exchange Server version 2019.",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Microsoft Exchange Server"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "2019"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_005",
+      "text": "Check whether GitLab 16.0.0 is vulnerable.",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "GitLab"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "16.0.0"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_006",
+      "text": "What CVEs affect VMware vCenter Server release 7.0?",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "VMware vCenter Server"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "7.0"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_007",
+      "text": "Show vulnerabilities in WordPress 5.8.1.",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "WordPress"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "5.8.1"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_008",
+      "text": "Does Drupal version 9.3.0 have known CVEs?",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Drupal"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "9.3.0"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_009",
+      "text": "Find CVEs affecting Jenkins 2.319.1.",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Jenkins"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "2.319.1"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_010",
+      "text": "List vulnerabilities for Fortinet FortiOS version 7.2.0.",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Fortinet FortiOS"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "7.2.0"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_011",
+      "text": "Check whether Google Chrome 114.0.5735.110 is vulnerable.",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Google Chrome"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "114.0.5735.110"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_012",
+      "text": "What CVEs affect Linux kernel release 5.15.0?",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Linux kernel"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "5.15.0"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_013",
+      "text": "Show vulnerabilities in Cisco IOS XE 17.9.1.",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Cisco IOS XE"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "17.9.1"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_014",
+      "text": "Does Atlassian Confluence version 7.18.1 have known CVEs?",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Atlassian Confluence"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "7.18.1"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_015",
+      "text": "Find CVEs affecting Oracle WebLogic Server 12.2.1.4.",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Oracle WebLogic Server"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "12.2.1.4"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_016",
+      "text": "List vulnerabilities for F5 BIG-IP version 16.1.3.",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "F5 BIG-IP"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "16.1.3"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_017",
+      "text": "Check whether Mozilla Firefox 102.0 is vulnerable.",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Mozilla Firefox"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "102.0"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_018",
+      "text": "What CVEs affect Kubernetes release 1.24.0?",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Kubernetes"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "1.24.0"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_019",
+      "text": "Show vulnerabilities in Apache Struts 2.5.30.",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Apache Struts"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "2.5.30"
+        }
+      ]
+    },
+    {
+      "id": "VERSION_SEARCH_020",
+      "text": "Does SonicWall SMA version 10.2.1 have known CVEs?",
+      "expected_intent": "VERSION_SEARCH",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "SonicWall SMA"
+        },
+        {
+          "entity_type": "VERSION",
+          "value": "10.2.1"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_001",
+      "text": "Show critical vulnerabilities.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "critical"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_002",
+      "text": "Find high CVEs.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "high"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_003",
+      "text": "List vulnerabilities with medium severity.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "medium"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_004",
+      "text": "Give me CVEs rated low.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "low"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_005",
+      "text": "Which critical vulnerabilities affect Apache Log4j?",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "critical"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Apache Log4j"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_006",
+      "text": "Search for high security issues in OpenSSL.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "high"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "OpenSSL"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_007",
+      "text": "Show medium vulnerabilities in Microsoft Exchange Server.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "medium"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Microsoft Exchange Server"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_008",
+      "text": "Find low CVEs in WordPress.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "low"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "WordPress"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_009",
+      "text": "List vulnerabilities with critical severity in VMware vCenter Server.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "critical"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "VMware vCenter Server"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_010",
+      "text": "Which high vulnerabilities affect Cisco IOS XE?",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "high"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Cisco IOS XE"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_011",
+      "text": "Search for critical security issues in Fortinet FortiOS.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "critical"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Fortinet FortiOS"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_012",
+      "text": "Give me CVEs rated medium for Google Chrome.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "medium"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Google Chrome"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_013",
+      "text": "Show low vulnerabilities in Mozilla Firefox.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "low"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Mozilla Firefox"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_014",
+      "text": "Find critical CVEs affecting Atlassian Confluence.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "critical"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Atlassian Confluence"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_015",
+      "text": "List high severity vulnerabilities in Apache HTTP Server.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "high"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Apache HTTP Server"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_016",
+      "text": "Which medium vulnerabilities affect Kubernetes?",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "medium"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Kubernetes"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_017",
+      "text": "Search for low security issues in GitLab.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "low"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "GitLab"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_018",
+      "text": "Give me CVEs rated critical in Oracle WebLogic Server.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "critical"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Oracle WebLogic Server"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_019",
+      "text": "Show high vulnerabilities in F5 BIG-IP.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "high"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "F5 BIG-IP"
+        }
+      ]
+    },
+    {
+      "id": "SEVERITY_FILTER_020",
+      "text": "Find medium CVEs affecting Linux kernel.",
+      "expected_intent": "SEVERITY_FILTER",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "medium"
+        },
+        {
+          "entity_type": "PRODUCT",
+          "value": "Linux kernel"
+        }
+      ]
+    },
+    {
+      "id": "GENERAL_QUERY_001",
+      "text": "What is a CVE?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": []
+    },
+    {
+      "id": "GENERAL_QUERY_002",
+      "text": "How does CVSS work?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "CVSS"
+        }
+      ]
+    },
+    {
+      "id": "GENERAL_QUERY_003",
+      "text": "What does the NVD provide?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": []
+    },
+    {
+      "id": "GENERAL_QUERY_004",
+      "text": "Explain vulnerability severity.",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": []
+    },
+    {
+      "id": "GENERAL_QUERY_005",
+      "text": "What information is stored in a vulnerability record?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": []
+    },
+    {
+      "id": "GENERAL_QUERY_006",
+      "text": "How are software vulnerabilities classified?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": []
+    },
+    {
+      "id": "GENERAL_QUERY_007",
+      "text": "What does critical severity mean?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "SEVERITY",
+          "value": "critical"
+        }
+      ]
+    },
+    {
+      "id": "GENERAL_QUERY_008",
+      "text": "How should I interpret a CVSS score?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "CVSS score"
+        }
+      ]
+    },
+    {
+      "id": "GENERAL_QUERY_009",
+      "text": "What is vulnerability disclosure?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": []
+    },
+    {
+      "id": "GENERAL_QUERY_010",
+      "text": "How do CVE records relate to affected products?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": []
+    },
+    {
+      "id": "GENERAL_QUERY_011",
+      "text": "Why do analysts use the NVD?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": []
+    },
+    {
+      "id": "GENERAL_QUERY_012",
+      "text": "What fields are useful in CVE analysis?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": []
+    },
+    {
+      "id": "GENERAL_QUERY_013",
+      "text": "What does exploitability score mean in a CVE record?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "exploitability score"
+        }
+      ]
+    },
+    {
+      "id": "GENERAL_QUERY_014",
+      "text": "How should analysts read attack vector for vulnerabilities?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "attack vector"
+        }
+      ]
+    },
+    {
+      "id": "GENERAL_QUERY_015",
+      "text": "What does an affected product mean in CVE analysis?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": []
+    },
+    {
+      "id": "GENERAL_QUERY_016",
+      "text": "Why do CVE records mention products such as Apache Log4j?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "PRODUCT",
+          "value": "Apache Log4j"
+        }
+      ]
+    },
+    {
+      "id": "GENERAL_QUERY_017",
+      "text": "What does a version such as 2.17.1 represent in a CVE record?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "VERSION",
+          "value": "2.17.1"
+        }
+      ]
+    },
+    {
+      "id": "GENERAL_QUERY_018",
+      "text": "What does it mean when a record like CVE-2021-44228 lists affected software?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "CVE_ID",
+          "value": "CVE-2021-44228"
+        }
+      ]
+    },
+    {
+      "id": "GENERAL_QUERY_019",
+      "text": "How does the NVD connect CVE IDs, products, and versions?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": []
+    },
+    {
+      "id": "GENERAL_QUERY_020",
+      "text": "What is the difference between a CVE ID and a CVSS metric?",
+      "expected_intent": "GENERAL_QUERY",
+      "expected_entities": [
+        {
+          "entity_type": "METRIC",
+          "value": "CVSS"
+        }
+      ]
+    }
+  ]
+}

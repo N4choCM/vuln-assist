@@ -13,8 +13,8 @@ from services.nlu.config import (
     NLUTrainingConfig,
 )
 from services.nlu.datasets import (
-    build_intent_dataset,
-    build_ner_dataset,
+    build_intent_encoded_dataset,
+    build_ner_encoded_dataset,
     load_intent_splits,
     load_ner_splits,
 )
@@ -93,13 +93,13 @@ def _train_intent_model(
 
     tokenizer = _load_tokenizer(pretrained_name)
     splits = load_intent_splits(intents_path)
-    train_dataset = build_intent_dataset(
+    train_dataset = build_intent_encoded_dataset(
         splits["train"], tokenizer, INTENT_LABEL_TO_ID, config.max_length
     )
-    validation_dataset = build_intent_dataset(
+    validation_dataset = build_intent_encoded_dataset(
         splits["validation"], tokenizer, INTENT_LABEL_TO_ID, config.max_length
     )
-    test_dataset = build_intent_dataset(
+    test_dataset = build_intent_encoded_dataset(
         splits["test"], tokenizer, INTENT_LABEL_TO_ID, config.max_length
     )
     model = AutoModelForSequenceClassification.from_pretrained(
@@ -133,13 +133,13 @@ def _train_ner_model(
 
     tokenizer = _load_tokenizer(pretrained_name, pretokenized=True)
     splits = load_ner_splits(ner_path)
-    train_dataset = build_ner_dataset(
+    train_dataset = build_ner_encoded_dataset(
         splits["train"], tokenizer, BIO_LABEL_TO_ID, config.max_length
     )
-    validation_dataset = build_ner_dataset(
+    validation_dataset = build_ner_encoded_dataset(
         splits["validation"], tokenizer, BIO_LABEL_TO_ID, config.max_length
     )
-    test_dataset = build_ner_dataset(
+    test_dataset = build_ner_encoded_dataset(
         splits["test"], tokenizer, BIO_LABEL_TO_ID, config.max_length
     )
     model = AutoModelForTokenClassification.from_pretrained(

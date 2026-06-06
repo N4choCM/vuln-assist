@@ -18,13 +18,13 @@ DEFAULT_MODELS_DIR = PROJECT_ROOT / "models" / "nlu"
 class NLUTrainingConfig:
     """Runtime settings shared by BERT and RoBERTa training."""
 
-    models: dict[str, str]
-    learning_rate: float
-    batch_size: int
-    max_length: int
-    early_stopping_patience: int
-    seed: int
-    num_train_epochs: int
+    models: dict[str, str]  # bert/roberta
+    learning_rate: float  # how fast weights update
+    batch_size: int  # examples processed per step
+    max_length: int  # max input text length
+    early_stopping_patience: int  # bad val rounds before stop
+    seed: int  # fixes randomness for reruns
+    num_train_epochs: int  # times to scan train data
 
     def model_name(self, model_family: str) -> str:
         try:

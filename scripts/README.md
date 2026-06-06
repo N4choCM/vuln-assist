@@ -73,6 +73,39 @@ This script loads a trained NLU model family and prints structured JSON.
 python scripts/predict_nlu.py --model-family bert --text "What is CVE-2021-44228?"
 ```
 
+Append the same result to a per-family JSONL log (no overwrite):
+
+```bash
+python scripts/predict_nlu.py \
+  --model-family bert \
+  --text "What is CVE-2021-44228?" \
+  --output-dir results/nlu_predictions
+```
+
+Writes/appends to:
+
+```text
+results/nlu_predictions/bert.jsonl
+results/nlu_predictions/roberta.jsonl
+```
+
+## `run_nlu_prediction_battery.py`
+
+Runs the default manual evaluation queries for BERT and RoBERTa, loading each model once.
+
+```bash
+python scripts/run_nlu_prediction_battery.py
+```
+
+Optional flags:
+
+```bash
+python scripts/run_nlu_prediction_battery.py --model-families bert
+python scripts/run_nlu_prediction_battery.py --run-id thesis_manual_eval_v1
+```
+
+Logs are appended to [results/nlu_predictions/](../results/nlu_predictions/README.md).
+
 ## Serving the Phase 3 Dialogue API
 
 The FastAPI orchestration stack lives outside this folder (see [`../backend/README.md`](../backend/README.md)). Typical local launch:
