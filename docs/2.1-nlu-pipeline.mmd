@@ -1,0 +1,48 @@
+---
+config:
+  layout: dagre
+  themeVariables:
+    fontSize: 40px
+---
+flowchart TD
+  A["train_nlu.py"] --> B["parse_args()"]
+  B --> C["load_training_config()<br/>config/nlu_training.json"]
+  C --> D{"--model-family?"}
+
+  D -->|all| E["train_all()<br/>for each family in config.models"]
+  D -->|bert / roberta| F["train_model_family()"]
+
+  E --> F
+  F --> G["config.model_name(family)<br/>bert-base-uncased / roberta-base"]
+
+  G --> H["INTENT_LABEL_TO_ID / BIO_LABEL_TO_ID<br/>labels.py ← data/dataset/labels.py"]
+
+  H --> I["load_intent_splits(intents.json)"]
+  I --> J["build_intent_encoded_dataset()<br/>train / validation / test"]
+  J --> K["AutoModelForSequenceClassification.from_pretrained()"]
+  K --> L["HuggingFace Trainer<br/>compute_classification_metrics<br/>EarlyStoppingCallback (F1)"]
+  L --> M["trainer.train() → evaluate(test)"]
+  M --> N["save_model + tokenizer<br/>models/nlu/&lt;family&gt;/intent/"]
+
+  N --> O["load_ner_splits(ner.conll)"]
+  O --> P["build_ner_encoded_dataset()<br/>align_bio_tags() per sample"]
+  P --> Q["AutoModelForTokenClassification.from_pretrained()"]
+  Q --> R["HuggingFace Trainer<br/>compute_ner_metrics (seqeval)<br/>EarlyStoppingCallback (F1)"]
+  R --> S["trainer.train() → evaluate(test)"]
+  S --> T["save_model + tokenizer<br/>models/nlu/&lt;family&gt;/ner/"]
+
+  T --> U["Write models/nlu/&lt;family&gt;/metrics.json"]
+  U --> V{"More families?"}
+  V -->|Yes| F
+  V -->|No| W{"train_all?"}
+  W -->|Yes| X["Write models/nlu/evaluation_summary.json"]
+  W -->|No| Y["Training complete"]
+
+  subgraph IN["Inputs (from dataset build pipeline)"]
+    Z1["data/dataset/output/intents.json"]
+    Z2["data/dataset/output/ner.conll"]
+  end
+
+  Z1 --> I
+  Z2 --> O
+
