@@ -1,9 +1,8 @@
-# FastAPI backend with NLU inference (Torch lazy-loaded on first predict).
+# FastAPI backend with NLU inference.
 FROM python:3.11-slim
 
 WORKDIR /app
 
-# curl is used by the compose healthcheck.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends curl \
     && rm -rf /var/lib/apt/lists/*
@@ -16,7 +15,6 @@ COPY services/ services/
 COPY integrations/ integrations/
 COPY config/ config/
 COPY data/knowledge_base/ data/knowledge_base/
-# Runtime NLU imports label constants from data.dataset (not the full pipeline).
 COPY data/__init__.py data/__init__.py
 COPY data/dataset/__init__.py data/dataset/__init__.py
 COPY data/dataset/labels.py data/dataset/labels.py
