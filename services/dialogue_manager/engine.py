@@ -90,7 +90,7 @@ class DialogueEngine:
                 blocked_reason=None,
             )
 
-        required = self._requirements_for(intent)
+        required = self._get_required_slots_by_intent(intent)
         missing_slot = next((slot for slot in required if not session.slots.get(slot)), None)
         if missing_slot is not None:
             clarification = _CLARIFICATION_TEMPLATES.get(
@@ -115,7 +115,7 @@ class DialogueEngine:
             blocked_reason=None,
         )
 
-    def _requirements_for(self, intent: str) -> tuple[str, ...]:
+    def _get_required_slots_by_intent(self, intent: str) -> tuple[str, ...]:
         slots = _REQUIRED_SLOTS_BY_INTENT.get(intent, ())
         return slots
 
