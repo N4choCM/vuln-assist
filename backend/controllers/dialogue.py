@@ -11,8 +11,6 @@ from backend.services.dialogue_app_service import DialogueApplicationService
 
 
 def get_dialogue_application_service(request: Request) -> DialogueApplicationService:
-    """Inject the lifespan-provisioned service without importing Torch in routers."""
-
     return request.app.state.dialogue_application_service
 
 
@@ -26,6 +24,4 @@ def append_message(
     payload: DialogueMessageRequest,
     svc: DialogueSvc,
 ) -> DialogueMessageResponse:
-    """Interpret one user statement and return scripted guidance."""
-
     return svc.exchange(session_id=payload.session_id, text=payload.text)

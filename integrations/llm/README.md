@@ -1,10 +1,10 @@
 # LLM Integration (`integrations/llm`)
 
-HTTP client for external LLM providers used by Phase 5 response generation.
+HTTP client for external LLM providers used by the response generation module.
 
 ## Scope
 
-This layer handles **only** outbound LLM API calls. It does not build prompts, format retrieval context, or generate business logic—that belongs in [`services/response_generator/`](../../services/response_generator/README.md).
+This layer handles **only** LLM API calls. It does not build prompts, format retrieval context, or generate business logic—that belongs in `[services/response_generator/](../../services/response_generator/README.md)`.
 
 ## Current provider
 
@@ -24,7 +24,7 @@ client = OllamaClient(
         timeout_seconds=30.0,
     )
 )
-text = client.complete(system="You are helpful.", user="Summarize CVE-2021-44228.")
+text = client.complete(system="<YOUR_SYSTEM_PROMPT>", user="Summarize CVE-2021-44228.")
 ```
 
 ## Prerequisites
@@ -32,11 +32,14 @@ text = client.complete(system="You are helpful.", user="Summarize CVE-2021-44228
 ```bash
 # Install Ollama from https://ollama.com, then:
 ollama pull llama3.2
-ollama serve   # usually starts automatically
+ollama serve   # It starts automatically
 ```
 
 ## Files
 
-| File | Role |
-|------|------|
+
+| File        | Role                                                  |
+| ----------- | ----------------------------------------------------- |
 | `client.py` | `LLMClient` protocol, `OllamaClient`, `OllamaConfig`. |
+
+

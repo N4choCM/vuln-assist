@@ -1,9 +1,8 @@
-"""Grounded natural-language reply generation from Phase 4 retrieval payloads."""
+"""Grounded natural-language reply generation from the External APIs Integration retrieval payloads."""
 
 from __future__ import annotations
 
 import logging
-from typing import Protocol
 
 from integrations.llm.client import LLMClient
 from services.response_generator.config import (
@@ -45,13 +44,6 @@ class ResponseGenerator:
 
         try:
             return self._llm.complete(system=SYSTEM_PROMPT, user=user_prompt)
-        except Exception as exc:  # noqa: BLE001 — degrade to template on any LLM failure
+        except Exception as exc:  
             logger.warning("LLM generation failed, using fallback: %s", exc)
             return fallback
-
-
-class ResponseGeneratorProtocol(Protocol):
-    """Structural typing hook for mocking generation in tests."""
-
-    def generate(self, user_query: str, intent: str, retrieval: dict[str, object]) -> str:
-        ...

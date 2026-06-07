@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from integrations.nvd.client import NVDQuery
 
-# NER may emit mixed casing; keys are normalized before lookup.
 _SEVERITY_MAP: dict[str, str] = {
     "critical": "CRITICAL",
     "high": "HIGH",
@@ -12,7 +11,6 @@ _SEVERITY_MAP: dict[str, str] = {
     "low": "LOW",
 }
 
-# Default page sizes per intent — small limits keep unauthenticated NVD usage viable.
 _LIMIT_BY_INTENT: dict[str, int] = {
     "CVE_LOOKUP": 1,
     "CVSS_QUERY": 1,
@@ -57,7 +55,7 @@ def build_nvd_query(intent: str, slots: dict[str, str]) -> tuple[NVDQuery, int] 
             _LIMIT_BY_INTENT[intent],
         )
 
-    # GENERAL_QUERY and unknown intents never hit external APIs in Phase 4.
+    # GENERAL_QUERY and unknown intents never hit external APIs.
     return None
 
 

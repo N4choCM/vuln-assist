@@ -1,4 +1,4 @@
-"""Serialize Phase 4 retrieval payloads into LLM-ready context text."""
+"""Serialize External APIs Integration retrieval payloads into LLM-ready context text."""
 
 from __future__ import annotations
 
@@ -24,12 +24,12 @@ def build_context(retrieval: dict[str, object]) -> str:
             continue
         lines.append(_format_cve(index, entry))
 
-    techniques_raw = retrieval.get("mitre_techniques", [])
-    techniques = techniques_raw if isinstance(techniques_raw, list) else []
-    if techniques:
+    mitre_techniques_raw = retrieval.get("mitre_techniques", [])
+    mitre_techniques = mitre_techniques_raw if isinstance(mitre_techniques_raw, list) else []
+    if mitre_techniques:
         lines.append("")
         lines.append("MITRE ATT&CK techniques:")
-        for item in techniques:
+        for item in mitre_techniques:
             if not isinstance(item, dict):
                 continue
             technique_id = item.get("technique_id", "")
@@ -43,7 +43,7 @@ def build_context(retrieval: dict[str, object]) -> str:
 def _format_cve(index: int, entry: dict[str, object]) -> str:
     cve_id = entry.get("cve_id", "Unknown")
     description = entry.get("description", "")
-    score = entry.get("cvss_score", "N/A")
+    cvss_score = entry.get("cvss_score", "N/A")
     severity = entry.get("severity", "UNKNOWN")
     products_raw = entry.get("products", [])
     products = products_raw if isinstance(products_raw, list) else []
@@ -53,7 +53,7 @@ def _format_cve(index: int, entry: dict[str, object]) -> str:
 
     block = [
         f"CVE #{index}: {cve_id}",
-        f"  Severity: {severity} (CVSS {score})",
+        f"  Severity: {severity} (CVSS {cvss_score})",
         f"  Description: {description}",
     ]
     if product_text:

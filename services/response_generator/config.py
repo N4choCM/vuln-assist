@@ -13,7 +13,6 @@ from integrations.llm.client import OllamaClient, OllamaConfig
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_CONFIG_PATH = PROJECT_ROOT / "config" / "response_generator.json"
 
-
 @dataclass(frozen=True)
 class ResponseGeneratorConfig:
     """Runtime settings for grounded LLM replies."""
@@ -26,14 +25,13 @@ class ResponseGeneratorConfig:
     ollama_model: str
     timeout_seconds: float
 
-
 def load_response_generator_config(
     path: Path = DEFAULT_CONFIG_PATH,
 ) -> ResponseGeneratorConfig:
     """Load JSON defaults and apply environment overrides."""
 
     payload = _read_json(path)
-    enabled = _env_bool("RESPONSE_GENERATOR_ENABLED", default=False)
+    enabled = _get_env_bool("RESPONSE_GENERATOR_ENABLED", default=False)
     provider = os.environ.get("LLM_PROVIDER", "ollama").strip().lower()
 
     return ResponseGeneratorConfig(
@@ -57,7 +55,6 @@ def load_response_generator_config(
         ),
     )
 
-
 def build_llm_client(config: ResponseGeneratorConfig) -> OllamaClient | None:
     """Instantiate an Ollama client when generation is enabled."""
 
@@ -77,13 +74,11 @@ def build_llm_client(config: ResponseGeneratorConfig) -> OllamaClient | None:
         )
     )
 
-
-def _env_bool(name: str, *, default: bool) -> bool:
+def _get_env_bool(name: str, *, default: bool) -> bool:
     raw = os.environ.get(name)
     if raw is None:
         return default
     return raw.strip().lower() in {"1", "true", "yes", "on"}
-
 
 def _read_json(path: Path) -> dict[str, Any]:
     with path.open("r", encoding="utf-8") as file:
