@@ -18,7 +18,6 @@ DEFAULT_SEED_KB_PATH = PROJECT_ROOT / "data" / "knowledge_base" / "seed_cves.jso
 
 
 class ExternalDataRepository:
-    """Fetch vulnerability data for Phase 4 without embedding query-building rules."""
 
     def __init__(
         self,
@@ -47,9 +46,9 @@ class ExternalDataRepository:
 
         try:
             raw_records = self._nvd.fetch_cves(query=query, total_limit=limit)
-        except Exception as exc:  # noqa: BLE001 — surface integration failures to callers
+        except Exception as exc:  
             errors.append(str(exc))
-            fallback = self._fallback_cve(slots)
+            fallback = self._get_fallback_cve(slots)
             if fallback is not None:
                 return self._build_result(
                     intent=intent,
@@ -85,7 +84,7 @@ class ExternalDataRepository:
             errors=errors,
         )
 
-    def _fallback_cve(self, slots: dict[str, str]) -> NormalizedCVE | None:
+    def _get_fallback_cve(self, slots: dict[str, str]) -> NormalizedCVE | None:
         cve_id = slots.get("CVE_ID", "").strip().upper()
         if not cve_id:
             return None
@@ -137,7 +136,6 @@ def _apply_version_filter(
         for cve in cves
         if any(version in entry.lower() for entry in cve.versions)
     ]
-    # Keep unfiltered results when NVD version metadata is sparse.
     return filtered or cves
 
 

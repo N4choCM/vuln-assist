@@ -4,7 +4,7 @@ from __future__ import annotations
 
 
 def format_retrieval_reply(intent: str, retrieval: dict[str, object]) -> str:
-    """Build a minimal structured reply from a Phase 4 retrieval payload."""
+    """Build a minimal structured reply from the External APIs Integration retrieval payload."""
 
     errors = retrieval.get("errors", [])
     if isinstance(errors, list) and errors:
