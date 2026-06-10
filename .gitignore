@@ -7,7 +7,6 @@ __pycache__/
 # Trained model artifacts are local outputs; keep only documentation tracked.
 models/nlu/*
 !models/nlu/README.md
-.cursor/
 
 # Frontend build artifacts
 frontend/node_modules/
